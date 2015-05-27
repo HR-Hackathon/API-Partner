@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgeAssessmentOrder 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+             xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/AcknowledgeAssessmentOrder.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-10-12T10:10:10.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Acknowledge>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2008-10-12T10:09:02.01Z</oa:CreationDateTime>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Accepted">/AcknowledgeAssessmentOrder/DataArea/AssessmentOrder</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Modified">/AcknowledgeAssessmentOrder/DataArea/AssessmentOrder/DocumentIDGroup/DocumentID</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Modified">/AcknowledgeAssessmentOrder/DataArea/AssessmentOrder/AssessmentAccessDetails</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+		</oa:Acknowledge>
+		<AssessmentOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="Order ID">53RR20031618-1</DocumentID>
+			<AssessmentAccess>
+				<AssessmentCommunication>
+						<oa:URI>http://www.assessmentprovider.com/test/ares08.r1</oa:URI>
+				</AssessmentCommunication>
+				<AccessCredentials>
+					<UserID>john.smith@epredix.com</UserID>
+					<AccessCredential>
+						<AccessCredentialTypeCode>Password</AccessCredentialTypeCode>
+						<AccessCredentialValue>ad7x111</AccessCredentialValue>
+					</AccessCredential>
+				</AccessCredentials>
+			</AssessmentAccess>
+		</AssessmentOrder>
+	</DataArea>
+</AcknowledgeAssessmentOrder>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

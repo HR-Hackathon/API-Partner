@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oa:ConfirmBOD systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.openapplications.org/oagis/9 ../../../org_openapplications_platform/1_2/BODs/ConfirmBOD.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!-- This is an example of an error message that might be received in response
+to a GetScreeningCatalogOrder BOD that could not be successfully executed.
+
+Note screening packages consist of component screening services. In some cases,
+failure may not occur immediately or an error may affect only a single screening
+type. 
+
+Total and partial errors determinable at the time of an order might be responded
+to with ConfirmBOD. Errors that are determined in the course of a screening
+and that might be returned together with other successful or partially successful
+results within the ErrorDetails component of ScreeningStatusDetails.
+ -->
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-12T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>75CR9001161800201Z</oa:BODID>
+	</oa:ApplicationArea>
+	<oa:DataArea>
+		<oa:Confirm>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2009-10-12T10:10:05.02Z</oa:CreationDateTime>
+				<oa:BODID>53RR2003161800502Z</oa:BODID>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Reported">/oa:ConfirmBOD/oa:DataArea/oa:BOD/oa:BODFailureMessage/oa:NounFailureMessage/oa:ErrorProcessMessage</oa:ResponseExpression>
+				
+				<oa:ChangeStatus>
+					<oa:Code listID="Error">Failed</oa:Code>
+				</oa:ChangeStatus>
+			</oa:ResponseCriteria>
+		</oa:Confirm>
+		<oa:BOD>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2009-10-12T10:10:05.02Z</oa:CreationDateTime>
+				<oa:BODID>53RR2003161800502Z</oa:BODID>
+			</oa:OriginalApplicationArea>
+			<oa:BODFailureMessage>
+				<oa:NounFailureMessage>
+					<oa:ErrorProcessMessage>
+						<oa:ID schemeID="DocumentID">12345077</oa:ID>
+						<oa:Description>Motor Vehicle License screenings are not available for the requested country of Afghanistan.</oa:Description>
+						<oa:Type>Fatal</oa:Type>
+						<oa:ReasonCode>409</oa:ReasonCode>
+					</oa:ErrorProcessMessage>
+				</oa:NounFailureMessage>
+			</oa:BODFailureMessage>
+		</oa:BOD>
+	</oa:DataArea>
+</oa:ConfirmBOD>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetAssessmentReport  
+		 systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+        xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetAssessmentReport.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-04-05T12:08:10.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get uniqueIndicator="true" maxItems="2">
+			<oa:Expression>/GetAssessmentReport/DataArea/AssessmentReport</oa:Expression>
+		</oa:Get>
+		<AssessmentReport majorVersionID="1" minorVersionID="0">
+			<OrderID schemeID="Test Order No" schemeAgencyID="AssessCo.com">100-777999-33</OrderID>
+		</AssessmentReport>
+	</DataArea>
+</GetAssessmentReport>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

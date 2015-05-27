@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessUSEnrollment systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessUSEnrollment.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:AuthorizationID>BenefitsAdministrator1</oa:AuthorizationID>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-02-03T17:45:40-05:00</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-016</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessUSEnrollment/DataArea/USEnrollment</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<USEnrollment majorVersionID="1" minorVersionID="0">
+			<DocumentID>PC2009-11-17-016</DocumentID>
+			<CustomerParty>
+				<PartyID>5977</PartyID>
+				<PartyName>Premier Company</PartyName>
+			</CustomerParty>
+			<BenefitsAdministratorID schemeID="Mutually Defined">382235791</BenefitsAdministratorID>
+			<SubscriberDetails validFrom="2010-02-03">
+				<SubscriberPerson>
+					<PersonLegalID schemeID="US SSN">111-22-3333</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>Edmund</oa:GivenName>
+						<FamilyName>Brady</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address type="Residence">
+							<oa:AddressLine sequence="1">125 Lincoln Park West</oa:AddressLine>
+							<oa:CityName>Chicago</oa:CityName>
+							<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>60614</oa:PostalCode>
+						</Address>
+					</Communication>
+					<BirthDate>1941-06-15</BirthDate>
+					<GenderCode>Male</GenderCode>
+					<CertifiedMaritalStatus>
+						<MaritalStatusCode validFrom="1967-05-08">Married</MaritalStatusCode>
+					</CertifiedMaritalStatus>
+				</SubscriberPerson>
+				<SubscriberEmployee>
+					<EmployeeID>428211</EmployeeID>
+				</SubscriberEmployee>
+				<SubscriberEmployment>
+					<EmployedIndicator validFrom="2009-01-01">true</EmployedIndicator>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>2009-01-01</HireDate>
+						</Hire>
+					</EmploymentLifecycle>
+				</SubscriberEmployment>
+				<USRateBasedCoverage>
+					<ElectedPlanID>25285</ElectedPlanID>
+					<GroupNumberID>AB0123</GroupNumberID>
+					<CoverageType>
+						<USRateBasedProductCode>Life Insurance</USRateBasedProductCode>
+						<ProductTypeCode>Basic</ProductTypeCode>
+						<CoverageEntityCode>Self</CoverageEntityCode>
+					</CoverageType>
+					<Carrier>
+						<OrganizationID schemeAgencyName="EmployerGenerated">13246</OrganizationID>
+						<OrganizationName>Life Offerings</OrganizationName>
+					</Carrier>
+					<FreeFormEffectivePeriod>
+						<StartDate>
+							<FormattedDateTime>2009-01-01</FormattedDateTime>
+						</StartDate>
+					</FreeFormEffectivePeriod>
+					<RequestedCoverage>
+						<Level>
+							<CoverageLevelAmount currencyID="USD">50000</CoverageLevelAmount>
+							<CoverageLevelMultiplier>2</CoverageLevelMultiplier>
+							<CoverageLevelTypeCode>Salary</CoverageLevelTypeCode>
+						</Level>
+						<VolumeAmount currencyID="USD">100000</VolumeAmount>
+					</RequestedCoverage>
+					<BeneficiaryDesignation sequence="Primary">
+						<BeneficiaryData>
+							<BeneficiaryName>Sarah Brady</BeneficiaryName>
+							<Communication>
+								<Address>
+									<oa:AddressLine>125 Lincoln Park West</oa:AddressLine>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+									<oa:PostalCode>60614</oa:PostalCode>
+								</Address>
+							</Communication>
+							<FamilyRelationshipCode>Spouse</FamilyRelationshipCode>
+						</BeneficiaryData>
+					</BeneficiaryDesignation>
+				</USRateBasedCoverage>
+				<USRateBasedCoverage>
+					<ElectedPlanID>25286</ElectedPlanID>
+					<GroupNumberID>AB0124</GroupNumberID>
+					<CoverageType>
+						<USRateBasedProductCode>Life Insurance</USRateBasedProductCode>
+						<ProductTypeCode>Basic</ProductTypeCode>
+						<CoverageEntityCode>Spouse</CoverageEntityCode>
+					</CoverageType>
+					<Carrier>
+						<OrganizationID schemeAgencyName="EmployerGenerated">13246</OrganizationID>
+						<OrganizationName>Life Offerings</OrganizationName>
+					</Carrier>
+					<FreeFormEffectivePeriod>
+						<StartDate>
+							<FormattedDateTime>2009-01-01</FormattedDateTime>
+						</StartDate>
+					</FreeFormEffectivePeriod>
+					<RequestedCoverage>
+						<Level>
+							<CoverageLevelAmount currencyID="USD">25000</CoverageLevelAmount>
+							<CoverageLevelMultiplier>1</CoverageLevelMultiplier>
+							<CoverageLevelTypeCode>Fixed</CoverageLevelTypeCode>
+						</Level>
+						<VolumeAmount currencyID="USD">25000</VolumeAmount>
+					</RequestedCoverage>
+					<BeneficiaryDesignation sequence="Primary">
+						<BeneficiaryData>
+							<BeneficiaryName>Edmund Brady</BeneficiaryName>
+							<Communication>
+								<Address>
+									<oa:AddressLine>125 Lincoln Park West</oa:AddressLine>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+									<oa:PostalCode>60614</oa:PostalCode>
+								</Address>
+							</Communication>
+							<FamilyRelationshipCode>Spouse</FamilyRelationshipCode>
+						</BeneficiaryData>
+					</BeneficiaryDesignation>
+				</USRateBasedCoverage>
+				<USRateBasedCoverage>
+					<ElectedPlanID>25287</ElectedPlanID>
+					<GroupNumberID>AB0125</GroupNumberID>
+					<CoverageType>
+						<USRateBasedProductCode>Long-Term Disability Insurance Insurance</USRateBasedProductCode>
+						<ProductTypeCode>Basic</ProductTypeCode>
+						<CoverageEntityCode>Self</CoverageEntityCode>
+					</CoverageType>
+					<Carrier>
+						<OrganizationID schemeAgencyName="EmployerGenerated">13246</OrganizationID>
+						<OrganizationName>Disability Offerings</OrganizationName>
+					</Carrier>
+					<FreeFormEffectivePeriod>
+						<StartDate>
+							<FormattedDateTime>2009-01-01</FormattedDateTime>
+						</StartDate>
+					</FreeFormEffectivePeriod>
+					<RequestedCoverage>
+						<Level>
+							<CoverageLevelAmount currencyID="USD">4166.67</CoverageLevelAmount>
+							<CoverageLevelMultiplier>.6</CoverageLevelMultiplier>
+							<CoverageLevelTypeCode>Salary</CoverageLevelTypeCode>
+						</Level>
+						<VolumeAmount currencyID="USD">2500</VolumeAmount>
+					</RequestedCoverage>
+				</USRateBasedCoverage>
+			</SubscriberDetails>
+		</USEnrollment>
+	</DataArea>
+</ProcessUSEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

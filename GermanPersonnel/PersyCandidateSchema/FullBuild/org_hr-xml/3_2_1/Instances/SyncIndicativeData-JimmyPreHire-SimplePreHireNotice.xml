@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncIndicativeData systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncIndicativeData.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2009-09-01</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/SyncIndicativeData/DataArea/IndicativeData</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Sync>
+		<IndicativeData majorVersionID="1" minorVersionID="0">
+			<DocumentID>9987-12228</DocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID>12345</OrganizationID>
+			</EmployerIdentifiers>
+			<IndicativePersonDossier>
+				<IndicativePerson>
+					<PersonLegalID schemeID="SSN" schemeAgencyID="US SSA">555-11-1111</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>Jimmy</oa:GivenName>
+						<FamilyName>PreHire</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address>
+							<oa:StreetName>Progress Street</oa:StreetName>
+							<oa:Unit>5003</oa:Unit>
+							<oa:CityName>Brooklyn</oa:CityName>
+							<oa:CountrySubDivisionCode>NY</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>11217</oa:PostalCode>
+						</Address>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Home</UseCode>
+						<oa:CountryDialing>1</oa:CountryDialing>
+						<oa:AreaDialing>212</oa:AreaDialing>
+						<oa:DialNumber>555 1212</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:URI>jimmy@home_domain.com</oa:URI>
+					</Communication>
+					<BirthDate>1961-04-05</BirthDate>
+					<GenderCode>Male</GenderCode>
+					<CertifiedMaritalStatus>
+						<MaritalStatusCode>Married</MaritalStatusCode>
+					</CertifiedMaritalStatus>
+				</IndicativePerson>
+				<IndicativeEmployment>
+					<!-- Employed Indicator is false since candidate is not yet officially hired.-->
+					<EmployedIndicator>false</EmployedIndicator>
+					<ProposedHire>
+						<ExpectedDutyEntryDate>2009-09-10</ExpectedDutyEntryDate>
+					</ProposedHire>
+				</IndicativeEmployment>
+			</IndicativePersonDossier>
+		</IndicativeData>
+	</DataArea>
+</SyncIndicativeData>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

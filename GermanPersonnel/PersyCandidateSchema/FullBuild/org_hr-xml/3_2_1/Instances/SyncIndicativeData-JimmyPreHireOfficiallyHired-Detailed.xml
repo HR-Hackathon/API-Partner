@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncIndicativeData systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncIndicativeData.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2009-09-16</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<!-- Use of "Replace" actionCode indicates "snapshot" or "full-file" refresh approach. -->
+				<oa:ActionExpression actionCode="Replace">/SyncIndicativeData/DataArea/IndicativeData</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Sync>
+		<IndicativeData majorVersionID="1" minorVersionID="0">
+			<DocumentID>9987-12228</DocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID>12345</OrganizationID>
+			</EmployerIdentifiers>
+			<IndicativePersonDossier>
+				<IndicativePerson>
+					<!-- Sending previously sent legal id, since that is how the 'Jimmy" was uniquely identified
+				     in the previous documents (in this scenario employee ids are not given
+				     until actually hired and employee reports for their first day of work)
+				-->
+					<PersonLegalID schemeID="SSN" schemeAgencyID="US SSA">555-11-1111</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>Jimmy</oa:GivenName>
+						<FamilyName>PreHire</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address>
+							<oa:StreetName>Progress Street</oa:StreetName>
+							<oa:Unit>5003</oa:Unit>
+							<oa:CityName>Brooklyn</oa:CityName>
+							<oa:CountrySubDivisionCode>NY</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>11217</oa:PostalCode>
+						</Address>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Home</UseCode>
+						<oa:AreaDialing>212</oa:AreaDialing>
+						<oa:DialNumber>555 1212</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:URI>jimmy@home_domain.com</oa:URI>
+					</Communication>
+					<BirthDate>1961-04-05</BirthDate>
+					<GenderCode>Male</GenderCode>
+					<CertifiedMaritalStatus>
+						<MaritalStatusCode>Married</MaritalStatusCode>
+					</CertifiedMaritalStatus>
+				</IndicativePerson>
+				<IndicativeEmployee>
+					<!-- we now have an employee id for Jimmy.  Used a personal id in previous documents -->
+					<EmployeeID>1212-4321-99</EmployeeID>
+				</IndicativeEmployee>
+				<IndicativeEmployment>
+					<!-- IsEmployed is now 'true' -->
+					<EmployedIndicator>true</EmployedIndicator>
+					<EmploymentLifecycle>
+						<!-- Official hire date -->
+						<Hire>
+							<HireDate>2009-09-16</HireDate>
+						</Hire>
+					</EmploymentLifecycle>
+				</IndicativeEmployment>
+				<IndicativeDeployment>
+					<ResourceRelationshipCode>Employee</ResourceRelationshipCode>
+					<DeploymentOrganization>
+						<OrganizationalIdentifiers>
+							<OrganizationalID schemeID="Division Code">11111</OrganizationalID>
+						</OrganizationalIdentifiers>
+					</DeploymentOrganization>
+					<WorkLocation>
+						<Address>
+							<oa:BuildingNumber>830</oa:BuildingNumber>
+							<oa:StreetName>44th Street</oa:StreetName>
+							<oa:Unit>Suite 100</oa:Unit>
+							<oa:CityName>New York</oa:CityName>
+							<oa:CountrySubDivisionCode>NY</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>10021</oa:PostalCode>
+						</Address>
+					</WorkLocation>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:AreaDialing>212</oa:AreaDialing>
+						<oa:DialNumber>555 5555</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Mobile Telephone</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:AreaDialing>212</oa:AreaDialing>
+						<oa:DialNumber>555 5555</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:URI>jPrehire@widgetGlobal.com</oa:URI>
+					</Communication>
+					<IndicativePosition>
+						<RemunerationBasisCode>Salaried</RemunerationBasisCode>
+					</IndicativePosition>
+				</IndicativeDeployment>
+				<PayCycleRemuneration>
+					<Remuneration validFrom="2009-10-05">
+						<oa:Amount currencyID="USD">50000.00</oa:Amount>
+						<RemunerationRateIntervalCode>Year</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>Base Pay</RemunerationTypeCode>
+					</Remuneration>
+				</PayCycleRemuneration>
+			</IndicativePersonDossier>
+		</IndicativeData>
+	</DataArea>
+</SyncIndicativeData>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgeScreeningOrder 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/AcknowledgeScreeningOrder.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-15T10:10:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Acknowledge>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Modified">/AcknowledgeScreeningOrder/DataArea/ScreeningOrder</oa:ResponseExpression>
+				<oa:ChangeStatus>
+					<oa:Code>Order Created</oa:Code>
+				</oa:ChangeStatus>
+			</oa:ResponseCriteria>
+		</oa:Acknowledge>
+		<ScreeningOrder majorVersionID="2" minorVersionID="1">
+			<DocumentID schemeID="OrderID">1111-000-111-2009-10-15</DocumentID>
+			<ScreeningPackage></ScreeningPackage>
+		</ScreeningOrder>
+	</DataArea>
+</AcknowledgeScreeningOrder>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

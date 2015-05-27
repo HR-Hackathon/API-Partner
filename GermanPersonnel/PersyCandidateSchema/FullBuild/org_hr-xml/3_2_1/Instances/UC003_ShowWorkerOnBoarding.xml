@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShowWorkerOnBoarding  releaseID="3.2" languageCode="en-US" 
+		systemEnvironmentCode="Production"
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ShowWorkerOnboarding.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>HRIS123</oa:LogicalID>
+			<oa:ConfirmationCode>Never</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-01-11T12:10:21.10Z</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID">32187e88-c34e-401b-fe0a-615ba5e87667</oa:BODID>
+	</oa:ApplicationArea>
+
+	<DataArea>
+		<oa:Show recordSetCompleteIndicator="true" recordSetTotal="1" recordSetCount="1">
+			<oa:OriginalApplicationArea>
+				<oa:Sender>
+					<oa:LogicalID>89rtc7</oa:LogicalID>
+					<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+				</oa:Sender>
+				<oa:CreationDateTime>2010-01-11T12:10:20.10Z</oa:CreationDateTime>
+				<oa:BODID schemeName="GUID">fbd87e88-c34e-401b-9d0a-615ba5e87667</oa:BODID>
+			</oa:OriginalApplicationArea>
+		</oa:Show>
+		
+		<WorkerOnBoarding majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyName="HRIS" schemeName="CompanyOnboardingID">ON-48372</DocumentID>
+			<AlternateDocumentID schemeAgencyName="ATS" schemeName="OnboardingTransactionID">df987e66</AlternateDocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID schemeAgencyName="ATS" schemeName="OrganizationID">46884910-c1ba-4a95-862d-ad6d925fcda4</OrganizationID>
+				<OrganizationName>ABC Company</OrganizationName>
+			</EmployerIdentifiers>
+			<OnBoardingPerson>
+				<PersonID schemeAgencyName="ATS" schemeName="ApplicantID">ebf81291-3dcc-4a66-8355-64881e1d7659</PersonID>
+				<PersonName>
+					<FormattedName>Frederik Goulden</FormattedName>
+					<oa:GivenName>Frederik</oa:GivenName>
+					<FamilyName>Goulden</FamilyName>
+				</PersonName>
+				<Communication>
+					<UseCode listAgencyName="ATS" listName="PhoneType">Mobile
+          Phone</UseCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>203</oa:AreaDialing>
+					<oa:DialNumber>6662323</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<Address type="ResidenceAddress">
+						<oa:AddressLine>44 12th St</oa:AddressLine>
+						<oa:CityName>Chicago</oa:CityName>
+						<oa:CountrySubDivisionCode listAgencyName="ISO" listName="ISO-3166-2:US">IL</oa:CountrySubDivisionCode>
+						<CountryCode listAgencyName="ISO" listName="ISO-3166-1-alpha-2">US</CountryCode>
+						<oa:PostalCode>60601</oa:PostalCode>
+					</Address>
+				</Communication>
+			</OnBoardingPerson>
+			<OnBoardingWorkerProfile languageCode="en">
+				<EmploymentHistory>
+					<EmployerHistory>
+						<OrganizationName>XYZ Corporation</OrganizationName>
+						<InternetDomainName>www.xyzcorp.com</InternetDomainName>
+						<IndustryCode listAgencyName="ATS" listName="IndustryName">Software</IndustryCode>
+						<EmploymentPeriod>
+							<StartDate>
+								<FormattedDateTime>2008-01-01</FormattedDateTime>
+							</StartDate>
+						</EmploymentPeriod>
+						<CurrentIndicator>true</CurrentIndicator>
+						<PositionHistory>
+							<PositionTitle>Web Developer</PositionTitle>
+							<PositionLocation>
+								<Address>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode listAgencyName="ISO" listName="ISO-3166-2:US">IL</oa:CountrySubDivisionCode>
+									<CountryCode listAgencyName="ISO" listName="ISO-3166-1-alpha-2">US</CountryCode>
+								</Address>
+							</PositionLocation>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>2008-01-01</FormattedDateTime>
+								</StartDate>
+							</EmploymentPeriod>
+							<CurrentIndicator>true</CurrentIndicator>
+							<oa:Description> Developer working in the User Experience (UX)
+              Team. Developing Web Applications for international and North
+              American clients in the Entertainment, Sports and Virtual
+              Gambling/Casino/Games fields. </oa:Description>
+						</PositionHistory>
+					</EmployerHistory>
+					<EmployerHistory>
+						<OrganizationName>SoftNet Inc.</OrganizationName>
+						<InternetDomainName>www.softnetinc.com</InternetDomainName>
+						<IndustryCode listAgencyName="ATS" listName="IndustryName">Software</IndustryCode>
+						<EmploymentPeriod>
+							<StartDate>
+								<FormattedDateTime>2007-01-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2007-12-31</FormattedDateTime>
+							</EndDate>
+						</EmploymentPeriod>
+						<PositionHistory>
+							<PositionTitle>Web Developer</PositionTitle>
+							<PositionLocation>
+								<Address>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode listAgencyName="ISO" listName="ISO-3166-2:US">IL</oa:CountrySubDivisionCode>
+									<CountryCode listAgencyName="ISO" listName="ISO-3166-1-alpha-2">US</CountryCode>
+								</Address>
+							</PositionLocation>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>2007-01-01</FormattedDateTime>
+								</StartDate>
+								<EndDate>
+									<FormattedDateTime>2007-12-31</FormattedDateTime>
+								</EndDate>
+							</EmploymentPeriod>
+							<oa:Description> Software developer of web applications for an online website management tool. </oa:Description>
+						</PositionHistory>
+					</EmployerHistory>
+				</EmploymentHistory>
+				<EducationHistory>
+					<EducationOrganizationAttendance>
+						<OrganizationName>University of Illinois at Urbana-Champaign</OrganizationName>
+						<InternetDomainName>illinois.edu</InternetDomainName>
+						<AttendancePeriod>
+							<StartDate>
+								<FormattedDateTime>2000-09-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2004-04-30</FormattedDateTime>
+							</EndDate>
+						</AttendancePeriod>
+						<EducationDegree>
+							<DegreeID schemeAgencyName="ATS" schemeName="DegreeCodes">B.Sc</DegreeID>
+							<DegreeName>Bachelor of Science</DegreeName>
+							<DegreeDate>
+								<FormattedDateTime>2004-04-30</FormattedDateTime>
+							</DegreeDate>
+							<DegreeMajor>
+								<ProgramID schemeAgencyName="ATS" schemeName="MajorCodes">COMPUTER SCIENCE</ProgramID>
+								<ProgramName>Computer Science</ProgramName>
+							</DegreeMajor>
+							<ReferenceLocation>
+								<oa:CityName>Urbana-Champaign</oa:CityName>
+								<oa:CountrySubDivisionCode listAgencyName="ISO" listName="ISO-3166-2:US">IL</oa:CountrySubDivisionCode>
+								<CountryCode listAgencyName="ISO" listName="ISO-3166-1-alpha-2">US</CountryCode>
+							</ReferenceLocation>
+						</EducationDegree>
+					</EducationOrganizationAttendance>
+				</EducationHistory>
+				<PersonQualifications>
+					<QualificationsSummary/>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="ATS" schemeName="SkillID">Ruby on Rails</CompetencyID>
+						<CompetencyName>Ruby on Rails</CompetencyName>
+						<TaxonomyID schemeAgencyName="ATS" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">5</ExperienceMeasure>
+					</PersonCompetency>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="ATS" schemeName="SkillID">C SHARP</CompetencyID>
+						<CompetencyName>C SHARP</CompetencyName>
+						<TaxonomyID schemeAgencyName="ATS" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">3</ExperienceMeasure>
+					</PersonCompetency>
+				</PersonQualifications>
+			</OnBoardingWorkerProfile>
+			<OnBoardingEmployee>
+				<EmployeeID schemeAgencyName="HRIS" schemeName="EmployeeID">EMP-98493</EmployeeID>
+				<Communication>
+					<UseCode listName="PhoneType" listAgencyName="HRIS">Office Phone</UseCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>312</oa:AreaDialing>
+					<oa:DialNumber>5551212</oa:DialNumber>
+					<oa:Extension>4444</oa:Extension>
+				</Communication>
+				<EmployeeGroupCode listName="EmployeeGroupCode" listAgencyName="HRIS">Office</EmployeeGroupCode>
+			</OnBoardingEmployee>
+			<OnBoardingEmployment>
+				<HireTypeCode listName="HireCode" listAgencyName="ATS">Fulltime</HireTypeCode>
+				<HireDate>2011-02-01</HireDate>
+				<OfferDate>2010-12-15</OfferDate>
+				<OfferAcceptedDate>2010-12-23</OfferAcceptedDate>
+			</OnBoardingEmployment>
+			<OnBoardingDeployment>
+				<DeploymentOrganization>
+					<OrganizationIdentifiers>
+						<OrganizationID schemeAgencyName="HRIS" schemeName="CompanyID">ABC-123</OrganizationID>
+						<OrganizationName>ABC Company</OrganizationName>
+					</OrganizationIdentifiers>
+				</DeploymentOrganization>
+				<WorkLocation>
+					<LocationID schemeAgencyName="HRIS" schemeName="OfficeLocationID">Office123</LocationID>
+					<LocationName>California Office</LocationName>
+				</WorkLocation>
+				<Job validFrom="2011-02-01">
+					<JobID schemeAgencyName="ATS" schemeName="JobOpeningID">JO-5543</JobID>
+					<oa:JobTitle>Web Developer</oa:JobTitle>
+					<JobCategoryCode listName="JobCategory" listAgencyName="HRIS">Software Developer </JobCategoryCode>
+				</Job>
+				<PositionID schemeAgencyName="HRIS" schemeName="PositionID">P12345</PositionID>
+				<PositionTitle>Web Developer Level 2</PositionTitle>
+				<DutyEntryDate>2011-02-01</DutyEntryDate>
+				<WorkLevelCode>FullTime</WorkLevelCode>
+				<WageHourLawCoverageCode>Exempt</WageHourLawCoverageCode>
+				<EmploymentTermCode>Regular</EmploymentTermCode>
+			</OnBoardingDeployment>
+			<Attachment>
+				<oa:EmbeddedData encodingCode="base64" filename="Frederik Goulden resume.docx" mimeCode="">
+VGhpcyBpcyBhIHRlc3Q=	
+		</oa:EmbeddedData>
+				<oa:Description>Resume</oa:Description>
+			</Attachment>
+			<Attachment>
+				<oa:EmbeddedData encodingCode="base64" filename="Frederik Goulden offer letter_e-signed 2010-12-23.pdf" mimeCode="">
+VGhpcyBpcyBhIHRlc3Q=
+		</oa:EmbeddedData>
+				<oa:Description>Offer letter, signed</oa:Description>
+			</Attachment>
+		</WorkerOnBoarding>
+	</DataArea>
+</ShowWorkerOnBoarding>
+<!--
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

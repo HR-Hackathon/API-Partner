@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This ConfirmBod will acknowledge receipt of the GetScreeningVendorOrder only in addition to the fact that the request was rejected.  In this instanct the request was for a late list, XML was well formed however, the authentication failed as identified by <ResponseExpression actionCode="Accepted" as well as an XPATH to the BODID in the  GetScreeningVendorOrder.  -->
+<ConfirmBOD releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.openapplications.org/oagis/9 ..\..\..\org_openapplications_platform\1_2\BODs\ConfirmBOD.xsd" xmlns="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ApplicationArea>
+		<Sender>
+			<LogicalID>CL6789</LogicalID>
+		</Sender>
+		<Receiver>
+			<LogicalID>123456</LogicalID>
+		</Receiver>
+		<CreationDateTime>2010-07-16T19:20:30.49-05:00</CreationDateTime>
+		<!-- BODID in the ApplicationArea will be unique for every BOD -->
+		<BODID>dd75db67-3baf-4dca-8633-ec805b7c3b57</BODID>
+	</ApplicationArea>
+	<DataArea>
+		<Confirm>
+			<OriginalApplicationArea>
+				<Sender>
+					<LogicalID>123456</LogicalID>
+					<ConfirmationCode>Always</ConfirmationCode>
+				</Sender>
+				<Receiver>
+					<LogicalID>CL6789</LogicalID>
+				</Receiver>
+				<CreationDateTime>2010-07-16T19:20:30.45-05:00</CreationDateTime>
+				<!-- BODID in the BODID from the original GetScreeningVendorOrder -->
+				<BODID>cd75db67-3baf-4dca-8633-ec805b7c3b56</BODID>
+				<UserArea>
+				</UserArea>
+			</OriginalApplicationArea>
+			<ResponseCriteria>
+				<ResponseExpression actionCode="Rejected" expressionLanguage="XPATH">/ConfirmBOD/DataArea/BOD/BODFailureMessage</ResponseExpression>
+			</ResponseCriteria>
+		</Confirm>
+		<BOD>
+			<BODFailureMessage>
+				<ErrorProcessMessage>
+					<!-- Due to the fact that different CRA's can have multiple ID's associated with a given order such as CaseID and FulfillmentID specified in the GetScreeningVendorOrder the only option here is to reference the original BODID of the GetScreeningVendorOrder -->
+					<ID schemeAgencyName="CRA" schemeName="BODID">cd75db67-3baf-4dca-8633-ec805b7c3b56</ID>
+					<Description>Authentication Failed.  Invalid UserID or Credential.</Description>
+					<ReasonCode>Authentication</ReasonCode>
+				</ErrorProcessMessage>
+			</BODFailureMessage>
+		</BOD>
+	</DataArea>
+</ConfirmBOD>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: WorkerOnBoarding.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="WorkerOnBoarding" type="WorkerOnBoardingType"/>
+	<xsd:complexType name="WorkerOnBoardingType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Worker OnBoarding </ccts:DictionaryEntryName>
+				<ccts:DefinitionText>A collection of data about an applicant who has accepted an offer with the employer and is in the process of On Boarding which includes moving the indicative data to the new system of record which would be the HRMS.  Worker OnBoarding document contains details about a the person, the person's profile (education history, employment history, military history, certifications, qualifications), employment related data, and deployment (position, remuneration)</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="EmployerIdentifiers" minOccurs="0"/>
+			<xsd:element ref="OnBoardingPerson" minOccurs="0"/>
+			<xsd:element ref="OnBoardingWorkerProfile" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="OnBoardingEmployee" minOccurs="0"/>
+			<xsd:element ref="OnBoardingEmployment" minOccurs="0"/>
+			<xsd:element ref="OnBoardingDeployment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="EmergencyContact" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Attachment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional">
+			<xsd:annotation>
+				<xsd:documentation>
+					<ccts:DictionaryEntryName>languageCode </ccts:DictionaryEntryName>
+					<ccts:DefinitionText>The language of the associated information.  CodeLists: hr:LanguageCodeEnumType</ccts:DefinitionText>
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+</xsd:schema>

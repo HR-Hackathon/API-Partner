@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This example include example to link information with attachment (to support link with European Diploma Supplement as well as European Certificate Supplement) as well as between elements (competency and Education or Employment History) -->
+<!-- The research leading to these results has received funding from the	European Community's Seventh Framework Programme (FP7/2007-2013) under grant agreement n° 216287 (TAS³ - Trusted Architecture for Securely Shared Services). -->
+<!-- The information in this document is provided "as is", and no guarantee or warranty is given that the information is fit for any particular purpose. The above referenced consortium members shall have no liability for damages of any kind including without limitation direct, special, indirect, or consequential damages that may result from the use of these materials subject to any liability which is mandatory due to applicable law. -->
+<Candidate xmlns="http://www.hr-xml.org/3" xmlns:europass="europass"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:1.1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:oa="http://www.openapplications.org/oagis/9"
+	xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/Nouns/Candidate.xsd" 
+	languageCode="fr" majorVersionID="1" minorVersionID="0">
+	<DocumentID>1067482948</DocumentID>
+	<DataCapture>
+		<FormattedDateTime>2009-04-27</FormattedDateTime>
+	</DataCapture>
+	<CandidatePerson>
+		<PersonName>
+			<FormattedName>Firstname Lastname</FormattedName>
+			<oa:GivenName>Firstname</oa:GivenName>
+			<FamilyName>Lastname</FamilyName>
+		</PersonName>
+		<Communication>
+			<Address type="Residence">
+				<oa:AddressLine sequence="1">myaddress</oa:AddressLine>
+				<oa:CityName>mycity</oa:CityName>
+				<CountryCode>FR</CountryCode>
+				<oa:PostalCode>29630</oa:PostalCode>
+				<UserArea>
+					<europass:CountryLabel xml:lang="fr">France</europass:CountryLabel>
+				</UserArea>
+			</Address>
+		</Communication>
+		<Communication>
+			<ChannelCode>Telephone</ChannelCode>
+			<UseCode>Personal</UseCode>
+			<oa:DialNumber>330620202020</oa:DialNumber>
+		</Communication>
+		<Communication>
+			<ChannelCode>MobileTelephone</ChannelCode>
+			<UseCode>Personal</UseCode>
+			<oa:DialNumber>330620202021</oa:DialNumber>
+		</Communication>
+		<Communication>
+			<ChannelCode>Email</ChannelCode>
+			<UseCode>Personal</UseCode>
+			<oa:URI>mymail@eife-l.org</oa:URI>
+		</Communication>
+		<Communication>
+			<ChannelCode>Web</ChannelCode>
+			<UseCode>Professional</UseCode>
+			<oa:URI>http://www.eife-l.org</oa:URI>
+		</Communication>
+		<NationalityCode>FR</NationalityCode>
+		<NationalityCode>DE</NationalityCode>
+		<BirthDate>1997-02-22</BirthDate>
+		<GenderCode>Male</GenderCode>
+		<PrimaryLanguageCode>FR</PrimaryLanguageCode>
+		<UserArea>
+			<europass:NationalityLabel xpath="NationalityCode[1]" xml:lang="fr">France</europass:NationalityLabel>
+			<europass:NationalityLabel xpath="NationalityCode[2]" xml:lang="fr">Allemagne</europass:NationalityLabel>
+			<europass:PrimaryLanguageLabel xml:lang="fr">Français</europass:PrimaryLanguageLabel>
+		</UserArea>
+	</CandidatePerson>
+	<CandidateProfile>
+		<CandidateObjective>Job search / Competency domain</CandidateObjective>
+		<ExecutiveSummary>not use in Europass CV </ExecutiveSummary>
+		<EmploymentHistory>
+			<EmployerHistory>
+				<OrganizationName>EIfEL</OrganizationName>
+				<OrganizationContact>
+					<Communication>
+						<Address>
+							<oa:BuildingNumber>1</oa:BuildingNumber>
+							<oa:StreetName>rue Neuve</oa:StreetName>
+							<oa:CityName>locality</oa:CityName>
+							<CountryCode>Countrycode</CountryCode>
+							<oa:PostalCode>Postalcode</oa:PostalCode>
+							<UserArea>
+								<europass:CountryLabel xml:lang="fr">France</europass:CountryLabel>
+							</UserArea>
+						</Address>
+					</Communication>
+				</OrganizationContact>
+				<IndustryCode name="Europass Cedefop Industry Code">45678</IndustryCode>
+				<EmploymentPeriod>
+					<StartDate>
+						<FormattedDateTime>1997-02-23</FormattedDateTime>
+						<DateText>1997-02</DateText>
+					</StartDate>
+					<CurrentIndicator>true</CurrentIndicator>
+				</EmploymentPeriod>
+				<PositionHistory>
+					<PositionTitle typeCode="label" languageID="en">Chief Technical Officer</PositionTitle>
+					<oa:Description languageID="en">Description of Main activities and responsibilities of this
+						job</oa:Description>
+					<JobCategoryCode name="ISCO 88 COM - 5th level added by Europass"
+						>11111</JobCategoryCode>
+				</PositionHistory>
+				<AttachmentReference>
+					<oa:Description languageID="en">Skills used</oa:Description>
+					<XPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='social']</XPath>
+				</AttachmentReference>
+				<AttachmentReference>
+					<oa:Description languageID="en">Skills used</oa:Description>
+					<XPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='organisational']</XPath>
+				</AttachmentReference>
+				<AttachmentReference>
+					<oa:Description languageID="en">Skills used</oa:Description>
+					<XPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='computer']</XPath>
+				</AttachmentReference>
+			</EmployerHistory>
+		</EmploymentHistory>
+		<EducationHistory>
+			<EducationOrganizationAttendance>
+				<OrganizationName>UFR Amiens</OrganizationName>
+				<OrganizationContact>
+					<Communication>
+						<Address>
+							<oa:CityName>Amiens</oa:CityName>
+							<CountryCode>FR</CountryCode>
+							<oa:PostalCode>80000</oa:PostalCode>
+							<UserArea>
+								<europass:CountryLabel xml:lang="fr">France</europass:CountryLabel>
+							</UserArea>
+						</Address>
+					</Communication>
+				</OrganizationContact>
+				<EducationLevelCode name="ISCED">5</EducationLevelCode>
+				<AttendancePeriod>
+					<StartDate>
+						<FormattedDateTime>1992-09-01</FormattedDateTime>
+					</StartDate>
+					<EndDate>
+						<FormattedDateTime>1995-01-31</FormattedDateTime>
+					</EndDate>
+				</AttendancePeriod>
+				<EducationDegree>
+					<DegreeName>DESS</DegreeName>
+					<DegreeTypeCode>Master</DegreeTypeCode>
+					<Comment>Principal subjects / occupational skills covered</Comment>
+					<UserArea>
+						<europass:DegreeClassification>
+							<europass:Id idOwner="ISCED1997-Fields-of-Education">
+								<europass:IdValue>14</europass:IdValue>
+							</europass:Id>
+							<europass:Description xml:lang="fr">Fields of education...</europass:Description>
+						</europass:DegreeClassification>
+					</UserArea>
+				</EducationDegree>
+				<AttachmentReference>
+					<oa:Description>EDS</oa:Description>
+					<XPath>/Candidate/CandidateProfile/Attachment/AttachmentID[text()='EDS-DESS']</XPath>
+				</AttachmentReference>
+				<AttachmentReference>
+					<oa:Description>Skills Learned</oa:Description>
+					<XPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='organisational']</XPath>
+				</AttachmentReference>
+				<AttachmentReference>
+					<oa:Description>Skills Learned</oa:Description>
+					<XPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='computer']</XPath>
+				</AttachmentReference>
+			</EducationOrganizationAttendance>
+		</EducationHistory>
+		<Licenses>
+			<License>
+				<LicenseID>A1</LicenseID>
+				<LicenseTypeCode>Europass Cedefop Driving Licences</LicenseTypeCode>
+				<LicenseName>A1</LicenseName>
+				<oa:Description>European driving licence - vehicle categories</oa:Description>
+			</License>
+			<License>
+				<LicenseID>A</LicenseID>
+				<LicenseTypeCode>Europass Cedefop Driving Licences</LicenseTypeCode>
+				<LicenseName>A</LicenseName>
+				<oa:Description>European driving licence - vehicle categories</oa:Description>
+			</License>
+			<License>
+				<LicenseID>B</LicenseID>
+				<LicenseTypeCode>Europass Cedefop Driving Licences</LicenseTypeCode>
+				<LicenseName>B</LicenseName>
+				<oa:Description>European driving licence - vehicle categories</oa:Description>
+			</License>
+		</Licenses>
+		<PersonQualifications>
+			<PersonCompetency>
+				<CompetencyID>Europass-LanguageSkills</CompetencyID>
+				<CompetencyName>Europass-LanguageSkills</CompetencyName>
+				<TaxonomyID schemeAgencyName="Common European Framework" schemeAgencyID="CEF"
+					>http://europass.cedefop.europa.eu/Competencies/CEF-main.xml </TaxonomyID>
+				<UserArea>
+					<PersonCompetency>
+						<CompetencyID>en</CompetencyID>
+						<CompetencyName>en</CompetencyName>
+						<CompetencyEvidence>
+							<oa:Description languageID="fr">anglais</oa:Description>
+						</CompetencyEvidence>
+						<UserArea>
+							<PersonCompetency>
+								<CompetencyID>CEF-Writing</CompetencyID>
+								<CompetencyName>CEF-Writing</CompetencyName>
+								<TaxonomyID schemeAgencyID="CEF"
+									schemeAgencyName="Common European Framework"
+									>http://europass.cedefop.europa.eu/Competencies/CEF-Writing-B2.xml</TaxonomyID>
+								<CompetencyEvidence>
+									<EvidenceTypeCode>self-assessment-europassCV</EvidenceTypeCode>
+									<Score>
+										<ScoreText scoreTextCode="Level: A1, A2, B1, B2, C1, C2"
+											minimumScoreText="C2" maximumScoreText="A1"
+											>B2</ScoreText>
+									</Score>
+								</CompetencyEvidence>
+							</PersonCompetency>
+							<PersonCompetency>
+								<CompetencyID>CEF-Speaking-SpokenInteraction</CompetencyID>
+								<CompetencyName>CEF-Speaking-SpokenInteraction</CompetencyName>
+								<TaxonomyID schemeAgencyID="CEF"
+									schemeAgencyName="Common European Framework"
+									>http://europass.cedefop.europa.eu/Competencies/CEF-Speaking-SpokenInteraction-C1.xml</TaxonomyID>
+								<CompetencyEvidence>
+									<EvidenceTypeCode>self-assessment-europassCV</EvidenceTypeCode>
+									<Score>
+										<ScoreText scoreTextCode="Level: A1, A2, B1, B2, C1, C2"
+											minimumScoreText="C2" maximumScoreText="A1"
+											>C1</ScoreText>
+									</Score>
+								</CompetencyEvidence>
+							</PersonCompetency>
+							<PersonCompetency>
+								<CompetencyID>CEF-Speaking-SpokenProduction</CompetencyID>
+								<CompetencyName>CEF-Speaking-SpokenProduction</CompetencyName>
+								<TaxonomyID schemeAgencyID="CEF"
+									schemeAgencyName="Common European Framework"
+									>http://europass.cedefop.europa.eu/Competencies/CEF-Speaking-SpokenProduction-B2.xml</TaxonomyID>
+								<CompetencyEvidence>
+									<EvidenceTypeCode>self-assessment-europassCV</EvidenceTypeCode>
+									<Score>
+										<ScoreText scoreTextCode="Level: A1, A2, B1, B2, C1, C2"
+											minimumScoreText="C2" maximumScoreText="A1"
+											>B2</ScoreText>
+									</Score>
+								</CompetencyEvidence>
+							</PersonCompetency>
+							<PersonCompetency>
+								<CompetencyID>CEF-Understanding-Reading</CompetencyID>
+								<CompetencyName>CEF-Understanding-Reading</CompetencyName>
+								<TaxonomyID schemeAgencyID="CEF"
+									schemeAgencyName="Common European Framework"
+									>http://europass.cedefop.europa.eu/Competencies/CEF-Understanding-Reading-C1.xml</TaxonomyID>
+								<CompetencyEvidence>
+									<EvidenceTypeCode>self-assessment-europassCV</EvidenceTypeCode>
+									<Score>
+										<ScoreText scoreTextCode="Level: A1, A2, B1, B2, C1, C2"
+											minimumScoreText="C2" maximumScoreText="A1"
+											>C1</ScoreText>
+									</Score>
+								</CompetencyEvidence>
+							</PersonCompetency>
+							<PersonCompetency>
+								<CompetencyID>CEF-Understanding-Listening</CompetencyID>
+								<CompetencyName>CEF-Understanding-Listening</CompetencyName>
+								<TaxonomyID schemeAgencyID="CEF"
+									schemeAgencyName="Common European Framework"
+									>http://europass.cedefop.europa.eu/Competencies/CEF-Understanding-Listening-C1.xml</TaxonomyID>
+								<CompetencyEvidence>
+									<EvidenceTypeCode>self-assessment-europassCV</EvidenceTypeCode>
+									<Score>
+										<ScoreText scoreTextCode="Level: A1, A2, B1, B2, C1, C2"
+											minimumScoreText="C2" maximumScoreText="A1"
+											>C1</ScoreText>
+									</Score>
+								</CompetencyEvidence>
+							</PersonCompetency>
+						</UserArea>
+					</PersonCompetency>
+					<PersonCompetency>
+						<CompetencyID>de</CompetencyID>
+						<CompetencyName>de</CompetencyName>
+						<CompetencyEvidence>
+							<oa:Description languageID="fr">allemand</oa:Description>
+						</CompetencyEvidence>
+					</PersonCompetency>
+				</UserArea>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>social</CompetencyID>
+				<CompetencyName>Europass Skills - Social</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Social.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">my social skills</oa:Description>
+				</CompetencyEvidence>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>organisational</CompetencyID>
+				<CompetencyName>Europass Skills - Organisational</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Organisational.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">my organisational skills description...blabla</oa:Description>
+				</CompetencyEvidence>
+				<UserArea>
+					<AttachmentReference>
+						<oa:Description>Skills Used</oa:Description>
+						<XPath>/Candidate/CandidateProfile/EmploymentHistory/EmployerHistory/PositionHistory/PositionTitle[text()='Chief
+							Technical Officer']</XPath>
+					</AttachmentReference>
+					<AttachmentReference>
+						<oa:Description>Skills Learned</oa:Description>
+						<XPath>/Candidate/CandidateProfile/EducationHistory/EducationOrganizationAttendance/EducationDegree/DegreeName[text()='DESS']</XPath>
+					</AttachmentReference>
+					<AttachmentReference>
+						<oa:Description>Skills Referenced</oa:Description>
+						<XPath>/Candidate/CandidateProfile/Attachment/AttachmentID[text()='EDS-DESS']</XPath>
+					</AttachmentReference>
+					<AttachmentReference>
+						<oa:Description>Skills Referenced</oa:Description>
+						<XPath>/Candidate/CandidateProfile/Attachment/AttachmentID[text()='ECS-EIFEL-CTO']</XPath>
+					</AttachmentReference>
+				</UserArea>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>technical</CompetencyID>
+				<CompetencyName>Europass Skills - Technical</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Technical.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">my technical skills description...blabla</oa:Description>
+				</CompetencyEvidence>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>computer</CompetencyID>
+				<CompetencyName>Europass Skills - Computer</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Computer.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">my computer skills description...blabla</oa:Description>
+				</CompetencyEvidence>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>artistic</CompetencyID>
+				<CompetencyName>Europass Skills - Artistic</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Artistic.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">Music: Drums</oa:Description>
+				</CompetencyEvidence>
+			</PersonCompetency>
+			<PersonCompetency>
+				<CompetencyID>other</CompetencyID>
+				<CompetencyName>Europass Skills - Other</CompetencyName>
+				<TaxonomyID schemeAgencyName="Cedefop" schemeAgencyID="Cedefop"
+					schemeName="Europass-CV-Skills"
+					>http://europass.cedefop.europa.eu/Competencies/Europass-Skills-Other.xml</TaxonomyID>
+				<CompetencyEvidence>
+					<oa:Description languageID="en">Sport: swimming</oa:Description>
+				</CompetencyEvidence>
+			</PersonCompetency>
+		</PersonQualifications>
+		<Attachment>
+			<AttachmentID>Photo</AttachmentID>
+			<oa:EmbeddedData mimeCode="img/jpeg" format="base64Binary"
+				>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</oa:EmbeddedData>
+			<DocumentTitle>Photo</DocumentTitle>
+			<AttachmentXPath>/Candidate/CandidatePerson</AttachmentXPath>
+		</Attachment>
+		<Attachment>
+			<AttachmentID>ResumeAdditionalItem</AttachmentID>
+			<oa:Description languageID="fr">Se reporter Ã  l'annexe pour les liens vers plus
+				d'information.</oa:Description>
+			<DocumentTitle>ResumeAdditionalItem</DocumentTitle>
+		</Attachment>
+		<Attachment>
+			<AttachmentID>ResumeAnnexe</AttachmentID>
+			<oa:Description  languageID="fr">Voir mon ePortfolio CV Europass</oa:Description>
+			<DocumentTitle>ResumeAnnexe</DocumentTitle>
+		</Attachment>
+		<Attachment>
+			<AttachmentID>EDS-DESS</AttachmentID>
+			<oa:URI>http://www.universitepicardiejulesvernes.edu.fr/eds/1996/desssim/marcvancoillie.pdf</oa:URI>
+			<DocumentTitle>Europass Diploma Supplement</DocumentTitle>
+			<AttachmentXPath>/Candidate/CandidateProfile/EducationHistory/EducationOrganizationAttendance/EducationDegree/DegreeName[text()='DESS']</AttachmentXPath>
+		</Attachment>
+		<Attachment>
+			<AttachmentID>ECS-EIFEL-CTO</AttachmentID>
+			<oa:URI>http://www.eife-l.org/ecs/2009/cto/marcvancoillie.pdf</oa:URI>
+			<DocumentTitle>Europass Certificate Supplement</DocumentTitle>
+			<AttachmentXPath>/Candidate/CandidateProfile/EmploymentHistory/EmployerHistory/PositionHistory/PositionTitle[text()='Chief
+				Technical Officer']</AttachmentXPath>
+			<AttachmentXPath>/Candidate/CandidateProfile/PersonQualifications/PersonCompetency/CompetencyID[text()='computer']</AttachmentXPath>
+		</Attachment>
+	</CandidateProfile>
+</Candidate>

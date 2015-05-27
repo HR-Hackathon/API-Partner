@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: UserAccount.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="UserAccount" type="UserAccountType"/>
+	<xsd:complexType name="UserAccountType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>User Account. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>Contains a set of information used to establish and maintain user accounts for an application or system.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="VersionID" minOccurs="0"/>
+			<xsd:element ref="Party" minOccurs="0"/>
+			<xsd:element ref="PartyReportingIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="FreeFormEffectivePeriod" minOccurs="0"/>
+			<xsd:element ref="UserID" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>An identifier for the user. Usually, a person ID, such as an employee ID.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccessCredential" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Contains a password or other token associated with the authentication of a user. This is used in pre-provisioning a partner system with user account information rather than in actual authentication processes (in which case the appropriate token would typically be passed in a SOAP security header). This component is repeatable to allow for multiple credentials or tokens. 
+			</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="PersonName" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>The User's actual name.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Communication" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Contact information related to the  Users.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="UserRole" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>The designated role(s) associated with the user with regard to the account. For example, "recruiter," "compliance officer," "HR manager," etc.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AuthorizedWorkScope" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A user's authorized scope of work.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="ProhibitedWorkScope" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>A prohibited scope of work for a user.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="AccountConfiguration" minOccurs="0"/>
+			<xsd:element ref="Notification" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="GoverningAgreementID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SecurityQuestionInformation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="AccountConfigurationType">
+		<xsd:sequence>
+			<xsd:element ref="UseDefaultIndicator" minOccurs="0"/>
+			<xsd:element ref="UserOptionCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="SecurityQuestionInformationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains information on a security question (For example, what is your mother's maiden name?) the answer to which is known or set by the user. Security questions sometimes are used to  support password resets or other authentication tasks.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="SecurityQuestionID" minOccurs="0"/>
+			<xsd:element ref="SecurityQuestion" minOccurs="0"/>
+			<xsd:element ref="SecurityQuestionAnswer" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SecurityQuestionInformation" type="SecurityQuestionInformationType"/>
+	<xsd:element name="AccountConfiguration" type="AccountConfigurationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains information on account options and notification perferences and details.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="GoverningAgreementID" type="oa:IdentifierType">
+		<xsd:annotation>
+			<xsd:documentation>An identifier for a relevant trading-partner agreement that sets or describes rules or details about user authorization.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="SecurityQuestionID" type="oa:IdentifierType"/>
+	<xsd:element name="SecurityQuestion" type="oa:StringType"/>
+	<xsd:element name="SecurityQuestionAnswer" type="oa:StringType"/>
+	<xsd:element name="UserOptionCode" type="oa:CodeType"/>
+</xsd:schema>

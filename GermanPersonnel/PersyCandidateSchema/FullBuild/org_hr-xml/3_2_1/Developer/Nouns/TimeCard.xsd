@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: TimeCard.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="TimeCard" type="TimeCardType"/>
+	<xsd:complexType name="TimeCardType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Time Card. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>A record of time worked; associated expenses to be reimbursed; and/or allowances associated with the engagement.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="TimeCardStatusCode" minOccurs="0"/>
+			<xsd:element ref="StaffingReferenceIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="CustomerReportingRequirements" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ReportedResource" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ReportedPeriod" minOccurs="0"/>
+			<xsd:element ref="TimeCardReportedItem" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Submitter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="TimeCardExpenseType">
+		<xsd:annotation>
+			<xsd:documentation>This allows for the reporting of expenses
+			                       for reimbursement or payment. HR-XML's TimeCard is not designed as an all-purpose
+			                       expense-reporting format, but rather is designed to accommodate the type of expenses
+			                       that are reported and reimbursed in the context of staffing assignments.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0"/>
+			<xsd:element ref="OrderLineID" minOccurs="0"/>
+			<xsd:element ref="ExpenseTypeCode" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="BillableIndicator" minOccurs="0"/>
+			<xsd:element ref="PayableIndicator" minOccurs="0"/>
+			<xsd:element ref="FreeFormEffectivePeriod" minOccurs="0"/>
+			<xsd:element ref="ExpenseDate" minOccurs="0"/>
+			<xsd:element ref="ExpenseAmount" minOccurs="0"/>
+			<xsd:element ref="Submitter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeWorkedRounding" minOccurs="0"/>
+			<xsd:element ref="Comment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="TimeCardAllowanceType">
+		<xsd:annotation>
+			<xsd:documentation>Allows for the reporting of allowances 
+				          that may be associated with the particular time worked. For example, some workers may 
+				          be due per diems to cover expenses incurred during an assignment or may receive
+				          allowances to cover the cost of items such as uniforms.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0"/>
+			<xsd:element ref="OrderLineID" minOccurs="0"/>
+			<xsd:element ref="AllowanceTypeCode" minOccurs="0"/>
+			<xsd:element ref="BillableIndicator" minOccurs="0"/>
+			<xsd:element ref="PayableIndicator" minOccurs="0"/>
+			<xsd:element ref="FreeFormEffectivePeriod" minOccurs="0"/>
+			<xsd:element ref="oa:Amount" minOccurs="0"/>
+			<xsd:element ref="PayRateIntervalCode" minOccurs="0"/>
+			<xsd:element ref="oa:Quantity" minOccurs="0"/>
+			<xsd:element ref="Submitter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeWorkedRounding" minOccurs="0"/>
+			<xsd:element ref="Comment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="TimeCardReportedItem" type="TimeCardReportedItemType"/>
+	<xsd:complexType name="TimeCardReportedItemType">
+		<xsd:annotation>
+			<xsd:documentation>Contains 
+		data on a period of work, time event, expense, or allowance that is being reported within a time card.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeReportedStatusCode" minOccurs="0"/>
+			<xsd:element ref="AssignmentID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="BillableIndicator" minOccurs="0"/>
+			<xsd:element ref="CostAllocation" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PartyReportingIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeInterval" minOccurs="0"/>
+			<xsd:element ref="TimeEvent" minOccurs="0"/>
+			<xsd:element ref="Expense" minOccurs="0"/>
+			<xsd:element ref="Allowance" minOccurs="0"/>
+			<xsd:element ref="Submitter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Attachment" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="TimeIntervalType">
+		<xsd:annotation>
+			<xsd:documentation>A period of time worked or leave or idle time reported
+				on a time card.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0"/>
+			<xsd:element ref="OrderLineID" minOccurs="0"/>
+			<xsd:element ref="TimeIntervalTypeCode" minOccurs="0"/>
+			<xsd:element ref="ComponentRateIndicator" minOccurs="0"/>
+			<xsd:element ref="FreeFormEffectivePeriod" minOccurs="0"/>
+			<xsd:element ref="PieceWork" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeCardPayRate" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Allowance" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Expense" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Submitter" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Approver" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="TimeWorkedRounding" minOccurs="0"/>
+			<xsd:element ref="Comment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Allowance" type="TimeCardAllowanceType"/>
+	<xsd:element name="Expense" type="TimeCardExpenseType"/>
+	<xsd:element name="TimeIntervalTypeCode" type="oa:CodeType"/>
+	<xsd:element name="TimeInterval" type="TimeIntervalType"/>
+	<xsd:element name="TimeEvent" type="TimeEventType"/>
+</xsd:schema>

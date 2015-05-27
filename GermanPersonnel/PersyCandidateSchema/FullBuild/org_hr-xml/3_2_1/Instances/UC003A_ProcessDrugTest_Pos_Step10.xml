@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is an example of the status on an instant drug test sent from the Lab to the consumer.  -->
+<ProcessDrugTest languageCode="en-US" releaseID="3.2" systemEnvironmentCode="Production" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessDrugTest.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>AITPA</oa:LogicalID>
+			<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2013-05-05T08:21:11.01Z</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID" schemeAgencyName="ATS">33d88-d9e3-304b-9d0a-490lx3d3g3xx</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="OnError">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add" expressionLanguage="XPath">/ProcessDrugTest/DataArea/DrugTest</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<DrugTest majorVersionID="1" minorVersionID="0" validFrom="2013-05-05">
+			<DocumentID schemeAgencyName="TPA" schemeName="OrderID">123456</DocumentID>
+			<DrugTestStatus>
+				<DrugTestStatusCode>ReceivedAtLab</DrugTestStatusCode>
+			</DrugTestStatus>
+		</DrugTest>
+	</DataArea>
+</ProcessDrugTest>

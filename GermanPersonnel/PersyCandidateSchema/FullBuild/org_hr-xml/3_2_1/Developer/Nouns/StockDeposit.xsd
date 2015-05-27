@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: StockDeposit.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="StockDeposit" type="StockDepositType"/>
+	<xsd:complexType name="StockDepositType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Stock Deposit. Detail</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>This schema is the instruction for the broker to distribute stock to a given set of participants.  The broker receives a stock transfer by the ESPP sponsor company's transfer agent and therefore needs instructions before distributions can take place. </ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="DepositTypeCode" minOccurs="0"/>
+			<xsd:element ref="ParticipantID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ParticipantName" minOccurs="0"/>
+			<xsd:element ref="PlanID" minOccurs="0"/>
+			<xsd:element ref="DepositDate" minOccurs="0"/>
+			<xsd:element ref="ShareQuantity" minOccurs="0"/>
+			<xsd:element ref="SharePrice" minOccurs="0"/>
+			<xsd:element ref="RestrictionPeriod" minOccurs="0"/>
+			<xsd:element ref="RestrictionTypeCode" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+</xsd:schema>

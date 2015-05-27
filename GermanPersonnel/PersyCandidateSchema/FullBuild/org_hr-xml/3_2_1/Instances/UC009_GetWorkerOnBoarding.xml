@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetWorkerOnBoarding languageCode="en-US" releaseID="3.2" 
+		systemEnvironmentCode="Production" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetWorkerOnBoarding.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID schemeName="Application Identifier" schemeAgencyName="ATS">e99fnp2</oa:LogicalID>
+			<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-10-15</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID" schemeAgencyName="ATS">ecd87e88-c34e-401b-9d0a-615ba5e0f6bb</oa:BODID>
+	</oa:ApplicationArea>
+
+	<DataArea>
+		<oa:Get>
+			<oa:Expression expressionLanguage="XPath">/GetWorkerOnBoarding/DataArea/WorkerOnBoarding[/EmployeeID="E121311"]</oa:Expression>
+		</oa:Get>
+		<WorkerOnBoarding majorVersionID="1" minorVersionID="0">
+		</WorkerOnBoarding>
+	</DataArea>
+</GetWorkerOnBoarding>
+<!--
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

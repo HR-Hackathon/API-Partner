@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessStockOptionExerciseOrder 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessStockOptionExerciseOrder.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2010-09-18T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>2010-09-18-A107774-14123</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/StockOptionExerciseOrder/DataArea/StockOptionExerciseOrder</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<StockOptionExerciseOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID>12094-1255</DocumentID>
+			<Participant>
+				<PersonID schemeID="Employee No.">AB11-111-333</PersonID>
+				<PersonName>
+					<oa:GivenName>Joan</oa:GivenName>
+					<FamilyName>Johns</FamilyName>
+				</PersonName>
+				<Communication>
+					<ChannelCode>Email</ChannelCode>
+					<oa:URI>joan.johns@notarealcompany.com</oa:URI>
+				</Communication>
+			</Participant>
+			<RequestDate>2010-09-18</RequestDate>
+			<GrantID>111-1111-1111</GrantID>
+			<OptionQuantity>200</OptionQuantity>
+			<SellShareQuantity>0</SellShareQuantity>
+			<SARProceedsCashPercent>0</SARProceedsCashPercent>
+			<ExerciseInstructions>
+				<CoverOptionsIndicator>true</CoverOptionsIndicator>
+				<CoverTaxesIndicator>false</CoverTaxesIndicator>
+				<CoverFeesIndicator>false</CoverFeesIndicator>
+				<UseSharesForTaxesIndicator>false</UseSharesForTaxesIndicator>
+				<UseSharesFirstIndicator>false</UseSharesFirstIndicator>
+				<ShareSaleInstructions>
+					<MarketOrderIndicator>true</MarketOrderIndicator>
+				</ShareSaleInstructions>
+			</ExerciseInstructions>
+		</StockOptionExerciseOrder>
+	</DataArea>
+</ProcessStockOptionExerciseOrder>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

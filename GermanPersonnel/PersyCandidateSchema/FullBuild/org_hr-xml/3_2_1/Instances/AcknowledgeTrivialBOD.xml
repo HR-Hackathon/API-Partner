@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgeCandidate 
+		    releaseID="3.2"
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/AcknowledgeCandidate.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-17T10:09:02.21Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-21-12-123</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Acknowledge>
+         <oa:OriginalApplicationArea>
+		       <oa:CreationDateTime>2009-10-17T10:09:02.01Z</oa:CreationDateTime>
+		       <oa:BODID>PC2009-11-17-052</oa:BODID>
+         </oa:OriginalApplicationArea>		
+         <oa:ResponseCriteria>
+		        <oa:ResponseExpression actionCode="Accepted">/AcknowledgeCandidate/DataArea/Candidate</oa:ResponseExpression>
+		        <oa:ChangeStatus>
+		               <oa:Code>Candidate Profile Created</oa:Code>
+		        </oa:ChangeStatus>
+		</oa:ResponseCriteria>
+		</oa:Acknowledge>
+		<Candidate majorVersionID="1" minorVersionID="0">
+			<DocumentID>Hello World!</DocumentID>
+           </Candidate>		
+	</DataArea>
+</AcknowledgeCandidate>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

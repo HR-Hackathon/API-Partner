@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ProcessAssessmentOrder systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessAssessmentOrder.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<!-- Application mgmt system (AMS) is sending the request for client named Weckford Corp.  The candidate to be tested is Cindy Cabot and she is applying for a sales job.  The recruiter who ordered the test is Bill Smith.  The sales test has two components to it and the scores come back simply as textual descriptions with no numeric scores but do include a pass/fail indicator for AMS requirement.  The internal name of the assessment on both the AMS and the vendor system is “SALES”. -->
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-10-12T10:09:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessAssessmentOrder/DataArea/AssessmentOrder</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<AssessmentOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID validFrom="2009-04-27">45578</DocumentID>
+			<CustomerParty>
+				<PartyID>W12345</PartyID>
+				<PartyName>Weckford Corp.</PartyName>
+				<PersonContact>
+					<PersonName>
+						<oa:GivenName>Bill</oa:GivenName>
+						<FamilyName>Smith</FamilyName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>email</ChannelCode>
+						<oa:URI>Bill_smith@weckford.com</oa:URI>
+					</Communication>
+				</PersonContact>
+				<UserArea/>
+			</CustomerParty>
+			<SupplierParty>
+				<PartyID>AVS487</PartyID>
+				<PartyName>AAA Assessment Vendor</PartyName>
+			</SupplierParty>
+			<InvitationByPartyCode>Customer</InvitationByPartyCode>
+			<PackageID>SALES</PackageID>
+			<!-- Job requisition the person is applying to -->
+			<ComparisonGroupID>JobReq89234</ComparisonGroupID>
+			<AssessmentSubject>
+				<SubjectID>999312</SubjectID>
+				<PersonName>
+					<oa:GivenName>Cindy</oa:GivenName>
+					<MiddleName>B</MiddleName>
+					<FamilyName>Cabot</FamilyName>
+				</PersonName>
+				<Communication>
+					<ChannelCode>email</ChannelCode>
+					<oa:URI>CCabot@mindspring.com</oa:URI>
+				</Communication>
+				<RaceCode>1</RaceCode>
+				<EthnicityCode>H</EthnicityCode>
+				<BirthDate>1979-06-26</BirthDate>
+				<GenderCode>Female</GenderCode>
+				<DisabilityIndicator>false</DisabilityIndicator>
+				<MilitaryStatusCode>V</MilitaryStatusCode>
+				<InternalCandidateIndicator>false</InternalCandidateIndicator>
+				<UserArea/>
+			</AssessmentSubject>
+			<AssessmentLanguageCode>en-US</AssessmentLanguageCode>
+			<AssessmentResultLanguageCode>en-US</AssessmentResultLanguageCode>	
+			<TestLocationID></TestLocationID>
+			<oa:RedirectURL>http://www.ams.com/weckford/fuseaction=jobboard.showmypositions&amp;999312</oa:RedirectURL>
+		</AssessmentOrder>
+	</DataArea>
+</ProcessAssessmentOrder>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

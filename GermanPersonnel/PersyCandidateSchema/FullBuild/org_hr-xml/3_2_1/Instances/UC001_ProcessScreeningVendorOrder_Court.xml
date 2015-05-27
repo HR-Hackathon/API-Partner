@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The function of this document is for the CRA to place a  single order by court with the provider. When the BODID is not present, it is assumed that this is a synchronous SOAP request and that a BODID is not mandatory.    If this is a SOAP Asynchrounous request, the BODID could prove to be useful.  It is recommended that the BODID be specified for each data transfer and stored by each party. -->
+<ProcessScreeningVendorOrder systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessScreeningVendorOrder.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>CRAServerName</oa:LogicalID>
+			<oa:ComponentID>ORDER PROCESSING</oa:ComponentID>
+			<oa:TaskID>New</oa:TaskID>
+			<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:Receiver>
+			<oa:LogicalID>ProviderServerName</oa:LogicalID>
+			<oa:ComponentID>ORDER PROCESSING</oa:ComponentID>
+			<oa:ID schemeAgencyID="ProviderName">3123123</oa:ID>
+		</oa:Receiver>
+		<oa:CreationDateTime>2008-10-12T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>1432a3d4-48f4-4c59-b44d-7d8ee92543d5</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<!--In this case, the expression contains an XPATH to the action of the payload(ScreeningVendorOrder).  Normally, a payload should contain the same action for all orders in the document.  In this case, it is requesting placing a new order.  -->
+				<oa:ActionExpression actionCode="Add" expressionLanguage="XPATH">/ProcessScreeningVendorOrder/DataArea/ScreeningVendorOrder</oa:ActionExpression>
+				<oa:ChangeStatus>
+					<oa:ReasonCode>New</oa:ReasonCode>
+				</oa:ChangeStatus>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<ScreeningVendorOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID>222456789</DocumentID>
+			<AlternateDocumentID schemeAgencyName="CRA" schemeName="OrderId">222456789</AlternateDocumentID>
+			<UserID schemeAgencyName="CRA">CCorner</UserID>
+			<AccessCredential>
+				<AccessCredentialValue>secretcode</AccessCredentialValue>
+			</AccessCredential>
+			<ScreeningVendorSubject>
+				<ScreeningVendorSubjectTypeCode>Person</ScreeningVendorSubjectTypeCode>
+				<ScreeningVendorPerson>
+					<PersonLegalID schemeAgencyID="US" schemeAgencyName="SSA">123456789</PersonLegalID>
+					<PersonLegalID schemeAgencyID="VA" schemeAgencyName="DMV">123456789</PersonLegalID>
+					<PrimarySubjectIndicator>true</PrimarySubjectIndicator>
+					<ScreeningVendorPersonName>
+						<ScreeningSubjectTypeCode>Current</ScreeningSubjectTypeCode>
+						<PersonName nameTypeCode="CurrentName">
+							<oa:GivenName>Jane</oa:GivenName>
+							<MiddleName>A</MiddleName>
+							<FamilyName>Doe</FamilyName>
+							<FormerFamilyName>Smith</FormerFamilyName>
+						</PersonName>
+					</ScreeningVendorPersonName>
+					<Address currentAddressIndicator="true">
+						<oa:AddressLine>10 Main Street</oa:AddressLine>
+						<oa:CityName>Setauket</oa:CityName>
+						<oa:CountrySubDivisionCode listName="State">NY</oa:CountrySubDivisionCode>
+						<CountryCode>US</CountryCode>
+						<oa:PostalCode>11733</oa:PostalCode>
+					</Address>
+					<Address currentAddressIndicator="false">
+						<oa:AddressLine>5 Minor Street</oa:AddressLine>
+						<oa:CityName>Setauket</oa:CityName>
+						<oa:CountrySubDivisionCode listName="State">NY</oa:CountrySubDivisionCode>
+						<CountryCode>US</CountryCode>
+						<oa:PostalCode>11733</oa:PostalCode>
+					</Address>
+					<RaceCode>W</RaceCode>
+					<GenderCode>Male</GenderCode>
+					<FreeFormBirthDate>
+						<FormattedDateTime>2001-02-28</FormattedDateTime>
+					</FreeFormBirthDate>
+				</ScreeningVendorPerson>
+			</ScreeningVendorSubject>
+			<SubmittedDateTime>2010-05-11T12:08:10.10-05:00</SubmittedDateTime>
+			<ResultDueDateTime>2010-05-14T12:08:10.10-05:00</ResultDueDateTime>
+			<ScopeOfWork>
+				<WorkScopeCode>10</WorkScopeCode>
+				<oa:Description>Mandatory 10 year non FCRA search.</oa:Description>
+			</ScopeOfWork>
+			<ScreeningVendorOrderCode>PreScreened</ScreeningVendorOrderCode>
+			<ScreeningMessage>
+				<oa:Description>Please Rush.</oa:Description>
+			</ScreeningMessage>
+			<ScreeningVendorCourtOrder>
+				<ScreeningVendorAdmittedCharge>
+					<AdmittedChargesID>123334</AdmittedChargesID>
+					<AdmittedChargesSummary>Arresting Agency : JOPLIN POLICE AGENCY  Charge/Complaint : TRESPASSING  Disposition : Pled Guilty  Explanation : I WAS VISITING A FRIEND AT A HOMELESS SHELTER AND I DIDNT LIVE THERE  AND THE PERSON THAT WAS ASSISTING IN THE RUNNING OF THE SHELTER SAID THAT HAD TO LEAVE, BUT I DIDN'T</AdmittedChargesSummary>
+				</ScreeningVendorAdmittedCharge>
+				<CourtSearchPeriod>
+					<oa:Duration>P10Y</oa:Duration>
+				</CourtSearchPeriod>
+				<CourtSearchProductCode>Felony</CourtSearchProductCode>
+				<Court>
+					<CourtID>1234</CourtID>
+					<CourtName>Apache County Superior Court</CourtName>
+					<CourtLevel>County</CourtLevel>
+					<Address>
+						<oa:AddressLine>70 West 3rd South</oa:AddressLine>
+						<oa:CityName>St. Johns</oa:CityName>
+						<oa:CountrySubDivisionCode listName="State">AZ</oa:CountrySubDivisionCode>
+						<CountryCode>US</CountryCode>
+						<oa:PostalCode>85936</oa:PostalCode>
+					</Address>
+				</Court>
+				<Attachment>
+					<AttachmentID>1</AttachmentID>
+					<oa:EmbeddedData mimeCode="image\tiff">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</oa:EmbeddedData>
+					<oa:FileName>222456789Release.tif</oa:FileName>
+					<DocumentDateTime>1967-08-13</DocumentDateTime>
+					<oa:Description>Special Notarized Release</oa:Description>
+					<oa:FileType>tif</oa:FileType>
+				</Attachment>
+			</ScreeningVendorCourtOrder>
+		</ScreeningVendorOrder>
+	</DataArea>
+</ProcessScreeningVendorOrder>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgeSavingsPlanEnrollment 
+	systemEnvironmentCode="Production" 
+	releaseID="3.2" 
+	languageCode="en-US" 
+	xsi:schemaLocation="http://www.hr-xml.org/3 
+	../Developer/BODs/AcknowledgeSavingsPlanEnrollment.xsd" 
+	xmlns="http://www.hr-xml.org/3" 
+	xmlns:oa="http://www.openapplications.org/oagis/9" 
+	xmlns:ext="http://www.example.com" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-01-12T10:10:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+<oa:Acknowledge>
+		<oa:OriginalApplicationArea>
+			<oa:CreationDateTime>2009-01-12T10:09:02.01Z</oa:CreationDateTime>
+		</oa:OriginalApplicationArea>
+	<oa:ResponseCriteria>
+		<oa:ResponseExpression actionCode="Accepted">/AcknowledgeSavingsPlanEnrollment/DataArea/SavingsPlanEnrollment</oa:ResponseExpression>
+	</oa:ResponseCriteria>
+</oa:Acknowledge>
+<SavingsPlanEnrollment majorVersionID="1" minorVersionID="0">
+	<DocumentID>12094-1255</DocumentID>
+</SavingsPlanEnrollment>
+	</DataArea>
+</AcknowledgeSavingsPlanEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

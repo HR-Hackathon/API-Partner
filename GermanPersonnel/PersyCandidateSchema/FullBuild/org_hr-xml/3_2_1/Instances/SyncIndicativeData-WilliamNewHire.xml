@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncIndicativeData 
+	systemEnvironmentCode="Production" 
+	releaseID="3.2" 
+	languageCode="en-US" 
+	xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncIndicativeData.xsd" 
+	xmlns="http://www.hr-xml.org/3" 
+	xmlns:oa="http://www.openapplications.org/oagis/9" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<oa:ApplicationArea>
+		<oa:CreationDateTime>2001-09-01</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/SyncIndicativeData/DataArea/IndicativeData</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Sync>
+<IndicativeData majorVersionID="1" minorVersionID="0">
+	<EmployerIdentifiers>
+		<OrganizationID schemeID="DUNNS" schemeAgencyID="Dunn &amp; Bradstreet">72241</OrganizationID>
+		<OrganizationName>Widget Manufacturing</OrganizationName>
+	</EmployerIdentifiers>
+	<IndicativePersonDossier>
+		<IndicativePerson>
+			<PersonLegalID schemeAgencyID="Canadian Social Insurance" validFrom="1961-04-05" validTo="2000-05-11">123-456-789</PersonLegalID>
+			<PersonName>
+				<oa:GivenName>William</oa:GivenName>
+				<FamilyName>Jones</FamilyName>
+			</PersonName><Communication>
+			<Address type="Residence">
+					<oa:BuildingNumber>875</oa:BuildingNumber>
+					<oa:StreetName>rue Fraser</oa:StreetName>
+					<oa:CityName>Quebec City</oa:CityName>
+					<oa:CountrySubDivisionCode>Quebec</oa:CountrySubDivisionCode>
+					<CountryCode>CA</CountryCode>
+					<oa:PostalCode>G1R 5C7</oa:PostalCode>
+				</Address></Communication>
+				<Communication validFrom="2001-01-01">
+			    <ChannelCode>Telephone</ChannelCode>
+				<UseCode>Home</UseCode>
+                <oa:AreaDialing>418</oa:AreaDialing>
+		        <oa:DialNumber>555-9876</oa:DialNumber>
+		    </Communication>    
+			<BirthDate>1961-04-05</BirthDate>
+			<GenderCode>Male</GenderCode>
+			<CertifiedMaritalStatus>
+ 			     <MaritalStatusCode>Unmarried</MaritalStatusCode>
+			</CertifiedMaritalStatus>
+		</IndicativePerson>
+		<IndicativeEmployee>
+			<EmployeeID validFrom="2001-01-01">Widget Manufacturing</EmployeeID>
+				<LaborBargainingUnitMemberCode>NonMember</LaborBargainingUnitMemberCode>
+			<EmployeeGroupCode listID="EmployeeGroupCodes" listAgencyID="Widget Manufacturing" validFrom="2001-01-01">Y17LT6</EmployeeGroupCode>
+		</IndicativeEmployee>
+		<IndicativeEmployment>
+			<EmployedIndicator>true</EmployedIndicator>
+			<EmploymentLifecycle>
+				<Hire>
+					<HireDate>2001-01-01</HireDate>
+				</Hire>
+			</EmploymentLifecycle>
+		</IndicativeEmployment>
+		<IndicativeDeployment>
+			<ResourceRelationshipCode>Employee</ResourceRelationshipCode>
+			<DeploymentOrganization>
+				<OrganizationIdentifiers>
+					<OrganizationID schemeID="DUNNS" schemeAgencyID="Dunn &amp; Bradstreet">72241</OrganizationID>
+					<OrganizationName>Widget Manufacturing</OrganizationName>
+				</OrganizationIdentifiers>
+				<OrganizationalIdentifiers organizationalTypeCode="Unit" validFrom="2001-01-01">
+					<OrganizationalID schemeID="Division Id">01</OrganizationalID>
+					<OrganizationalName>Quebec Plant</OrganizationalName>
+				</OrganizationalIdentifiers>
+		</DeploymentOrganization>
+             <WorkLocation allocationPercentage="100">
+					<LocationID schemeID="location code">87609</LocationID>
+				    <Address>
+					  <oa:BuildingNumber>100</oa:BuildingNumber>
+				   	  <oa:StreetName>rue Monte</oa:StreetName>
+					  <oa:CityName>Quebec City</oa:CityName>
+					  <oa:CountrySubDivisionCode>Quebec</oa:CountrySubDivisionCode>
+					  <CountryCode>CA</CountryCode>
+					  <oa:PostalCode>G1R 5C7</oa:PostalCode>
+				    </Address>
+				</WorkLocation>		
+		    <Communication validFrom="2001-01-01">
+                <ChannelCode>Telephone</ChannelCode>			
+				<UseCode>office</UseCode>
+				<oa:AreaDialing>418</oa:AreaDialing>
+				<oa:DialNumber>555-1000</oa:DialNumber>
+			</Communication>
+			<Job>
+				<JobCategoryCode>Shop Floor</JobCategoryCode>
+				<JobEvaluation>
+					<JobPlanCode>Assembly Line</JobPlanCode>
+					<JobGradeCode>B17</JobGradeCode>
+					<JobStepCode>1</JobStepCode>
+				</JobEvaluation>
+			</Job>
+			<IndicativePosition>
+				<PositionID>20</PositionID>
+				<PositionTitle>Assembly Line Worker</PositionTitle>
+				<RemunerationBasisCode>Salaried</RemunerationBasisCode>
+			</IndicativePosition>
+			<Schedule>
+				<ScheduledHours scheduleBasis="Day">8</ScheduledHours>
+				<ScheduledHours scheduleBasis="Week">40</ScheduledHours>
+			</Schedule>
+			<AssignmentEntryReasonCode>Hire</AssignmentEntryReasonCode>
+			<WorkLevelCode>FullTime</WorkLevelCode>
+			<WageHourLawCoverageCode countryCode="CA">Exempt</WageHourLawCoverageCode>
+			<EmploymentTermCode>Regular</EmploymentTermCode>
+			<NationalityContextCode>Domestic</NationalityContextCode>
+		</IndicativeDeployment>
+		<PayCycleRemuneration>
+			<Remuneration validFrom="2001-01-01">
+				<oa:Amount currencyID="CAD">15</oa:Amount>
+				<RemunerationRateIntervalCode>Hour</RemunerationRateIntervalCode>
+				<RemunerationTypeCode>Base Pay</RemunerationTypeCode>
+			</Remuneration>
+		</PayCycleRemuneration>
+		<Affiliation>
+			<LaborBargainingUnit>
+				<OrganizationName>International Example of Machinists</OrganizationName>
+				<AgreementID validFrom="2009-01-01" validTo="2011-01-01" schemeAgencyID="IEM">P71154</AgreementID>
+			</LaborBargainingUnit>
+		</Affiliation>
+	</IndicativePersonDossier>
+</IndicativeData>
+</DataArea>
+</SyncIndicativeData>
+<!--
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

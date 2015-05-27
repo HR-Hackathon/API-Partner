@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessStaffingOrder 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessStaffingOrder.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-15T10:09:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessStaffingOrder/DataArea/StaffingOrder</oa:ActionExpression>
+				<oa:ChangeStatus>
+					<oa:Code>New RFQ</oa:Code>
+				</oa:ChangeStatus>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<StaffingOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID validFrom="2008-01-01" validTo="2008-01-31" schemeID="Request for Quotation" schemeAgencyID="StaffingCustomer">RFQ23489712</DocumentID>
+			<StaffingOrderTypeCode>RFQ</StaffingOrderTypeCode>
+			<StaffingOrderStatusCode>New</StaffingOrderStatusCode>
+			<CustomerParty>
+				<PartyID schemeID="StaffingCustomerID" schemeAgencyID="StaffingCustomer">445123</PartyID>
+				<PartyID schemeID="StaffingCustomerOrgUnitId" schemeAgencyID="StaffingCustomer">12</PartyID>
+				<PersonContact contactTypeCode="Request Placed By">
+					<PersonName>
+						<LegalName>Jan Janssen</LegalName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Mobile Telephone</ChannelCode>
+						<oa:CountryDialing>0031</oa:CountryDialing>
+						<oa:AreaDialing>06</oa:AreaDialing>
+						<oa:DialNumber>12345678</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						 <oa:URI>jan.janssen@staffingcustomer.nl</oa:URI>
+					</Communication>
+					<Communication>
+						<ChannelCode>Web</ChannelCode>
+						 <oa:URI>http://www.staffingcustomer.nl</oa:URI>
+					</Communication>
+				</PersonContact>
+			</CustomerParty>
+			<SupplierParty>
+				<PartyID schemeAgencyID="StaffingCompany">676773</PartyID>
+			</SupplierParty>
+			<StaffingReferenceIDs>
+				<MasterStaffingOrderID schemeAgencyID="StaffingCustomer">FA5623467</MasterStaffingOrderID>
+			</StaffingReferenceIDs>
+			<CustomerReportingRequirements>
+				<DepartmentCode>12</DepartmentCode>
+				<CostCenterCode>173</CostCenterCode>
+				<ProjectCode>G12345</ProjectCode>
+				<CustomerReferenceNumber>PO123789</CustomerReferenceNumber>		
+			</CustomerReportingRequirements>
+			<RequiredResponseDate>2008-01-12T16:00:00</RequiredResponseDate>
+			<MultiVendorDistributionIndicator>true</MultiVendorDistributionIndicator>
+			<StaffingRequisition>
+				<PositionTitle>Information Analyst</PositionTitle>
+				<PositionLocation>
+					<LocationName>Building A</LocationName>
+					<Address>
+						<oa:BuildingNumber>27</oa:BuildingNumber>
+						<oa:StreetName>Colosseum</oa:StreetName>
+						<oa:CityName>Enschede</oa:CityName>
+						<CountryCode>NL</CountryCode>
+						<oa:PostalCode>7521 PV</oa:PostalCode>	
+					</Address>
+				</PositionLocation>
+				<PositionOpenQuantity>1</PositionOpenQuantity>
+				<JobCategoryCode>45</JobCategoryCode>
+				<PositionOfferingTypeCode>Secondment</PositionOfferingTypeCode>
+				<PositionQualifications>
+					<PositionCompetency>
+						<CompetencyName>WorkingAndThinkingLevel</CompetencyName>
+						<RequiredProficiencyLevel>
+							<ScoreText>WO</ScoreText>
+						</RequiredProficiencyLevel>
+					</PositionCompetency>
+					<PositionCompetency>
+						<CompetencyName>Project management</CompetencyName>
+						<RequiredProficiencyLevel>
+							<ScoreText>Project management course</ScoreText>
+						</RequiredProficiencyLevel>
+					</PositionCompetency>	
+					<EducationRequirement>
+						<DegreeTypeCode>Bc.</DegreeTypeCode>
+						<ProgramName>HEAO</ProgramName>
+						<ProgramConcentration>Commercial economics</ProgramConcentration>
+					</EducationRequirement>
+					<LicenseTypeCode>Rijbewijs B</LicenseTypeCode>
+				</PositionQualifications>
+				<PositionFormattedDescription>
+					<Content languageID="en">Information Analist for Staffing Company</Content>
+				</PositionFormattedDescription>
+				<StaffingAvailability>
+					<StartDate>
+						<FormattedDateTime>2008-02-01</FormattedDateTime>
+					</StartDate>
+					<ExpectedEndDate>
+						<FormattedDateTime>2009-02-01</FormattedDateTime>
+					</ExpectedEndDate>
+				</StaffingAvailability>
+				<Shift>
+					<ShiftWorkIndicator>true</ShiftWorkIndicator>
+					<ShiftDescription>4-shift</ShiftDescription>
+				</Shift>			
+				<Schedule>
+					<ScheduledHours scheduleBasis="Week">36</ScheduledHours>
+					<ScheduledDays scheduleBasis="Week">4</ScheduledDays>
+				</Schedule>
+				<RequisitionReasonCode>Position</RequisitionReasonCode>		
+				<StaffingRate validFrom="2008-03-01">
+					<OrderLineID>5</OrderLineID>
+					<ComponentRateIndicator>false</ComponentRateIndicator>
+					<RateTypeCode>bill</RateTypeCode>
+					<RateStatusCode>proposed</RateStatusCode>
+					<oa:Amount currencyID="EUR">15.00</oa:Amount>
+					<PayRateIntervalCode>Hour</PayRateIntervalCode>
+					<Multiplier>100</Multiplier>
+				</StaffingRate>
+				<StaffingRate validFrom="2008-03-01" validTo="2008-07-01"> 
+					<OrderLineID>4</OrderLineID>
+					<ComponentRateIndicator>false</ComponentRateIndicator> 
+					<RateTypeCode>minPayRate</RateTypeCode>
+					<RateStatusCode>proposed</RateStatusCode>
+					<oa:Amount currencyID="EUR">14.00</oa:Amount>
+					<PayRateIntervalCode>Hour</PayRateIntervalCode>
+					<Multiplier>100</Multiplier>
+				</StaffingRate>		
+				<StaffingRate validFrom="2008-03-01" validTo="2008-07-01">
+					<OrderLineID>3</OrderLineID>
+					<ComponentRateIndicator>false</ComponentRateIndicator>
+					<RateTypeCode>maxPayRate</RateTypeCode>
+					<RateStatusCode>proposed</RateStatusCode>
+					<oa:Amount currencyID="EUR">20.00</oa:Amount>
+					<PayRateIntervalCode>Hour</PayRateIntervalCode>
+					<Multiplier>100</Multiplier>
+				</StaffingRate>				
+				<LaborBargainingUnit>
+					<AgreementID>824</AgreementID>
+					<AgreementName>CAO Staffing Companies</AgreementName>				
+				</LaborBargainingUnit>		
+				<RequestedPerson>
+					<PersonName>
+						<FormattedName>Katrien de Vries</FormattedName>
+					</PersonName>
+				</RequestedPerson>
+			</StaffingRequisition>
+			<Comment>This is a free text field for comments.</Comment>
+		</StaffingOrder>
+	</DataArea>
+</ProcessStaffingOrder>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

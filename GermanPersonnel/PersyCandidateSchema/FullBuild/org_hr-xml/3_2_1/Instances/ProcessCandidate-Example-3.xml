@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessCandidate 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessCandidate.xsd" 
+			xmlns:ext="http://resumeparsingco.com" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-17T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-052</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessCandidate/DataArea/Candidate</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<Candidate majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="CandidateID" schemeAgencyID="GenericJobBoardCoInc.com">8811811199999</DocumentID>
+			<AlternateDocumentID schemeID="ResumeID" schemeAgencyID="ParseMeCo, Inc.">1118889922999</AlternateDocumentID>
+			<DataCapture>
+				<SupplierPartyID>info@ParseMeCo.com</SupplierPartyID>
+				<DataCaptureMethodCode>Automated</DataCaptureMethodCode>
+				<FormattedDateTime>2009-10-17</FormattedDateTime>
+			</DataCapture>
+			<CandidatePerson>
+				<PersonName>
+					<FormattedName>Tom NotForReal</FormattedName>
+					<oa:GivenName>Tom</oa:GivenName>
+					<FamilyName>NotForReal</FamilyName>
+				</PersonName>
+				<Communication>
+					<ChannelCode>Telephone</ChannelCode>
+					<UseCode>Business</UseCode>
+					<oa:AreaDialing>212</oa:AreaDialing>
+					<oa:DialNumber>366-5555</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<ChannelCode>Fax</ChannelCode>
+					<UseCode>Business</UseCode>
+					<oa:AreaDialing>212</oa:AreaDialing>
+					<oa:DialNumber>367-5555</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<ChannelCode>Email</ChannelCode>
+					<UseCode>Business</UseCode>
+					<oa:URI>Tom.Bennett@notarealcompany.com</oa:URI>
+				</Communication>
+				<Communication>
+				<Address>
+					<oa:AddressLine sequence="1">1999 Fordham Dr</oa:AddressLine>
+					<oa:CityName>New York</oa:CityName>
+					<oa:CountrySubDivisionCode listID="US States">NY</oa:CountrySubDivisionCode>
+					<CountryCode>US</CountryCode>
+					<oa:PostalCode>10022</oa:PostalCode>
+				</Address>
+				</Communication>
+			</CandidatePerson>
+			<CandidateProfile>
+				<EmploymentHistory>
+					<EmployerHistory>
+						<OrganizationName>Jeopardy Enterprises Co., Inc.</OrganizationName>
+						<PositionHistory>
+							<PositionTitle>Controller</PositionTitle>
+							<ResourceRelationshipCode>Employee</ResourceRelationshipCode>
+							<PositionLocation>
+								<ReferenceLocation>
+									<oa:CityName>Chicago</oa:CityName>
+									<oa:CountrySubDivisionCode listID="US States">IL</oa:CountrySubDivisionCode>
+									<CountryCode>US</CountryCode>
+								</ReferenceLocation>
+							</PositionLocation>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>2008-09</FormattedDateTime>
+								</StartDate>
+								<EndDate>
+									<DateText>until present</DateText>
+								</EndDate>
+								<!-- CurrentIndicator - indicates that this is a position currently held 
+                                       at the time the information was reported -->
+								<CurrentIndicator>true</CurrentIndicator>
+							</EmploymentPeriod>
+							<oa:Description> 
+	* Responsible for the administration and control of the financial operations through financial planning, control, and counsel to executive team.  
+	* Oversaw compliance with relevant securities commissions (OSC, BCSC, SEC, etc).
+    * Prepared quarterly and annual financial statements, budgets, tax returns (including SR&amp;ED claims) and billings/claims/payments under collaborative/license agreements and government assistance programs
+    * Prepared Cdn and US securities filings (eg AGM materials, AIF, 20F, etc.)
+    *  SOX compliance including preparing/updating documentation of processes, completing assessments, designing tests and completing evaluations of internal control processes and developing recommendations to improve control weaknesses where appropriate.
+    *  Implemented Great Plains to replace ACCPAC
+    *  Monitor budgets and analysis of variances
+
+</oa:Description>
+						</PositionHistory>
+					</EmployerHistory>
+				</EmploymentHistory>
+				<EducationHistory>
+					<EducationOrganizationAttendance>
+						<OrganizationName>University of Virginia</OrganizationName>
+						<OrganizationUnitName>Darden School of Business</OrganizationUnitName>
+						<ProgramName>Business Administration</ProgramName>
+						<AttendancePeriod>
+							<StartDate>
+								<FormattedDateTime>2002-09</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2005-05</FormattedDateTime>
+							</EndDate>
+						</AttendancePeriod>
+						<EducationDegree>
+							<DegreeTypeCode>MBA</DegreeTypeCode>
+							<DegreeDate>
+								<FormattedDateTime>2005-05</FormattedDateTime>
+							</DegreeDate>
+						</EducationDegree>
+					</EducationOrganizationAttendance>
+					<EducationOrganizationAttendance>
+						<OrganizationName>University of Virginia</OrganizationName>
+						<OrganizationUnitName>McIntire School of Commerce</OrganizationUnitName>
+						<ProgramName>Accounting</ProgramName>
+						<AttendancePeriod>
+							<StartDate>
+								<FormattedDateTime>1999-09</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2002-05</FormattedDateTime>
+							</EndDate>
+						</AttendancePeriod>
+						<EducationDegree>
+							<DegreeTypeCode>Bachelors</DegreeTypeCode>
+							<DegreeDate>
+								<FormattedDateTime>2005-05</FormattedDateTime>
+							</DegreeDate>
+							<DegreeMajor>
+								<ProgramName>Accounting</ProgramName>
+							</DegreeMajor>
+						</EducationDegree>
+					</EducationOrganizationAttendance>
+				</EducationHistory>
+				<Licenses>
+					<License>
+					    <LicenseID schemeAgencyID="IBE-CPA">13-88811</LicenseID>
+						<LicenseTypeCode>Certified Public Accountant</LicenseTypeCode>
+					     <LicenseStatusCode>Current</LicenseStatusCode>
+						<FirstIssuedDate>
+							<FormattedDateTime>2004-04</FormattedDateTime>
+						</FirstIssuedDate>
+						<IssuingAuthority>
+							<oa:Name>Illinois Board of Examiners</oa:Name>
+							<LocationSummary>
+								<oa:CountrySubDivisionCode listID="US States">IL</oa:CountrySubDivisionCode>
+							</LocationSummary>
+						</IssuingAuthority>
+					</License>
+				</Licenses>
+				<PersonQualifications>
+					<QualificationsSummary>
+Proven record of developing and implementing financial and operational controls that improve P&amp;L scenario and competitively position firm.
+Areas of Expertise :
+    * Merger and Acquisition Negotiations
+    * Securities Compliance and Auditing 
+    * Financial and Strategic Planning
+    * P&amp;L Management
+    * Operating and Working Capital
+    * Budget Development and Management
+    * Cash Flow Management and Modeling
+    * Business Valuations
+</QualificationsSummary>
+				</PersonQualifications>
+			</CandidateProfile>
+		</Candidate>
+	</DataArea>
+</ProcessCandidate>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note this posting is designed to be parallel to ProcessStaffingOrder-Example-2.xml -->
+<ProcessPositionOpening 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessPositionOpening.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-15T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-234</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessPositionOpening/DataArea/PositionOpening</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<PositionOpening majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="PostingID" schemeAgencyID="JobBoardInc.com">88811199999</DocumentID>
+			<AlternateDocumentID validTo="2009-12-31" schemeID="RequsitionID" schemeAgencyID="StaffingCoInc">R123789</AlternateDocumentID>
+			<PositionOpeningStatusCode>Active</PositionOpeningStatusCode>
+			<PostingRequester>
+				<PartyID schemeID="Client ID">1235123</PartyID>
+				<PartyName>ABC Inc., Corp. LTD</PartyName>
+				<PartyReportingIDs schemeAgencyID="StaffingCoInc">
+					<ID schemeID="DepartmentID">Finance 901</ID>
+					<ID schemeID="AccountID">1478111</ID>
+					<ID schemeID="ProjectID">Eng 2009-1401</ID>
+				</PartyReportingIDs>
+				<PersonContact contactTypeCode="Order Placed By">
+					<PersonName>
+						<FormattedName>Bob Smith</FormattedName>
+					</PersonName>
+					<RoleName>Posting Coordinator</RoleName>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<oa:AreaDialing>312</oa:AreaDialing>
+						<oa:DialNumber>-222-5555</oa:DialNumber>
+					</Communication>
+				</PersonContact>
+				<PostingRequesterRoleCode>Staffing Agency</PostingRequesterRoleCode>
+			</PostingRequester>
+			<PositionProfile>
+				<ID>265852</ID>
+				<PositionID>1</PositionID>
+				<PositionTitle>California - Material Handler</PositionTitle>
+				<PositionLocation>
+				<ReferenceLocation>
+				<oa:CityName>Foothill Ranch</oa:CityName>
+				<oa:CountrySubDivisionCode listID="US States">CA</oa:CountrySubDivisionCode>
+				</ReferenceLocation></PositionLocation>
+				<PositionOrganization>
+                    <OrganizationIdentifiers>
+					         <OrganizationName>Foothill Ranch</OrganizationName>
+                    </OrganizationIdentifiers>
+					<OrganizationalIdentifiers organizationalTypeCode="Unit">
+						<OrganizationalName>Tier 1 Distribution Centers</OrganizationalName>
+					</OrganizationalIdentifiers>
+				</PositionOrganization>
+				<PositionOpenQuantity>3</PositionOpenQuantity>
+				<JobCategoryCode>ETW/Warehouse/Distribution</JobCategoryCode>
+				<PositionOfferingTypeCode>Contract</PositionOfferingTypeCode>
+				<PositionFormattedDescription>
+					<Content><![CDATA[Loads, unloads and moves material within or near worksite. 
+Utilizes hand truck, dolly, pallet jack. 
+May keep simple inventory records. 
+Lifts a maximum of 50 pounds unassisted. 
+Standing all day long, bending, lifting and twisting throughout the day. 
+Team work and verbal communication skills required.]]></Content>
+				</PositionFormattedDescription>
+	  	       <ShiftDescription>First Shift (M-F)</ShiftDescription>
+			</PositionProfile>
+		</PositionOpening>
+	</DataArea>
+</ProcessPositionOpening>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The function of this document is for the CRA to request the status of a single order.  Typically, the provider will need to perform some research in order to provide and estimated completion date and reason for the delay..-->
+<GetScreeningVendorReport releaseID="3.2" languageCode="en-US"  xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetScreeningVendorReport.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>123456</oa:LogicalID>
+			<oa:TaskID>Late</oa:TaskID>
+			<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:Receiver>
+			<oa:LogicalID>CL6789</oa:LogicalID>
+		</oa:Receiver>
+		<oa:CreationDateTime>2010-07-16T19:20:30.45-05:00</oa:CreationDateTime>
+		<oa:BODID>cd75db67-3baf-4dca-8633-ec805b7c3b56</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get maxItems="2">
+			<!--The expression contains an XPATH to the EstimatedOrderCompletedDate which signifies "Late List"-->
+			<oa:Expression expressionLanguage="XPATH">/GetScreeningVendorReport/DataArea/ScreeningVendorReport/EstimatedOrderCompletedDate</oa:Expression>
+		</oa:Get>
+		<ScreeningVendorReport majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="RequestID" schemeAgencyName="FADV">123456</DocumentID>
+			<!--Note that some CRA's may require the abilitiy for the provider to return more then one Id -->
+			<AlternateDocumentID schemeAgencyName="CRA" schemeName="OrderId">222456790</AlternateDocumentID>
+			<AlternateDocumentID schemeAgencyName="CRA" schemeName="CaseId">17836375</AlternateDocumentID>
+			<!--Note that some CRA's may not store and have the abilitiy to return  the Providers Id-->
+			<AlternateDocumentID schemeAgencyName="Provider">123784</AlternateDocumentID>
+			<UserID>ccorner@fadv.com</UserID>
+			<AccessCredential>
+				<AccessCredentialValue>password</AccessCredentialValue>
+			</AccessCredential>
+			<!-- This information could be used for additional subject confirmation.  It's not necessary to include the subject information in a Get Late List. -->	
+			<ScreeningVendorSubject>
+				<ScreeningVendorSubjectTypeCode>Person</ScreeningVendorSubjectTypeCode>
+				<ScreeningVendorPerson>
+					<PersonLegalID schemeAgencyID="US" schemeAgencyName="SSA">123456789</PersonLegalID>
+					<PrimarySubjectIndicator>true</PrimarySubjectIndicator>
+					<ScreeningVendorPersonName>
+						<ScreeningSubjectTypeCode>Current</ScreeningSubjectTypeCode>
+						<PersonName nameTypeCode="CurrentName">
+							<oa:GivenName>Jane</oa:GivenName>
+							<MiddleName>A</MiddleName>
+							<FamilyName>Doe</FamilyName>
+						</PersonName>
+					</ScreeningVendorPersonName>
+				</ScreeningVendorPerson>
+			</ScreeningVendorSubject>
+		</ScreeningVendorReport>
+		<ScreeningVendorReport>
+			<DocumentID schemeID="RequestID" schemeAgencyName="FADV">123457</DocumentID>
+			<AlternateDocumentID schemeID="ProviderOrderID" schemeAgencyName="Provider">9048907</AlternateDocumentID>
+			<UserID>ccorner@fadv.com</UserID>
+			<AccessCredential>
+				<AccessCredentialValue>password</AccessCredentialValue>
+			</AccessCredential>
+			<ScreeningVendorSubject>
+				<ScreeningVendorSubjectTypeCode>Person</ScreeningVendorSubjectTypeCode>
+				<ScreeningVendorPerson>
+					<PersonLegalID schemeAgencyID="US" schemeAgencyName="SSA">123452222</PersonLegalID>
+					<PrimarySubjectIndicator>true</PrimarySubjectIndicator>
+					<ScreeningVendorPersonName>
+						<ScreeningSubjectTypeCode>Current</ScreeningSubjectTypeCode>
+						<PersonName nameTypeCode="CurrentName">
+							<oa:GivenName>John</oa:GivenName>
+							<MiddleName>D</MiddleName>
+							<FamilyName>Doe</FamilyName>
+						</PersonName>
+					</ScreeningVendorPersonName>
+				</ScreeningVendorPerson>
+			</ScreeningVendorSubject>
+		</ScreeningVendorReport>
+	</DataArea>
+</GetScreeningVendorReport>

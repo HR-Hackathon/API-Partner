@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This is a notification that the original document has expired -->
+<AcknowledgeEmploymentEligibilityI-9 systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:oacl="http://www.openapplications.org/oagis/9/codelists" xmlns:qdt="http://www.openapplications.org/oagis/9/qualifieddatatypes/1.1" xmlns:udt="http://www.openapplications.org/oagis/9/unqualifieddatatypes/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/AcknowledgeEmploymentEligibilityI-9.xsd">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>9vn44urgb</oa:LogicalID>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-01-02T00:09:05.01Z</oa:CreationDateTime>
+		<oa:BODID>9ad39242-ff4e-321b-abc2-239acff36812</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Acknowledge>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2010-01-02T00:09:00.00Z</oa:CreationDateTime>
+				<oa:BODID>ecd87e88-c34e-401b-9d0a-615ba5e0f6bb</oa:BODID>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Accepted" expressionLanguage="XPath">/AcknowledgeEmploymentEligibilityI-9/DataArea/EmploymentEligibilityI-9</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+		</oa:Acknowledge>
+		<EmploymentEligibilityI-9 majorVersionID="1" minorVersionID="1">
+			<DocumentID>A000001</DocumentID>
+			<OrganizationID>10001</OrganizationID>
+		</EmploymentEligibilityI-9>
+	</DataArea>
+</AcknowledgeEmploymentEligibilityI-9>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2008 Open Applications Group, Inc. All Rights Reserved 
+-->

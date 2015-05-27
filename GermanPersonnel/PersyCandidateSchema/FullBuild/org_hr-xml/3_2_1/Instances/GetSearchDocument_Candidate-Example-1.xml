@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSearchDocument systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetSearchDocument.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-01-11T12:10:10.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get uniqueIndicator="true" recordSetSaveIndicator="true" maxItems="100" recordSetStartNumber="101">
+			<oa:Expression>/GetSearchDocument/SearchDocument</oa:Expression>
+		</oa:Get>
+		<SearchDocument majorVersionID="1" minorVersionID="0">
+			<DocumentID>ResumeMirror</DocumentID>
+			<SearchCriteria>
+				<UserID schemeName="RecruiterName">csRecruiter</UserID>
+				<SearchCriterion>
+					<CriterionName>conceptual</CriterionName>
+					<CriterionValue>Oracle DBA with JDBC experience</CriterionValue>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>CSINDEX</CriterionName>
+					<CriterionValue>tech</CriterionValue>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>keyword</CriterionName>
+					<CriterionValue>oracle</CriterionValue>
+					<ComparativeOperator>EqualTo</ComparativeOperator>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>education level</CriterionName>
+					<CriterionValue>04</CriterionValue>
+					<ComparativeOperator>GreaterThanOrEqualTo</ComparativeOperator>
+				</SearchCriterion>
+				<UserArea/>
+			</SearchCriteria>
+		</SearchDocument>
+	</DataArea>
+</GetSearchDocument>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

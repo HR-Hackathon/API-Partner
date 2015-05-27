@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShowAssessmentReport 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2"  
+		languageCode="en-US" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:oacl="http://www.openapplications.org/oagis/9/codelists" 
+		xmlns:qdt="http://www.openapplications.org/oagis/9/qualifieddatatypes/1.1" 
+		xmlns:udt="http://www.openapplications.org/oagis/9/unqualifieddatatypes/1.1" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ShowAssessmentReport.xsd">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-04-05T12:10:10.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Show>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2008-04-05T12:08:10.10Z</oa:CreationDateTime>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Accepted">/ShowAssessmentReport/DataArea/AssessmentReport</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+		</oa:Show>
+		<AssessmentReport majorVersionID="1" minorVersionID="0">
+			<OrderID schemeID="Test Order No" schemeAgencyID="AssessCo.com">100-777999-33</OrderID>
+			<AssessmentResult>
+				<AssessmentStatus>
+					<AssessmentStatusCode validFrom="2008-04-05">Test Scheduled</AssessmentStatusCode>
+				</AssessmentStatus>
+			</AssessmentResult>
+		</AssessmentReport>
+	</DataArea>
+</ShowAssessmentReport>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

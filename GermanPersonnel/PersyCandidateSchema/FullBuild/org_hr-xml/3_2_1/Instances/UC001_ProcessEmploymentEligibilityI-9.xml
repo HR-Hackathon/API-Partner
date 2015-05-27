@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessEmploymentEligibilityI-9 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessEmploymentEligibilityI-9.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>e99fnp2</oa:LogicalID>
+			<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-01-02T00:09:00.00Z</oa:CreationDateTime>
+		<oa:BODID>ecd87e88-c34e-401b-9d0a-615ba5e0f6bb</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add" expressionLanguage="XPath">/ProcessEmploymentEligibilityI-9/DataArea/EmploymentEligibilityI-9</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<EmploymentEligibilityI-9 majorVersionID="1" minorVersionID="1">
+			<DocumentID>A000001</DocumentID>
+			<OrganizationID>10001</OrganizationID>
+			<SupplierParty>
+				<PartyName>I-9 Provider Company</PartyName>
+			</SupplierParty>
+			<I-9Form revisionDate="2009-01-02" expirationDate="2012-01-01">
+				<Section1>
+					<FamilyName>Brandon</FamilyName>
+					<oa:GivenName>Taylor</oa:GivenName>
+					<MiddleName/>
+					<oa:AddressLine>1060 West Addison Street</oa:AddressLine>
+					<oa:CityName>Chicago</oa:CityName>
+					<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+					<oa:PostalCode>60613</oa:PostalCode>
+					<BirthDate>1950-03-23</BirthDate>
+					<PersonLegalID>111-33-9880</PersonLegalID>
+					<WorkerEligibilityType>USCitizen</WorkerEligibilityType>
+					<ElectronicSignature>
+						<SignatureIndicator>true</SignatureIndicator>
+						<SignatureDate>2010-01-02</SignatureDate>
+					</ElectronicSignature>
+					<PreparerCertification>
+						<FormattedName>Chris Sabian</FormattedName>
+						<PositionTitle>HR Directory</PositionTitle>
+						<OrganizationalName>CPD</OrganizationalName>
+						<ElectronicSignature>
+							<SignatureIndicator>true</SignatureIndicator>
+							<SignatureDate>2010-01-02</SignatureDate>
+						</ElectronicSignature>
+					</PreparerCertification>
+				</Section1>
+				<Section2>
+					<Section2Documentation>
+						<DocumentTitleListB>USStateDriversLicense</DocumentTitleListB>
+						<IssuingAuthorityName>United States</IssuingAuthorityName>
+						<EligibilityDocumentID validFrom="2000-01-01" validTo="2012-12-31">A123456789</EligibilityDocumentID>
+						<ExpirationDate>2012-12-31</ExpirationDate>
+						<Attachment>
+							<oa:EmbeddedData mimeCode="image/tiff">Z9pd29kLN7hjZ0dTQUxNQUFJR221RU1tQ1p0dU3ic2jos9ih</oa:EmbeddedData>
+						</Attachment>
+					</Section2Documentation>
+					<Section2Documentation>
+						<DocumentTitleListC>BirthCertificateWithSeal</DocumentTitleListC>
+						<IssuingAuthorityName>State of IL</IssuingAuthorityName>
+						<EligibilityDocumentID>123456789</EligibilityDocumentID>
+						<Attachment>
+							<oa:EmbeddedData mimeCode="application/pdf">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</oa:EmbeddedData>
+						</Attachment>
+					</Section2Documentation>
+					<EmployerCertification>
+						<FormattedName>Chris Sabian</FormattedName>
+						<PositionTitle>HR Directory</PositionTitle>
+						<OrganizationalName>CPD</OrganizationalName>
+						<SubmitterAddress languageCode="" type="">
+							<oa:AddressLine>121 N La Salle St</oa:AddressLine>
+							<oa:CityName>Chicago</oa:CityName>
+							<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+							<oa:PostalCode>60602</oa:PostalCode>
+						</SubmitterAddress>
+						<SubmitterPhoneNumber>
+							<oa:CountryDialing>US</oa:CountryDialing>
+							<oa:AreaDialing>312</oa:AreaDialing>
+							<oa:DialNumber>7444000</oa:DialNumber>
+						</SubmitterPhoneNumber>
+						<ElectronicSignature>
+							<SignatureIndicator>true</SignatureIndicator>
+							<SignatureDate>2010-01-02</SignatureDate>
+						</ElectronicSignature>
+						<HireDate>2010-01-02</HireDate>
+					</EmployerCertification>
+				</Section2>
+			</I-9Form>
+		</EmploymentEligibilityI-9>
+	</DataArea>
+</ProcessEmploymentEligibilityI-9>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2008 Open Applications Group, Inc. All Rights Reserved 
+-->

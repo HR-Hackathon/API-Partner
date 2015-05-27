@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncEPMResult xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncEPMResult.xsd">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>EPM_HR</oa:LogicalID>
+			<oa:ComponentID>ECC</oa:ComponentID>
+			<oa:TaskID>Scheduled Appraisal</oa:TaskID>
+			<oa:ReferenceID>App-1234</oa:ReferenceID>
+			<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2009-07-30T11:58:19-04:00</oa:CreationDateTime>
+		<oa:BODID>GUID-123456789890191</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/SyncEPMResult/DataArea/EPMResult</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Sync>
+		<EPMResult majorVersionID="1" minorVersionID="0">
+			<DocumentID>114-4444-111</DocumentID>
+			<ResultDate>2009-07-30</ResultDate>
+			<AppraisalSubject>
+				<PersonID schemeAgencyID="Notarealcorp, Inc." schemeID="Employee ID">4871-1810</PersonID>
+				<PersonName>
+					<oa:GivenName>John</oa:GivenName>
+					<FamilyName>Smith</FamilyName>
+				</PersonName>
+			</AppraisalSubject>
+			<!-- A regularly scheduled annual review for John Smith -->
+			<AppraisalReasonCode>Scheduled</AppraisalReasonCode>
+			<AppraisalScheduleCode>Annual</AppraisalScheduleCode>
+			<OverallRating>
+				<Score>
+					<ScoreNumeric>3.6</ScoreNumeric>
+				</Score>
+			</OverallRating>
+			<!-- Begin objectives section -->
+			<ObjectivesSection>
+				<!-- Overall rating within objectives section -->
+				<SectionSummaryResult>
+					<Weight>40</Weight>
+					<Score>
+						<ScoreNumeric>3</ScoreNumeric>
+					</Score>
+				</SectionSummaryResult>
+				<!-- Begin breakout of objectives -->
+				<ObjectiveResult>
+					<oa:Description>Increase dept sales by 25.</oa:Description>
+					<IndividualRaterScore>
+						<RaterID>93481-88-011</RaterID>
+						<Score>
+							<ScoreNumeric>3</ScoreNumeric>
+						</Score>
+						<Comment>Increased dept sales by 24 percent.</Comment>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<Score>
+							<ScoreNumeric>2</ScoreNumeric>
+						</Score>
+						<Comment>He only increased dept sales by 24 percent.</Comment>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-012</RaterID>
+						<Score>
+							<ScoreNumeric>4</ScoreNumeric>
+						</Score>
+						<Comment>Almost made the 25 percent.</Comment>
+					</IndividualRaterScore>
+				</ObjectiveResult>
+				<!-- Next individual objective -->
+				<ObjectiveResult>
+					<oa:Description>Increase product sales by 50.</oa:Description>
+					<IndividualRaterScore>
+						<RaterID>93481-88-011</RaterID>
+						<Score>
+							<ScoreNumeric>4</ScoreNumeric>
+						</Score>
+						<Comment>I increased product sales by 50 percent.</Comment>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-012</RaterID>
+						<Score>
+							<ScoreNumeric>4</ScoreNumeric>
+						</Score>
+						<Comment>He increased product sales by 50 percent.</Comment>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-013</RaterID>
+						<Comment>A tremendous contribution to our sales growth.</Comment>
+					</IndividualRaterScore>
+				</ObjectiveResult>
+			</ObjectivesSection>
+			<!-- Begin competencies rating section -->
+			<CompetencySection>
+				<!-- Overall competencies rating. -->
+				<SectionSummaryResult>
+					<oa:Description>Competency Overall Rating</oa:Description>
+					<Weight schemeID="percentage">60</Weight>
+					<Score>
+						<ScoreNumeric>4</ScoreNumeric>
+					</Score>
+				</SectionSummaryResult>
+				<!-- Detailed result for Communication Competency -->
+				<CompetencyResult>
+					<IndividualRaterScore>
+						<RaterID>93481-88-011</RaterID>
+						<Score>
+							<ScoreNumeric>3</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-012</RaterID>
+						<Score>
+							<ScoreNumeric>3</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<AssessedCompetency>
+						<CompetencyName>Communication</CompetencyName>
+					</AssessedCompetency>
+				</CompetencyResult>
+				<!-- Detailed result for Leadership Competency -->
+				<CompetencyResult>
+					<IndividualRaterScore>
+						<RaterID>93481-88-011</RaterID>
+						<Score>
+							<ScoreNumeric>4</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-012</RaterID>
+						<Score>
+							<ScoreNumeric>4</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<AssessedCompetency>
+						<CompetencyName>Leadership</CompetencyName>
+					</AssessedCompetency>
+				</CompetencyResult>
+				<!-- Detailed result for Teamwork Competency -->
+				<CompetencyResult>
+					<IndividualRaterScore>
+						<RaterID>93481-88-011</RaterID>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<IndividualRaterScore>
+						<RaterID>93481-88-012</RaterID>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</IndividualRaterScore>
+					<AssessedCompetency>
+						<CompetencyName>Team Work</CompetencyName>
+					</AssessedCompetency>
+				</CompetencyResult>
+			</CompetencySection>
+			<!-- Multi-Rater Scores -->
+			<CompetencySection>
+				<SectionTitle>Multi-Rater Appraisals</SectionTitle>
+				<!-- Ratings for competency "Delivers Results" -->
+				<CompetencyResult>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>self</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>supervisor</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>peer</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.67</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>DR/client</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.67</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<AssessedCompetency>
+						<CompetencyName>Delivers Results</CompetencyName>
+					</AssessedCompetency>
+				</CompetencyResult>
+				<!-- Ratings for competency "Build Relationships" -->
+				<CompetencyResult>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>self</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.8</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>supervisor</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>2.75</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>peer</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.75</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>DR/client</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<AssessedCompetency>
+						<CompetencyName>Build Relationships</CompetencyName>
+					</AssessedCompetency>
+				</CompetencyResult>
+				<!-- Ratings for competency "Demonstrate Trust and Integrity". Note that this also includes ratings of Behaviorial Indicators that roll-up into that competency. -->
+				<CompetencyResult>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>self</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.63</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>supervisor</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>5</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>peer</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.24</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<MultiRaterGroupScore>
+						<RaterGroupCode>DR/client</RaterGroupCode>
+						<Score>
+							<ScoreNumeric>4.68</ScoreNumeric>
+						</Score>
+					</MultiRaterGroupScore>
+					<!-- First Behaviorial Indicator, Treats others with respect and dignity.-->
+					<AssessedCompetency>
+						<CompetencyID>skillsbanknet:748</CompetencyID>
+						<CompetencyName>Demonstrate Trust and Integrity</CompetencyName>
+					</AssessedCompetency>
+					<BehavioralIndicatorScore>
+						<oa:Description>Treats others with respect and dignity.</oa:Description>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>self</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.5</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>peer</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.67</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>supervisor</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.33</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>DR/client</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>3.9</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+					</BehavioralIndicatorScore>
+					<!-- Second Behaviorial Indicator, Follows through on commitments. -->
+					<BehavioralIndicatorScore>
+						<oa:Description>Follows through on commitments.</oa:Description>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>self</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.75</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>peer</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.85</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>supervisor</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.75</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+						<MultiRaterGroupScore>
+							<RaterGroupCode>DR/client</RaterGroupCode>
+							<Score>
+								<ScoreNumeric>4.42</ScoreNumeric>
+							</Score>
+						</MultiRaterGroupScore>
+					</BehavioralIndicatorScore>
+				</CompetencyResult>
+			</CompetencySection>
+			<!-- RaterPanelDetails contains information identifying raters whose individual ratings were presented in the objectives section.  Note that a larger rater panel was involved in delivering ratings of competencies, but only summary information for the rater group was presented versus individual ratings. Thus, those individuals are not identified in the rater panel. -->
+			<RaterPanel>
+				<Rater>
+					<ID>93481-88-011</ID>
+					<RaterGroupCode>self</RaterGroupCode>
+					<PersonName>
+						<oa:GivenName>John</oa:GivenName>
+						<FamilyName>Smith</FamilyName>
+					</PersonName>
+				</Rater>
+				<Rater>
+					<ID>93481-88-012</ID>
+					<RaterGroupCode>supervisor</RaterGroupCode>
+					<PersonName>
+						<oa:GivenName>Jane</oa:GivenName>
+						<FamilyName>Doe</FamilyName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<oa:URI>jane.doe@acmecorp.net</oa:URI>
+					</Communication>
+					<ConfidentialIndicator>false</ConfidentialIndicator>
+				</Rater>
+				<Rater>
+					<ID>93481-88-013</ID>
+					<RaterGroupCode>supervisor's manager</RaterGroupCode>
+					<PersonName>
+						<oa:GivenName>Chris</oa:GivenName>
+						<FamilyName>Franklin</FamilyName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<oa:URI>chris.franklin@acmecorp.net</oa:URI>
+					</Communication>
+					<ConfidentialIndicator>false</ConfidentialIndicator>
+				</Rater>
+			</RaterPanel>
+		</EPMResult>
+	</DataArea>
+</SyncEPMResult>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

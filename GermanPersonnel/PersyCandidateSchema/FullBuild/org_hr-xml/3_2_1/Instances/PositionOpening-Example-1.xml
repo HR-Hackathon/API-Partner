@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PositionOpening xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/Nouns/PositionOpening.xsd" majorVersionID="1" minorVersionID="0">
+	<DocumentID schemeAgencyName="Daimler AG">056134</DocumentID>
+	<PositionOpeningStatusCode validFrom="2009-02-23" validTo="2009-12-31"/>
+	<PostingRequester>
+		<PartyID>010110001</PartyID>
+		<PartyName>JobStairs</PartyName>
+	</PostingRequester>
+	<PositionProfile languageCode="de-DE">
+		<PostingInstruction>
+			<PostingChannelID>1</PostingChannelID>
+			<FreeFormPeriod>
+				<StartDate>
+					<FormattedDateTime>2009-04</FormattedDateTime>
+				</StartDate>
+				<EndDate>
+					<FormattedDateTime>2009-05</FormattedDateTime>
+				</EndDate>
+			</FreeFormPeriod>
+			<ApplicationMethod>
+				<PersonContact>
+					<PersonName>
+						<FormattedName>Frau  Andrea Steisslinger</FormattedName>
+					</PersonName>
+				</PersonContact>
+				<Communication>
+					<ChannelCode>Telephone</ChannelCode>
+					<UseCode>Business</UseCode>
+					<oa:Text>+49 711 17 76159</oa:Text>
+				</Communication>
+			</ApplicationMethod>
+		</PostingInstruction>
+		<PositionTitle><![CDATA[Praktikum ab Mai 2009 - Finanzen und Betriebswirtschaft (allgemein), Stuttgart]]></PositionTitle>
+		<PositionLocation>
+			<ReferenceLocation>
+				<SpatialLocation>
+					<Latitude>30</Latitude>
+					<Longitude>150</Longitude>
+				</SpatialLocation>
+			</ReferenceLocation>
+			<Address>
+				<oa:AddressLine sequence="1">Daimler Str. 1</oa:AddressLine>
+				<oa:CityName>Stuttgart</oa:CityName>
+				<oa:CountrySubDivisionCode>Region goes here</oa:CountrySubDivisionCode>
+				<CountryCode>DE</CountryCode>
+				<oa:PostalCode>70546</oa:PostalCode>
+			</Address>
+		</PositionLocation>
+		<PositionOrganization>
+			<OrganizationIdentifiers>
+				<OrganizationID/>
+			</OrganizationIdentifiers>
+			<IndustryCode>Automotiv</IndustryCode>
+			<oa:Description><![CDATA[Daimler AG]]></oa:Description>
+		</PositionOrganization>
+		<PositionOpenQuantity>1</PositionOpenQuantity>
+		<JobCategoryCode/>
+		<CareerLevelCode>internship</CareerLevelCode>
+		<PositionFormattedDescription>
+			<oa:Name>x</oa:Name>
+			<Content>582</Content>
+		</PositionFormattedDescription>
+		<PositionFormattedDescription>
+			<oa:Name>y</oa:Name>
+			<Content>740</Content>
+		</PositionFormattedDescription>
+		<PositionFormattedDescription>
+			<oa:Name>Abteilung</oa:Name>
+			<Content><![CDATA[ICFR Automotive International]]></Content>
+		</PositionFormattedDescription>
+		<PositionFormattedDescription>
+			<oa:Name>Aufgaben</oa:Name>
+			<Content><![CDATA[<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Unterstützung bei der fachlichen Betreuung der Geschäftsbereiche bezüglich der Anwendung und Nutzung des Systems RCTS.<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Erstellung bzw. Weiterentwicklung von Handbüchern/Anleitungen für die Systemnutzer]]></Content>
+		</PositionFormattedDescription>
+		<PositionFormattedDescription>
+			<oa:Name>Anforderungen</oa:Name>
+			<Content><![CDATA[<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Studiengang: BWL mit Vertiefung Controlling, Finanzen & Rechnungswesen oder IT;<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Vordiplom erforderlich;<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Sprachkenntnisse: Sehr gute Englischkenntnisse;<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;PC-Kenntnisse: Sehr gute MS-Office Kenntnisse (insbesondere Excel)]]></Content>
+		</PositionFormattedDescription>
+		<PositionFormattedDescription>
+			<oa:Name>Zusätzliche Informationen</oa:Name>
+			<Content><![CDATA[<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Die Tätigkeit ist in Vollzeit, befristet auf 6 Monate<br><img src=../images/blank.gif width=2><img src="../images/pfeil_blau.gif" align="top">&nbsp;Ab Mai 2009 für 6 Monate, Fachbereichsansprechpartner: Ludwig Scherr, Tel.: 0711/17-5 65 78; bitte komplette Bewerbung (Anschreiben im Motivationsfeld, Lebenslauf, Zeugnisse, Imma.) ausschließlich online über die Homepage einsteuern.]]></Content>
+		</PositionFormattedDescription>
+		<SearchCriteria>
+			<SearchCriterion>
+				<CriterionName>Industry</CriterionName>
+				<CriterionValue>Automotiv</CriterionValue>
+			</SearchCriterion>
+			<SearchCriterion>
+				<CriterionName>EntryLevel</CriterionName>
+				<CriterionValue>Internship</CriterionValue>
+			</SearchCriterion>
+		</SearchCriteria>
+		<PositionPeriod>
+			<StartDate>
+				<FormattedDateTime>2009-01-23</FormattedDateTime>
+			</StartDate>
+			<EndDate>
+				<FormattedDateTime>2009-12-31</FormattedDateTime>
+			</EndDate>
+		</PositionPeriod>
+	</PositionProfile>
+</PositionOpening>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

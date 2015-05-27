@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShowSearchDocument 
+systemEnvironmentCode="Production" 
+releaseID="3.2" 
+languageCode="en-US" 
+xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ShowSearchDocument.xsd" 
+xmlns="http://www.hr-xml.org/3" 
+xmlns:oa="http://www.openapplications.org/oagis/9" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2010-01-12T08:18:15.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Show>
+			<oa:OriginalApplicationArea>
+				<oa:CreationDateTime>2010-01-11T12:10:10.10Z</oa:CreationDateTime>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Accepted">/GetSearchDocument/DataArea/SearchDocument</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+		</oa:Show>
+		<SearchDocument majorVersionID="1" minorVersionID="0">
+			<DocumentID>ResumeMirror</DocumentID>
+			<SearchCriteria>
+				<UserID schemeName="RecruiterName">csRecruiter</UserID>
+				<SearchCriterion>
+					<CriterionName>conceptual</CriterionName>
+					<CriterionValue>Oracle DBA with JDBC experience</CriterionValue>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>CSINDEX</CriterionName>
+					<CriterionValue>tech</CriterionValue>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>keyword</CriterionName>
+					<CriterionValue>oracle</CriterionValue>
+					<ComparativeOperator>EqualTo</ComparativeOperator>
+				</SearchCriterion>
+				<SearchCriterion>
+					<CriterionName>education level</CriterionName>
+					<CriterionValue>04</CriterionValue>
+					<ComparativeOperator>GreaterThanOrEqualTo</ComparativeOperator>
+				</SearchCriterion>
+				<UserArea/>
+			</SearchCriteria>
+			<SearchResult>
+				<MatchedObjectID schemeName="ApplicantID">101821</MatchedObjectID>
+				<MatchedObjectDescriptor name="Country">CAN</MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="Employer"> æ 62370 æ 62370 æ 62370 æ 62370 æ </MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="ApplicantStatus">010</MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="LinkedIn">Dmitriy Ochikov</MatchedObjectDescriptor>
+				<SearchRelevanceScore>0.109080357830093</SearchRelevanceScore>
+				<SearchRelevanceRank>1</SearchRelevanceRank>
+				<SearchResultCount>3</SearchResultCount>
+			</SearchResult>
+			<SearchResult>
+				<MatchedObjectID schemeName="ApplicantID">101821</MatchedObjectID>
+				<MatchedObjectDescriptor name="Country">USA</MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="Employer">æ TS SCI æ Data Center æ The Orkand Corporation FirstRa æ Advance Technology Corporation æ IBM and Tandem æ IBM Global Services IGS IBM an æ VeryNew Health Corporation æ Compaq Computer Corporation æ Wellness Healthcare æ Shaw Industries Berkshire Hath æ Logistics æ The Home Depot SSC æ </MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="ApplicantStatus">010</MatchedObjectDescriptor>
+				<MatchedObjectDescriptor name="LinkedIn">Kerry Officer</MatchedObjectDescriptor>
+				<SearchRelevanceScore>0.100052488145498</SearchRelevanceScore>
+				<SearchRelevanceRank>2</SearchRelevanceRank>
+				<SearchResultCount>3</SearchResultCount>
+			</SearchResult>
+			<SearchResult>
+				<RankedSearchResults>
+					<RankedResult>
+						<CriterionName>conceptual</CriterionName>
+						<Requested>oracle</Requested>
+						<Score>
+							<ScoreNumeric>0.88</ScoreNumeric>
+						</Score>
+					</RankedResult>
+					<RankedResult>
+						<CriterionName>conceptual</CriterionName>
+						<Requested>JDBC</Requested>
+						<Score>
+							<ScoreNumeric>0.82</ScoreNumeric>
+						</Score>
+					</RankedResult>
+				</RankedSearchResults>
+			</SearchResult>
+		</SearchDocument>
+	</DataArea>
+</ShowSearchDocument>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

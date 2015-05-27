@@ -1,0 +1,2621 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>OAGIS 9.5 Platform 1.2 UNCEFACT ATG Core Components -- Documentation</title>
+<meta content="text/xml; charset=iso-8859-1" http-equiv="Content-Type" />
+<style type="text/css">
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* More-configurable styles */
+
+/******** General ********/
+
+/* Document body */
+body {
+   color: Black;
+   background-color: White;
+   font-family: Arial, sans-serif;
+   font-size: 10pt;
+}
+/* Horizontal rules */
+hr {
+   color: black;
+}
+/* Document title */
+h1 {
+   font-size: 18pt;
+   letter-spacing: 2px;
+   border-bottom: 1px #ccc solid;
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+/* Main section headers */
+h2 {
+   font-size: 14pt;
+   letter-spacing: 1px;
+}
+/* Sub-section headers */
+h3, h3 a, h3 span {
+   font-size: 12pt;
+   font-weight: bold;
+   color: black;
+}
+/* Table displaying the properties of the schema components or the
+   schema document itself */
+table.properties th, table.properties th a {
+   color: black;
+   background-color: #F99; /* Pink */
+}
+table.properties td {
+   background-color: #eee; /* Gray */
+}
+
+
+/******** Table of Contents Section ********/
+
+/* Controls for switching between printing and viewing modes */
+div#printerControls {
+   color: #963; /* Orange-brown */
+}
+/* Controls that can collapse or expand all XML Instance
+   Representation and Schema Component Representation boxes */
+div#globalControls {
+   border: 2px solid #999;
+}
+
+
+/******** Schema Document Properties Section ********/
+
+/* Table displaying the namespaces declared in the schema */
+table.namespaces th {
+   background-color: #ccc;
+}
+table.namespaces td {
+   background-color: #eee;
+}
+/* Target namespace of the schema */
+span.targetNS {
+   color: #06C;
+   font-weight: bold;
+}
+
+
+/******** Schema Components' Sections ********/
+
+/* Name of schema component */
+.name {
+   color: #F93; /* Orange */
+}
+
+/* Hierarchy table */
+table.hierarchy {
+   border: 2px solid #999; /* Gray */
+}
+
+/* XML Instance Representation table */
+div.sample div.contents {
+   border: 2px dashed black;
+}
+
+/* Schema Component Representation table */
+div.schemaComponent div.contents {
+   border: 2px black solid;
+}
+
+
+/******** Glossary Section ********/
+
+/* Glossary Terms */
+.glossaryTerm {
+   color: #036; /* Blue */
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Printer-version styles */
+
+@media print {
+
+/* Ensures that controls are hidden when printing */
+div#printerControls {
+   visibility: hidden;
+}
+div#globalControls {
+   visibility: hidden;
+}
+#legend {
+   display: none;
+}
+#legendTOC {
+   display: none;
+}
+#glossary {
+   display: none;
+}
+#glossaryTOC {
+   display: none;
+}
+
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* Base styles */
+
+/******** General ********/
+
+/* Unordered lists */
+ul {
+   margin-left: 1.5em;
+   margin-bottom: 0em;
+}
+/* Tables */
+table {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   margin-left: 2px;
+   margin-right: 2px;
+}
+table th, table td {
+   font-size: 10pt;
+   vertical-align: top;
+   padding-top: 3px;
+   padding-bottom: 3px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+table th {
+   font-weight: bold;
+   text-align: left;
+}
+/* Table displaying the properties of the schema components or the
+   schema document itself */
+table.properties {
+   width: 90%;
+}
+table.properties th {
+   width: 30%;
+}
+/* Boxes that can make its content appear and disappear*/
+div.box {
+   margin: 1em;
+}
+   /* Box caption */
+div.box span.caption {
+   font-weight: bold;
+}
+   /* Button to open and close the box */
+div.box input.control {
+   width: 1.4em;
+   height: 1.4em;
+   text-align: center;
+   vertical-align: middle;
+   font-size: 11pt;
+}
+   /* Box contents */
+div.box div.contents {
+   margin-top: 3px;
+}
+
+
+/******** Table of Contents Section ********/
+
+/* Controls for switching between printing and viewing modes */
+div#printerControls {
+   white-space: nowrap;
+   font-weight: bold;
+   padding: 5px;
+   margin: 5px;
+}
+/* Controls that can collapse or expand all XML Instance
+   Representation and Schema Component Representation boxes */
+div#globalControls {
+   padding: 10px;
+   margin: 5px;
+}
+
+
+/******** Schema Document Properties Section ********/
+
+/* Table displaying the namespaces declared in the schema */
+table.namespaces th {
+}
+table.namespaces td {
+}
+/* Target namespace of the schema */
+span.targetNS {
+}
+
+
+/******** Schema Components' Sections ********/
+
+/* Name of schema component */
+.name {
+}
+
+/* Hierarchy table */
+table.hierarchy {
+   width: 90%;
+}
+table.hierarchy th {
+   font-weight: normal;
+   font-style: italic;
+   width: 20%;
+}
+table.hierarchy th, table.hierarchy td {
+   padding: 5px;
+}
+
+/* XML Instance Representation table */
+div.sample {
+   width: 90%;
+}
+div.sample div.contents {
+   padding: 5px;
+   font-family: Courier New, sans-serif;
+   font-size: 10pt;
+}
+   /* Normal elements and attributes */
+div.sample div.contents, div.sample div.contents a {
+   color: black;
+}
+   /* Group Headers */
+div.sample div.contents .group, div.sample div.contents .group a {
+   color: #999; /* Light gray */
+}
+   /* Type Information */
+div.sample div.contents .type, div.sample div.contents .type a {
+   color: #999; /* Light gray */
+}
+   /* Occurrence Information */
+div.sample div.contents .occurs, div.sample div.contents .occurs a {
+   color: #999; /* Light gray */
+}
+   /* Fixed values */
+div.sample div.contents .fixed {
+   color: #063; /* Green */
+   font-weight: bold;
+}
+   /* Simple type constraints */
+div.sample div.contents .constraint, div.sample div.contents .constraint a {
+   color: #999; /* Light gray */
+}
+   /* Elements and attributes inherited from base type */
+div.sample div.contents .inherited, div.sample div.contents .inherited a {
+   color: #666; /* Dark gray */
+}
+   /* Elements and attributes added to or changed from base type */
+div.sample div.contents .newFields {
+   font-weight: bold;
+}
+   /* Other type of information */
+div.sample div.contents .other, div.sample div.contents .other a {
+   color: #369; /* Blue */
+   font-style: italic;
+}
+   /* Link to open up window displaying documentation */
+div.sample div.contents a.documentation {
+   text-decoration: none;
+   padding-left: 3px;
+   padding-right: 3px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   font-weight: bold;
+   font-size: 11pt;
+   background-color: #FFD;
+   color: #069;
+}
+   /* Invert colors when hovering over link to open up window 
+      displaying documentation */
+div.sample div.contents a.documentation:hover {
+   color: #FFD;
+   background-color: #069;
+}
+
+/* Schema Component Representation table */
+div.schemaComponent {
+   width: 90%;
+}
+div.schemaComponent div.contents {
+   font-family: Courier New, sans-serif;
+   font-size: 10pt;
+   padding: 5px;
+}
+   /* Syntax characters */
+div.schemaComponent div.contents {
+   color: #00f; /* blue */
+}
+   /* Element and attribute tags */
+div.schemaComponent div.contents .scTag {
+   color: #933; /* maroon */
+}
+   /* Element and attribute content */
+div.schemaComponent div.contents .scContent, div.schemaComponent div.contents .scContent a {
+   color: black;
+   font-weight: bold;
+}
+   /* Comments */
+div.schemaComponent div.contents .comment {
+   color: #999; /* Light gray */
+}
+
+/******** Legend Section ********/
+
+div#legend table, div#legend div {
+   margin-bottom: 3px;
+}
+div#legend div.hint {
+   color: #999; /* Light gray */
+   width: 90%;
+   margin-left: 1em;
+   margin-bottom: 2em;
+}
+
+
+/******** Glossary Section ********/
+
+/* Glossary Terms */
+.glossaryTerm {
+   font-weight: bold;
+}
+
+
+/******** Footer ********/
+
+.footer {
+   font-size: 8pt;
+}
+</style>
+<script type="text/javascript">
+<!--
+/* IDs of XML Instance Representation boxes */
+var xiBoxes = new Array('type_AmountType_xibox', 'type_BinaryObjectType_xibox', 'type_GraphicType_xibox', 'type_PictureType_xibox', 'type_SoundType_xibox', 'type_VideoType_xibox', 'type_CodeType_xibox', 'type_DateTimeType_xibox', 'type_DateType_xibox', 'type_TimeType_xibox', 'type_IdentifierType_xibox', 'type_IndicatorType_xibox', 'type_MeasureType_xibox', 'type_NumericType_xibox', 'type_ValueType_xibox', 'type_PercentType_xibox', 'type_RateType_xibox', 'type_QuantityType_xibox', 'type_TextType_xibox', 'type_NameType_xibox');
+/* IDs of Schema Component Representation boxes */
+var scBoxes = new Array('schema_scbox', 'type_AmountType_scbox', 'type_BinaryObjectType_scbox', 'type_GraphicType_scbox', 'type_PictureType_scbox', 'type_SoundType_scbox', 'type_VideoType_scbox', 'type_CodeType_scbox', 'type_DateTimeType_scbox', 'type_DateType_scbox', 'type_TimeType_scbox', 'type_IdentifierType_scbox', 'type_IndicatorType_scbox', 'type_MeasureType_scbox', 'type_NumericType_scbox', 'type_ValueType_scbox', 'type_PercentType_scbox', 'type_RateType_scbox', 'type_QuantityType_scbox', 'type_TextType_scbox', 'type_NameType_scbox');
+
+/**
+ * Can get the ID of the button controlling
+ * a collapseable box by concatenating
+ * this string onto the ID of the box itself.
+ */
+var B_SFIX = "_button";
+
+/**
+ * Counter of documentation windows
+ * Used to give each window a unique name
+ */
+var windowCount = 0;
+
+/**
+ * Returns an element in the current HTML document.
+ * 
+ * @param elementID Identifier of HTML element
+ * @return               HTML element object
+ */
+function getElementObject(elementID) {
+    var elemObj = null;
+    if (document.getElementById) {
+        elemObj = document.getElementById(elementID);
+    }
+    return elemObj;
+}             
+
+/**
+ * Closes a collapseable box.
+ * 
+ * @param boxObj       Collapseable box
+ * @param buttonObj Button controlling box
+ */
+function closeBox(boxObj, buttonObj) {
+  if (boxObj == null || buttonObj == null) {
+     // Box or button not found
+  } else {
+     // Change 'display' CSS property of box
+     boxObj.style.display="none";
+
+     // Change text of button 
+     if (boxObj.style.display=="none") {
+        buttonObj.value=" + ";
+     }
+  }
+}
+
+/**
+ * Opens a collapseable box.
+ * 
+ * @param boxObj       Collapseable box
+ * @param buttonObj Button controlling box
+ */
+function openBox(boxObj, buttonObj) {
+  if (boxObj == null || buttonObj == null) {
+     // Box or button not found
+  } else {
+     // Change 'display' CSS property of box
+     boxObj.style.display="block";
+
+     // Change text of button
+     if (boxObj.style.display=="block") {
+        buttonObj.value=" - ";
+     }
+  }
+}
+
+/**
+ * Sets the state of a collapseable box.
+ * 
+ * @param boxID Identifier of box
+ * @param open If true, box is "opened",
+ *             Otherwise, box is "closed".
+ */
+function setState(boxID, open) {
+  var boxObj = getElementObject(boxID);
+  var buttonObj = getElementObject(boxID+B_SFIX);
+  if (boxObj == null || buttonObj == null) {
+     // Box or button not found
+  } else if (open) {
+     openBox(boxObj, buttonObj);
+     // Make button visible
+     buttonObj.style.display="inline";
+  } else {
+     closeBox(boxObj, buttonObj);
+     // Make button visible
+     buttonObj.style.display="inline";
+  }
+}
+
+/**
+ * Switches the state of a collapseable box, e.g.
+ * if it's opened, it'll be closed, and vice versa.
+ * 
+ * @param boxID Identifier of box
+ */
+function switchState(boxID) {
+  var boxObj = getElementObject(boxID);
+  var buttonObj = getElementObject(boxID+B_SFIX);
+  if (boxObj == null || buttonObj == null) {
+     // Box or button not found
+  } else if (boxObj.style.display=="none") {
+     // Box is closed, so open it
+     openBox(boxObj, buttonObj);
+  } else if (boxObj.style.display=="block") {
+     // Box is opened, so close it
+     closeBox(boxObj, buttonObj);
+  }
+}
+
+/**
+ * Closes all boxes in a given list.
+ * 
+ * @param boxList Array of box IDs
+ */
+function collapseAll(boxList) {
+  var idx;
+  for (idx = 0; idx < boxList.length; idx++) {
+     var boxObj = getElementObject(boxList[idx]);
+     var buttonObj = getElementObject(boxList[idx]+B_SFIX);
+     closeBox(boxObj, buttonObj);
+  }
+}
+
+/**
+ * Open all boxes in a given list.
+ * 
+ * @param boxList Array of box IDs
+ */
+function expandAll(boxList) {
+  var idx;
+  for (idx = 0; idx < boxList.length; idx++) {
+     var boxObj = getElementObject(boxList[idx]);
+     var buttonObj = getElementObject(boxList[idx]+B_SFIX);
+     openBox(boxObj, buttonObj);
+  }
+}
+
+/**
+ * Makes all the control buttons of boxes appear.
+ * 
+ * @param boxList Array of box IDs
+ */
+function viewControlButtons(boxList) {
+    var idx;
+    for (idx = 0; idx < boxList.length; idx++) {
+        buttonObj = getElementObject(boxList[idx]+B_SFIX);
+        if (buttonObj != null) {
+            buttonObj.style.display = "inline";
+        }
+    }
+}
+
+/**
+ * Makes all the control buttons of boxes disappear.
+ * 
+ * @param boxList Array of box IDs
+ */
+function hideControlButtons(boxList) {
+    var idx;
+    for (idx = 0; idx < boxList.length; idx++) {
+        buttonObj = getElementObject(boxList[idx]+B_SFIX);
+        if (buttonObj != null) {
+            buttonObj.style.display = "none";
+        }
+    }
+}
+
+/**
+ * Sets the page for either printing mode
+ * or viewing mode. In printing mode, the page
+ * is made to be more readable when printing it out.
+ * In viewing mode, the page is more browsable.
+ *
+ * @param isPrinterVersion If true, display in
+ *                                 printing mode; otherwise, 
+ *                                 in viewing mode
+ */
+function displayMode(isPrinterVersion) {
+    var obj;
+    if (isPrinterVersion) {
+        // Hide global control buttons
+        obj = getElementObject("globalControls");
+        if (obj != null) {
+            obj.style.visibility = "hidden";
+        }
+        // Hide Legend
+        obj = getElementObject("legend");
+        if (obj != null) {
+            obj.style.display = "none";
+        }
+        obj = getElementObject("legendTOC");
+        if (obj != null) {
+            obj.style.display = "none";
+        }
+        // Hide Glossary
+        obj = getElementObject("glossary");
+        if (obj != null) {
+            obj.style.display = "none";
+        }
+        obj = getElementObject("glossaryTOC");
+        if (obj != null) {
+            obj.style.display = "none";
+        }
+
+        // Expand all XML Instance Representation tables
+        expandAll(xiBoxes);
+        // Expand all Schema Component Representation tables
+        expandAll(scBoxes);
+
+        // Hide Control buttons
+        hideControlButtons(xiBoxes);
+        hideControlButtons(scBoxes);
+    } else {
+        // View global control buttons
+        obj = getElementObject("globalControls");
+        if (obj != null) {
+            obj.style.visibility = "visible";
+        }
+        // View Legend
+        obj = getElementObject("legend");
+        if (obj != null) {
+            obj.style.display = "block";
+        }
+        obj = getElementObject("legendTOC");
+        if (obj != null) {
+            obj.style.display = "block";
+        }
+        // View Glossary
+        obj = getElementObject("glossary");
+        if (obj != null) {
+            obj.style.display = "block";
+        }
+        obj = getElementObject("glossaryTOC");
+        if (obj != null) {
+            obj.style.display = "block";
+        }
+
+        // Expand all XML Instance Representation tables
+        expandAll(xiBoxes);
+        // Collapse all Schema Component Representation tables
+        collapseAll(scBoxes);
+
+        // View Control buttons
+        viewControlButtons(xiBoxes);
+        viewControlButtons(scBoxes);
+    }
+}
+
+/**
+ * Opens up a window displaying the documentation
+ * of a schema component in the XML Instance
+ * Representation table.
+ * 
+ * @param compDesc      Description of schema component 
+ * @param compName      Name of schema component 
+ * @param docTextArray Array containing the paragraphs 
+ *                           of the new document
+ */
+function viewDocumentation(compDesc, compName, docTextArray) {
+  var width = 400;
+  var height = 200;
+  var locX = 100;
+  var locY = 200;
+
+  /* Generate content */
+  var actualText = "<html>";
+  actualText += "<head><title>";
+  actualText += compDesc;
+  if (compName != '') {
+     actualText += ": " + compName;
+  }
+  actualText += "</title></head>";
+  actualText += "<body bgcolor=\"#FFFFEE\">";
+  // Title
+  actualText += "<p style=\"font-family: Arial, sans-serif; font-size: 12pt; font-weight: bold; letter-spacing:1px;\">";
+  actualText += compDesc;
+  if (compName != '') {
+     actualText += ": <span style=\"color:#006699\">" + compName + "</span>";
+  }
+  actualText += "</p>";
+  // Documentation
+  var idx;
+  for (idx = 0; idx < docTextArray.length; idx++) {
+     actualText += "<p style=\"font-family: Arial, sans-serif; font-size: 10pt;\">" + docTextArray[idx] + "</p>";
+  }
+  // Link to close window
+  actualText += "<a href=\"javascript:void(0)\" onclick=\"window.close();\" style=\"font-family: Arial, sans-serif; font-size: 8pt;\">Close</a>";
+  actualText += "</body></html>";
+
+  /* Display window */
+  windowCount++;
+  var docWindow = window.open("", "documentation"+windowCount, "toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable,alwaysRaised,dependent,titlebar=no,width="+width+",height="+height+",screenX="+locX+",left="+locX+",screenY="+locY+",top="+locY);
+  docWindow.document.write(actualText);
+}
+
+// -->
+</script>
+</head>
+<body>
+<h1>
+<a name="top">OAGIS 9.5 Platform 1.2 UNCEFACT ATG Core Components -- Documentation</a>
+</h1>
+<div style="float: right;">
+<div style="display:none;" id="printerControls">
+<input onclick="displayMode(this.checked)" type="checkbox" />Printer-friendly Version</div>
+<script type="text/javascript">
+<!--
+
+var pc = getElementObject("printerControls");
+if (pc != null) {
+   pc.style.display="block";
+}
+               
+// -->
+</script>
+<div style="display:none" id="globalControls">
+<strong>XML Instance Representation:</strong>
+<br />
+<span style="margin-left: 1em; white-space: nowrap">[ <a onclick="expandAll(xiBoxes)" href="javascript:void(0)">Expand All</a> | <a onclick="collapseAll(xiBoxes)" href="javascript:void(0)">Collapse All</a> ]</span>
+<br />
+<br />
+<strong>Schema Component Representation:</strong>
+<br />
+<span style="margin-left: 1em; white-space: nowrap">[ <a onclick="expandAll(scBoxes)" href="javascript:void(0)">Expand All</a> | <a onclick="collapseAll(scBoxes)" href="javascript:void(0)">Collapse All</a> ]</span>
+</div>
+<script type="text/javascript">
+<!--
+
+var gc = getElementObject("globalControls");
+if (gc != null) {
+   gc.style.display="block";
+}
+               
+// -->
+</script>
+</div>
+<h2>Table of Contents</h2>
+<ul>
+<li>
+<a href="#SchemaProperties">Schema Document Properties</a>
+</li>
+<li>
+<a href="#SchemaComponents">Global Schema Components</a>
+<ul>
+<li>
+<a href="#type_AmountType">Complex Type: <strong>AmountType</strong>
+</a>
+</li>
+<li>
+<a href="#type_BinaryObjectType">Complex Type: <strong>BinaryObjectType</strong>
+</a>
+</li>
+<li>
+<a href="#type_GraphicType">Complex Type: <strong>GraphicType</strong>
+</a>
+</li>
+<li>
+<a href="#type_PictureType">Complex Type: <strong>PictureType</strong>
+</a>
+</li>
+<li>
+<a href="#type_SoundType">Complex Type: <strong>SoundType</strong>
+</a>
+</li>
+<li>
+<a href="#type_VideoType">Complex Type: <strong>VideoType</strong>
+</a>
+</li>
+<li>
+<a href="#type_CodeType">Complex Type: <strong>CodeType</strong>
+</a>
+</li>
+<li>
+<a href="#type_DateTimeType">Simple Type: <strong>DateTimeType</strong>
+</a>
+</li>
+<li>
+<a href="#type_DateType">Simple Type: <strong>DateType</strong>
+</a>
+</li>
+<li>
+<a href="#type_TimeType">Simple Type: <strong>TimeType</strong>
+</a>
+</li>
+<li>
+<a href="#type_IdentifierType">Complex Type: <strong>IdentifierType</strong>
+</a>
+</li>
+<li>
+<a href="#type_IndicatorType">Simple Type: <strong>IndicatorType</strong>
+</a>
+</li>
+<li>
+<a href="#type_MeasureType">Complex Type: <strong>MeasureType</strong>
+</a>
+</li>
+<li>
+<a href="#type_NumericType">Simple Type: <strong>NumericType</strong>
+</a>
+</li>
+<li>
+<a href="#type_ValueType">Simple Type: <strong>ValueType</strong>
+</a>
+</li>
+<li>
+<a href="#type_PercentType">Simple Type: <strong>PercentType</strong>
+</a>
+</li>
+<li>
+<a href="#type_RateType">Simple Type: <strong>RateType</strong>
+</a>
+</li>
+<li>
+<a href="#type_QuantityType">Complex Type: <strong>QuantityType</strong>
+</a>
+</li>
+<li>
+<a href="#type_TextType">Complex Type: <strong>TextType</strong>
+</a>
+</li>
+<li>
+<a href="#type_NameType">Complex Type: <strong>NameType</strong>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h2>
+<a name="SchemaProperties">Schema Document Properties</a>
+</h2>
+<table class="properties">
+<tr>
+<th>Target Namespace</th>
+<td>
+<span class="targetNS">http://www.openapplications.org/oagis/9/unqualifieddatatypes/1.1</span>
+</td>
+</tr>
+<tr>
+<th>Element and Attribute Namespaces</th>
+<td>
+<ul>
+<li>Global element and attribute declarations belong to this schema's target namespace.</li>
+<li>By default, local element declarations belong to this schema's target namespace.</li>
+<li>By default, local attribute declarations have no namespace.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Schema Composition</th>
+<td>
+<ul>
+<li>This schema imports schema(s) from the following namespace(s):<ul>
+<li>
+<em>http://www.openapplications.org/oagis/9/codelists</em> (at ../../../OAGi/Components/CodeLists.xsd)</li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<h3>Declared Namespaces</h3>
+<table class="namespaces">
+<tr>
+<th>Prefix</th>
+<th>Namespace</th>
+</tr>
+<tr>
+<td>
+<a name="ns_xml">xml</a>
+</td>
+<td>http://www.w3.org/XML/1998/namespace</td>
+</tr>
+<tr>
+<td>
+<a name="ns_xsd">xsd</a>
+</td>
+<td>http://www.w3.org/2001/XMLSchema</td>
+</tr>
+<tr>
+<td>
+<a name="ns_udt">udt</a>
+</td>
+<td>
+<span class="targetNS">http://www.openapplications.org/oagis/9/unqualifieddatatypes/1.1</span>
+</td>
+</tr>
+<tr>
+<td>
+<a name="ns_ccts">ccts</a>
+</td>
+<td>urn:un:unece:uncefact:documentation:1.1</td>
+</tr>
+<tr>
+<td>
+<a name="ns_oacl">oacl</a>
+</td>
+<td>http://www.openapplications.org/oagis/9/codelists</td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('schema_scbox'); return false;" class="control" id="schema_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="schema_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:schema</span> <span class="scTag">targetNamespace</span>="<span class="scContent">http://www.openapplications.org/oagis/9/unqualifieddatatypes/1.1</span>" <span class="scTag">elementFormDefault</span>="<span class="scContent">qualified</span>" <span class="scTag">attributeFormDefault</span>="<span class="scContent">unqualified</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:import</span> <span class="scTag">namespace</span>="<span class="scContent">http://www.openapplications.org/oagis/9/codelists</span>" <span class="scTag">schemaLocation</span>="<span class="scContent">../../../OAGi/Components/CodeLists.xsd</span>"/&gt;</div>
+<div style="margin-left: 1.5em" class="scContent">...</div>&lt;/<span class="scTag">xsd:schema</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('schema_scbox', false);
+// -->
+</script>
+</div>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h2>
+<a name="SchemaComponents">Global Schema Components</a>
+</h2>
+<h3>Complex Type: <a class="name" name="type_AmountType">AmountType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>AmountType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>AmountType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000001&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Amount. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A number of monetary units specified in a currency where the unit of the currency is explicit or implied.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Amount&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; decimal&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_AmountType_xibox'); return false;" class="control" id="type_AmountType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_AmountType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> currencyID="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;CurrencyCodeContentType&quot; type definition could not be found." onclick="alert('&quot;CurrencyCodeContentType&quot; type definition could not be found.');">CurrencyCodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000001-SC2 SC Amount Currency. Identifier The currency of the amount. Amount Currency Identification Identifier string'); viewDocumentation('Attribute', 'currencyID', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_AmountType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_AmountType_scbox'); return false;" class="control" id="type_AmountType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_AmountType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">AmountType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">currencyID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;CurrencyCodeContentType&quot; type definition could not be found." onclick="alert('&quot;CurrencyCodeContentType&quot; type definition could not be found.');">CurrencyCodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_AmountType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_BinaryObjectType">BinaryObjectType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> &lt; <strong>BinaryObjectType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>BinaryObjectType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000002&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Binary Object. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A set of finite-length sequences of binary octets.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Binary Object&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; binary&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_BinaryObjectType_xibox'); return false;" class="control" id="type_BinaryObjectType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_BinaryObjectType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> format="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC2 SC Binary Object. Format. Text The format of the binary content. Binary Object Format Text string'); viewDocumentation('Attribute', 'format', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> mimeCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC3 SC Binary Object. Mime. Code The mime type of the binary object. Binary Object Mime Code string'); viewDocumentation('Attribute', 'mimeCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> encodingCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC4 SC Binary Object. Encoding. Code Specifies the decoding algorithm of the binary object. Binary Object Encoding Code string'); viewDocumentation('Attribute', 'encodingCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> characterSetCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC5 SC Binary Object. Character Set. Code The character set of the binary object if the mime type is text. Binary Object Character Set Code string'); viewDocumentation('Attribute', 'characterSetCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> uri="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC6 SC Binary Object. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the binary object is located. Binary Object Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'uri', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> filename="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000002-SC7 SC Binary Object. Filename.Text The filename of the binary object. Binary Object Filename Text string'); viewDocumentation('Attribute', 'filename', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_BinaryObjectType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_BinaryObjectType_scbox'); return false;" class="control" id="type_BinaryObjectType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_BinaryObjectType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">BinaryObjectType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">format</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">mimeCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">encodingCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">characterSetCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">uri</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">filename</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_BinaryObjectType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_GraphicType">GraphicType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> &lt; <strong>GraphicType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>GraphicType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000003&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Graphic. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A diagram, graph, mathematical curves, or similar representation.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Graphic&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; binary&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_GraphicType_xibox'); return false;" class="control" id="type_GraphicType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_GraphicType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> format="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000003-SC2 SC Graphic. Format. Text The format of the graphic content. Graphic Format Text string'); viewDocumentation('Attribute', 'format', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> mimeCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000003-SC3 SC Graphic. Mime. Code The mime type of the graphic object. Graphic Mime Code string'); viewDocumentation('Attribute', 'mimeCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> encodingCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000003-SC4 SC Graphic. Encoding. Code Specifies the decoding algorithm of the graphic object. Graphic Encoding Code string'); viewDocumentation('Attribute', 'encodingCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> uri="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000003-SC6 SC Graphic. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the graphic object is located. Graphic Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'uri', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> filename="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000003-SC7 SC Graphic. Filename.Text The filename of the graphic object. Graphic Filename Text string'); viewDocumentation('Attribute', 'filename', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_GraphicType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_GraphicType_scbox'); return false;" class="control" id="type_GraphicType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_GraphicType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">GraphicType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">format</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">mimeCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">encodingCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">uri</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">filename</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_GraphicType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_PictureType">PictureType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> &lt; <strong>PictureType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>PictureType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000004&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Picture. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A diagram, graph, mathematical curves, or similar representation.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Picture&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; binary&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_PictureType_xibox'); return false;" class="control" id="type_PictureType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_PictureType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> format="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000004-SC2 SC Picture. Format. Text The format of the picture content. Picture Format Text string'); viewDocumentation('Attribute', 'format', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> mimeCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000004-SC3 SC Picture. Mime. Code The mime type of the picture object. Picture Mime Code string'); viewDocumentation('Attribute', 'mimeCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> encodingCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000004-SC4 SC Picture. Encoding. Code Specifies the decoding algorithm of the picture object. Picture Encoding Code string'); viewDocumentation('Attribute', 'encodingCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> uri="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000004-SC6 SC Picture. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the picture object is located. Picture Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'uri', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> filename="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000004-SC7 SC Picture. Filename.Text The filename of the picture object. Picture Filename Text string'); viewDocumentation('Attribute', 'filename', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_PictureType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_PictureType_scbox'); return false;" class="control" id="type_PictureType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_PictureType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">PictureType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">format</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">mimeCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">encodingCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">uri</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">filename</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_PictureType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_SoundType">SoundType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> &lt; <strong>SoundType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>SoundType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000005&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Sound. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A diagram, graph, mathematical curves, or similar representation.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Sound&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; binary&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_SoundType_xibox'); return false;" class="control" id="type_SoundType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_SoundType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> format="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000005-SC2 SC Sound. Format. Text The format of the sound content. Sound Format Text string'); viewDocumentation('Attribute', 'format', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> mimeCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000005-SC3 SC Sound. Mime. Code The mime type of the sound object. Sound Mime Code string'); viewDocumentation('Attribute', 'mimeCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> encodingCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000005-SC4 SC Sound. Encoding. Code Specifies the decoding algorithm of the sound object. Sound Encoding Code string'); viewDocumentation('Attribute', 'encodingCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> uri="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000005-SC6 SC Sound. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the sound object is located. Sound Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'uri', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> filename="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000005-SC7 SC Sound. Filename.Text The filename of the sound object. Sound Filename Text string'); viewDocumentation('Attribute', 'filename', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_SoundType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_SoundType_scbox'); return false;" class="control" id="type_SoundType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_SoundType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">SoundType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">format</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">mimeCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">encodingCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">uri</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">filename</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_SoundType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_VideoType">VideoType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> &lt; <strong>VideoType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>VideoType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000006&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Video. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A diagram, graph, mathematical curves, or similar representation.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Graphic&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; binary&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_VideoType_xibox'); return false;" class="control" id="type_VideoType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_VideoType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> format="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000006-SC2 SC Video. Format. Text The format of the video content. Video Format Text string'); viewDocumentation('Attribute', 'format', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> mimeCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000006-SC3 SC Video. Mime. Code The mime type of the video object. Video Mime Code string'); viewDocumentation('Attribute', 'mimeCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> encodingCode="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000006-SC4 SC Video. Encoding. Code Specifies the decoding algorithm of the video object. Video Encoding Code string'); viewDocumentation('Attribute', 'encodingCode', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> uri="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000006-SC6 SC Video. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the video object is located. Video Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'uri', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> filename="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000006-SC7 SC Video. Filename.Text The filename of the video object. Video Filename Text string'); viewDocumentation('Attribute', 'filename', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_VideoType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_VideoType_scbox'); return false;" class="control" id="type_VideoType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_VideoType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">VideoType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:base64Binary</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">format</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">mimeCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;MIMECodeContentType&quot; type definition could not be found." onclick="alert('&quot;MIMECodeContentType&quot; type definition could not be found.');">MIMECodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">encodingCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">uri</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">filename</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_VideoType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_CodeType">CodeType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> &lt; <strong>CodeType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>CodeType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000007&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Code. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A character string (letters, figures, or symbols) that for brevity and/or languange independence may be used to represent or replace a definitive value or text of an attribute together with relevant supplementary information.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Code&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt; Other supplementary components in the CCT are captured as part of the token and name for the schema module containing the code list and thus, are not declared as attributes. &lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_CodeType_xibox'); return false;" class="control" id="type_CodeType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_CodeType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> listID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000007-SC2 SC Code List. Identifier The identification of a list of codes. Code List Identification Identifier string'); viewDocumentation('Attribute', 'listID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listAgencyID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000007-SC3 SC Code List. Agency. Identifier An agency that maintains one or more lists of codes. Code List Agency Identifier string Defaults to the UN/EDIFACT data element 3055 code list.'); viewDocumentation('Attribute', 'listAgencyID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listAgencyName="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000007-SC4 SC Code List. Agency Name. Text The name of the agency that maintains the list of codes. Code List Agency Name Text string'); viewDocumentation('Attribute', 'listAgencyName', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listName="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000007-SC5 SC Code List. Name. Text The name of a list of codes. Code List Name Text string'); viewDocumentation('Attribute', 'listName', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listVersionID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000007-SC6 SC Code List. Identifier The identification of a list of codes. Code List Identification Identifier string'); viewDocumentation('Attribute', 'listVersionID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> name="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000007-SC7 SC Code. Name. Text The textual equivalent of the code content component. Code Name Text string'); viewDocumentation('Attribute', 'name', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> languageID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000007-SC8 SC Language. Identifier The identifier of the language used in the code name. Language Identification Identifier string'); viewDocumentation('Attribute', 'languageID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listURI="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000007-SC9 SC Code List. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the code list is located. Code List Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'listURI', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> listSchemeURI="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT000007-SC10 SC Code List Scheme. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the code list scheme is located. Code List Scheme Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'listSchemeURI', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_CodeType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_CodeType_scbox'); return false;" class="control" id="type_CodeType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_CodeType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">CodeType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listAgencyID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listAgencyName</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listName</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listVersionID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">name</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">languageID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listURI</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">listSchemeURI</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_CodeType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_DateTimeType">DateTimeType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:dateTime</span> &lt; <strong>DateTimeType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>DateTimeType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: dateTime</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000008&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Date Time. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A particular point in the progression of time together with the relevant supplementary information.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Date Time&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt; Can be used for a date and/or time.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_DateTimeType_scbox'); return false;" class="control" id="type_DateTimeType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_DateTimeType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">DateTimeType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:dateTime</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_DateTimeType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_DateType">DateType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:date</span> &lt; <strong>DateType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>DateType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: date</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT000009&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Date. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; One calendar day according the Gregorian calendar.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Date&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_DateType_scbox'); return false;" class="control" id="type_DateType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_DateType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">DateType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:date</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_DateType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_TimeType">TimeType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:time</span> &lt; <strong>TimeType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>TimeType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: time</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000010&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Time. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; The instance of time that occurs every day.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Time&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_TimeType_scbox'); return false;" class="control" id="type_TimeType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_TimeType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">TimeType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:time</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_TimeType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_IdentifierType">IdentifierType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> &lt; <strong>IdentifierType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>IdentifierType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000011&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Identifier. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A character string to identify and distinguish uniquely, one instance of an object in an identification scheme from all other objects in the same scheme together with relevant supplementary information.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Identifier&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt; Other supplementary components in the CCT are captured as part of the token and name for the schema module containing the identifer list and thus, are not declared as attributes. &lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UsageRule&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_IdentifierType_xibox'); return false;" class="control" id="type_IdentifierType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_IdentifierType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000011-SC2 SC Identification Scheme. Identifier The identification of the identification scheme. Identification Scheme Identification Identifier string'); viewDocumentation('Attribute', 'schemeID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeName="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000011-SC3 SC Identification Scheme. Name. Text The name of the identification scheme. Identification Scheme Name Text string'); viewDocumentation('Attribute', 'schemeName', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeAgencyID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000011-SC4 SC Identification Scheme Agency. Identifier The identification of the agency that maintains the identification scheme. Identification Scheme Agency Identification Identifier string Defaults to the UN/EDIFACT data element 3055 code list.'); viewDocumentation('Attribute', 'schemeAgencyID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeAgencyName="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000011-SC5 SC Identification Scheme Agency. Name. Text The name of the agency that maintains the identification scheme. Identification Scheme Agency Agency Name Text string'); viewDocumentation('Attribute', 'schemeAgencyName', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeVersionID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UNDT000011-SC6 SC Identification Scheme. Version. Identifier The version of the identification scheme. Identification Scheme Version Identifier string'); viewDocumentation('Attribute', 'schemeVersionID', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeDataURI="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000011-SC7 SC Identification Scheme Data. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the identification scheme data is located. Identification Scheme Data Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'schemeDataURI', docArray);">?</a>"</span>
+<br />
+<span style="margin-left: 0.5em" class="newFields"> schemeURI="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000011-SC8 SC Identification Scheme. Uniform Resource. Identifier The Uniform Resource Identifier that identifies where the identification scheme is located. Identification Scheme Uniform Resource Identifier Identifier string'); viewDocumentation('Attribute', 'schemeURI', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_IdentifierType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_IdentifierType_scbox'); return false;" class="control" id="type_IdentifierType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_IdentifierType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">IdentifierType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeName</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeAgencyID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeAgencyName</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeVersionID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:normalizedString</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeDataURI</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">schemeURI</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:anyURI</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_IdentifierType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_IndicatorType">IndicatorType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:boolean</span> &lt; <strong>IndicatorType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>IndicatorType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: boolean</li>
+</ul>
+<ul>
+<li>
+<em>pattern</em> = false</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000012&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Indicator. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A list of two mutually exclusive Boolean values that express the only possible states of a property.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Indicator&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_IndicatorType_scbox'); return false;" class="control" id="type_IndicatorType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_IndicatorType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">IndicatorType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:boolean</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:pattern</span> <span class="scTag">value</span>="<span class="scContent">false</span>"/&gt;</div>
+<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:pattern</span> <span class="scTag">value</span>="<span class="scContent">true</span>"/&gt;</div>&lt;/<span class="scTag">xsd:restriction</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_IndicatorType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_MeasureType">MeasureType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>MeasureType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>MeasureType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000013&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Measure. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A numeric value determined by measuring an object along with the specified unit of measure.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Measure&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PropertyTermName&gt; Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PropertyTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; decimal&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_MeasureType_xibox'); return false;" class="control" id="type_MeasureType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_MeasureType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> unitCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;UnitCodeContentType&quot; type definition could not be found." onclick="alert('&quot;UnitCodeContentType&quot; type definition could not be found.');">UnitCodeContentType</a>
+</span> <span class="occurs">[1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000013-SC2 SC Measure Unit. Code The type of unit of measure. Measure Unit Code Code string Reference UN/ECE Rec 20 and X12 355.'); viewDocumentation('Attribute', 'unitCode', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_MeasureType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_MeasureType_scbox'); return false;" class="control" id="type_MeasureType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_MeasureType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">MeasureType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">unitCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;UnitCodeContentType&quot; type definition could not be found." onclick="alert('&quot;UnitCodeContentType&quot; type definition could not be found.');">UnitCodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">required</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_MeasureType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_NumericType">NumericType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>NumericType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>NumericType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: decimal</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000014&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Numeric. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; Numeric information that is assigned or is determined by calculation, counting, or sequencing. It does not require a unit of quantity or unit of measure.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Numeric&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_NumericType_scbox'); return false;" class="control" id="type_NumericType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_NumericType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">NumericType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_NumericType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_ValueType">ValueType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>ValueType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>ValueType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: decimal</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000015&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Value. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; Numeric information that is assigned or is determined by calculation, counting, or sequencing. It does not require a unit of quantity or unit of measure.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Value&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_ValueType_scbox'); return false;" class="control" id="type_ValueType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_ValueType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">ValueType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_ValueType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_PercentType">PercentType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>PercentType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>PercentType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: decimal</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000016&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Percent. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; Numeric information that is assigned or is determined by calculation, counting, or sequencing. It does not require a unit of quantity or unit of measure.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Percent&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_PercentType_scbox'); return false;" class="control" id="type_PercentType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_PercentType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">PercentType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_PercentType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Simple Type: <a class="name" name="type_RateType">RateType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>RateType</strong> (by restriction)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>RateType</td>
+</tr>
+<tr>
+<th>Content</th>
+<td>
+<ul>
+<li>Base XSD Type: decimal</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000017&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Rate. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; Numeric information that is assigned or is determined by calculation, counting, or sequencing. It does not require a unit of quantity or unit of measuret.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Rate&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_RateType_scbox'); return false;" class="control" id="type_RateType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_RateType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:simpleType</span> <span class="scTag">name</span>="<span class="scContent">RateType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:restriction</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"/&gt;</div>&lt;/<span class="scTag">xsd:simpleType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_RateType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_QuantityType">QuantityType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> &lt; <strong>QuantityType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>QuantityType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000018&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Quantity. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A counted number of non-monetary units possibly including fractions.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Quantity&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; decimal&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_QuantityType_xibox'); return false;" class="control" id="type_QuantityType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_QuantityType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> unitCode="<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;UnitCodeContentType&quot; type definition could not be found." onclick="alert('&quot;UnitCodeContentType&quot; type definition could not be found.');">UnitCodeContentType</a>
+</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000018-SC2 SC Quantity. Unit. Code The unit of the quantity Quantity Unit Code Code string'); viewDocumentation('Attribute', 'unitCode', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_QuantityType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_QuantityType_scbox'); return false;" class="control" id="type_QuantityType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_QuantityType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">QuantityType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:decimal</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">unitCode</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'oacl' prefix" href="#ns_oacl">oacl</a>:<a href="javascript:void(0)" title="&quot;UnitCodeContentType&quot; type definition could not be found." onclick="alert('&quot;UnitCodeContentType&quot; type definition could not be found.');">UnitCodeContentType</a>
+</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_QuantityType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_TextType">TextType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> &lt; <strong>TextType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>TextType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000019&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Text. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A character string (i.e. a finite set of characters) generally in the form of words of a language.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Text&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_TextType_xibox'); return false;" class="control" id="type_TextType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_TextType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> languageID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000019-SC2 SC Language. Identifier The identifier of the language used in the content component. Language Identification Identifier string'); viewDocumentation('Attribute', 'languageID', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_TextType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_TextType_scbox'); return false;" class="control" id="type_TextType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_TextType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">TextType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">languageID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_TextType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<h3>Complex Type: <a class="name" name="type_NameType">NameType</a>
+</h3>
+<table class="hierarchy">
+<tr>
+<th>Super-types:</th>
+<td>
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> &lt; <strong>NameType</strong> (by extension)</td>
+</tr>
+<tr>
+<th>Sub-types:</th>
+<td>None</td>
+</tr>
+</table>
+<table class="properties">
+<tr>
+<th>Name</th>
+<td>NameType</td>
+</tr>
+<tr>
+<th>Abstract</th>
+<td>no</td>
+</tr>
+<tr>
+<th>Documentation</th>
+<td>
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt; UDT0000020&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:UniqueID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt; UDT&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:CategoryCode&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt; Name. Type&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:DictionaryEntryName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt; 1.0&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:VersionID&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt; A character string that consititues the distinctive designation of a person, place, thing or concept.&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:Definition&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt; Name&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:RepresentationTermName&gt;
+                                &lt;<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt; string&lt;/<a title="Find out namespace of 'ccts' prefix" href="#ns_ccts">ccts</a>:PrimitiveType&gt;
+                        </td>
+</tr>
+</table>
+<div class="sample box">
+<div>
+<input style="display: none" onclick="switchState('type_NameType_xibox'); return false;" class="control" id="type_NameType_xibox_button" type="button" /> <span class="caption">XML Instance Representation</span>
+</div>
+<div class="contents" id="type_NameType_xibox">
+<div style="margin-left: 0em">&lt;...<br />
+<span style="margin-left: 0.5em" class="newFields"> languageID="<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span> <span class="occurs">[0..1]</span> <a class="documentation" title="View Documentation" href="javascript:void(0)" onclick="docArray = new Array('UDT0000020-SC2 SC Language. Identifier The identifier of the language used in the content component. Language Identification Identifier string'); viewDocumentation('Attribute', 'languageID', docArray);">?</a>"</span>&gt; <br />
+<span style="margin-left: 1.5em"> <span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span> </span>
+<br />&lt;/...&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_NameType_xibox', true);
+// -->
+</script>
+</div>
+<div class="schemaComponent box">
+<div>
+<input style="display: none" onclick="switchState('type_NameType_scbox'); return false;" class="control" id="type_NameType_scbox_button" type="button" /> <span class="caption">Schema Component Representation</span>
+</div>
+<div class="contents" id="type_NameType_scbox">
+<div style="margin-left: 0em">&lt;<span class="scTag">xsd:complexType</span> <span class="scTag">name</span>="<span class="scContent">NameType</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:simpleContent</span>&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:extension</span> <span class="scTag">base</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:string</span>
+</span>"&gt;<div style="margin-left: 1.5em">&lt;<span class="scTag">xsd:attribute</span> <span class="scTag">name</span>="<span class="scContent">languageID</span>" <span class="scTag">type</span>="<span class="scContent">
+<span class="type">
+<a title="Find out namespace of 'xsd' prefix" href="#ns_xsd">xsd</a>:language</span>
+</span>" <span class="scTag">use</span>="<span class="scContent">optional</span>"/&gt;</div>&lt;/<span class="scTag">xsd:extension</span>&gt;</div>&lt;/<span class="scTag">xsd:simpleContent</span>&gt;</div>&lt;/<span class="scTag">xsd:complexType</span>&gt;</div>
+</div>
+<script type="text/javascript">
+<!--
+setState('type_NameType_scbox', false);
+// -->
+</script>
+</div>
+<p />
+<a href="http://www.oagi.org/dnn2/DownloadsandResources/OAGISRelease95PublicReviewFeedbackForm.aspx" target="new">Report an issue to OAGi.</a>
+<div style="text-align: right; clear: both;">
+<a href="#top">top</a>
+</div>
+<hr />
+<p class="footer">Generated by <a href="http://titanium.dstc.edu.au/xml/xs3p">xs3p</a>. Last modified: <script type="text/javascript">
+<!--
+document.write(document.lastModified);
+// -->
+</script>
+</p>
+</body>
+</html>

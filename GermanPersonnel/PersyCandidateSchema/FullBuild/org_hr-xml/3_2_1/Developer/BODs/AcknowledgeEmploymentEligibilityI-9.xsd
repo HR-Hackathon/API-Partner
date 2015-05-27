@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name:AcknowledgeEmploymentEligibilityI-9.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../Nouns/EmploymentEligibilityI-9.xsd"/>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Meta.xsd"/>
+	<xsd:element name="AcknowledgeEmploymentEligibilityI-9" type="AcknowledgeEmploymentEligibilityI-9Type"/>
+	<xsd:complexType name="AcknowledgeEmploymentEligibilityI-9Type">
+		<xsd:annotation>
+			<xsd:documentation> 
+       AcknowledgeEmploymentEligibilityI-9 conveys the result of a ProcessEmploymentEligibilityI-9 request. 
+
+       EmploymentEligibilityI-9 contains a set of information describing a screening service provider's catalog. The catalog contains information about "packages", which consist of one or more individual screening services that are offered for sale as a unit. A catalog also may include detail about so-called "a la carte" screenings that can be ordered a part from a package. A catalog may represent services broadly offered for sale or may be catalogs specific to a particular customer or organizational unit. 
+
+       Acknowledge is a "Response Verb". Response Expressions represent and communicate actions taken by the receiver. 
+       XPath is the default expression language. The actionCode attribute (Accepted, Modified, Rejected  
+       specifies the action taken by the receiver. ChangeStatus allows detailed change and state information to be returned.
+       </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="oa:BusinessObjectDocumentType">
+				<xsd:sequence>
+					<xsd:element name="DataArea" type="AcknowledgeEmploymentEligibilityI-9DataAreaType">
+						<xsd:annotation>
+							<xsd:documentation>The DataArea is the part of the BOD that contains business information. This information consists of a verb and one or more noun instances. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AcknowledgeEmploymentEligibilityI-9DataAreaType">
+		<xsd:sequence>
+			<xsd:element ref="oa:Acknowledge"/>
+			<xsd:element ref="EmploymentEligibilityI-9" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessUSEnrollment releaseID="3.2" xmlns="http://www.hr-xml.org/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oa="http://www.openapplications.org/oagis/9" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessUSEnrollment.xsd">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-08-31T12:00:00-05:00</oa:CreationDateTime>
+		<oa:BODID>AS20090290411097542</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/ProcessUSEnrollment/DataArea/USEnrollment</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<USEnrollment majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="EnrollmentID">576124-RRRR</DocumentID>
+			<CustomerParty>
+				<PartyID>456123789</PartyID>
+				<PartyName>Perry and Sons</PartyName>
+			</CustomerParty>
+			<SubscriberDetails>
+				<SubscriberPerson>
+					<PersonName>
+						<oa:GivenName>Gerald</oa:GivenName>
+						<PreferredName>Jerry</PreferredName>
+						<MiddleName>Dale</MiddleName>
+						<FamilyName>Carmack</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address type="Residence">
+							<oa:AddressLine sequence="1">629 Old Hickory Avenue</oa:AddressLine>
+							<oa:CityName>Bethpage</oa:CityName>
+							<oa:CountrySubDivisionCode>TN</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>37022</oa:PostalCode>
+						</Address>
+					</Communication>
+					<BirthDate>1947-03-22</BirthDate>
+					<DeathDateTime>2009-08-16</DeathDateTime>
+					<GenderCode>Male</GenderCode>
+					<CertifiedMaritalStatus>
+						<MaritalStatusCode validFrom="1963-09-06">Married</MaritalStatusCode>
+					</CertifiedMaritalStatus>
+					<TobaccoUserIndicator>true</TobaccoUserIndicator>
+				</SubscriberPerson>
+				<SubscriberEmployment>
+					<EmployedIndicator validFrom="2009-08-16">false</EmployedIndicator>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>1977-10-28</HireDate>
+						</Hire>
+						<Termination>
+							<TerminationDate>2009-08-16</TerminationDate>
+						</Termination>
+					</EmploymentLifecycle>
+				</SubscriberEmployment>
+				<USHealthCoverage>
+					<USHealthCoverageCode>Preferred Provider Organization</USHealthCoverageCode>
+					<GroupNumberID>4521670</GroupNumberID>
+					<COBRAStatusCode>NonCOBRA</COBRAStatusCode>
+					<CoverageLevel validFrom="2009-01-01">
+						<CoverageLevelCode>Employee and Spouse</CoverageLevelCode>
+					</CoverageLevel>
+					<FreeFormEffectivePeriod>
+						<StartDate>
+							<FormattedDateTime>2009-01-01</FormattedDateTime>
+						</StartDate>
+						<EndDate>
+							<FormattedDateTime>2009-08-16</FormattedDateTime>
+						</EndDate>
+					</FreeFormEffectivePeriod>
+				</USHealthCoverage>
+				<SubscriberDependent>
+					<DependentRelationshipCode>Spouse</DependentRelationshipCode>
+					<DependentPerson>
+						<PersonID schemeID="SSN">152185222</PersonID>
+						<PersonName>
+							<oa:GivenName>Reba</oa:GivenName>
+							<FamilyName>Carmack</FamilyName>
+						</PersonName>
+						<Communication>
+							<Address type="Residence">
+								<oa:AddressLine sequence="1">629 Old Hickory Avenue</oa:AddressLine>
+								<oa:CityName>Bethpage</oa:CityName>
+								<oa:CountrySubDivisionCode>TN</oa:CountrySubDivisionCode>
+								<CountryCode>US</CountryCode>
+								<oa:PostalCode>37022</oa:PostalCode>
+							</Address>
+						</Communication>
+						<BirthDate>1944-11-14</BirthDate>
+						<GenderCode>Female</GenderCode>
+						<CertifiedMaritalStatus>
+							<MaritalStatusCode validFrom="1963-09-06">Married</MaritalStatusCode>
+						</CertifiedMaritalStatus>
+						<TobaccoUserIndicator>false</TobaccoUserIndicator>
+					</DependentPerson>
+					<USHealthCoverage>
+						<USHealthCoverageCode>Preferred Provider Organization</USHealthCoverageCode>
+						<GroupNumberID>4521670</GroupNumberID>
+						<COBRAStatusCode>NonCOBRA</COBRAStatusCode>
+						<CoverageLevel>
+							<CoverageLevelCode>Employee and Spouse</CoverageLevelCode>
+						</CoverageLevel>
+						<FreeFormEffectivePeriod>
+							<StartDate>
+								<FormattedDateTime>2009-01-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2009-08-31</FormattedDateTime>
+							</EndDate>
+						</FreeFormEffectivePeriod>
+					</USHealthCoverage>
+				</SubscriberDependent>
+			</SubscriberDetails>
+		</USEnrollment>
+	</DataArea>
+</ProcessUSEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

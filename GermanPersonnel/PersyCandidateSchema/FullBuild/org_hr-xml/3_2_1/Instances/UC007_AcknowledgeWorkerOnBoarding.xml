@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AcknowledgeWorkerOnBoarding languageCode="en-US" releaseID="3.2" 
+		systemEnvironmentCode="Production" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/AcknowledgeWorkerOnBoarding.xsd"
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID schemeName="Application Identifier" schemeAgencyName="ATS">HRIS</oa:LogicalID>
+			<oa:ConfirmationCode>Never</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-10-13</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID" schemeAgencyName="ATS">ecd87e88-c34e-401b-9d0a-615ba5e0f6ff</oa:BODID>
+	</oa:ApplicationArea>
+
+	<DataArea>
+		<oa:Acknowledge>
+			<oa:OriginalApplicationArea>
+				<oa:Sender>
+					<oa:LogicalID schemeName="Application Identifier" schemeAgencyName="ATS">e99fnp2</oa:LogicalID>
+					<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+				</oa:Sender>
+				<oa:CreationDateTime>2010-10-15</oa:CreationDateTime>
+				<oa:BODID schemeName="GUID" schemeAgencyName="ATS">ecd87e88-c34e-401b-9d0a-615ba5e0f6bb</oa:BODID>
+			</oa:OriginalApplicationArea>
+			<oa:ResponseCriteria>
+				<oa:ResponseExpression actionCode="Accepted" expressionLanguage="XPath">/AcknowledgeWorkerOnBoarding/DataArea/WorkerOnBoarding</oa:ResponseExpression>
+			</oa:ResponseCriteria>
+		</oa:Acknowledge>
+
+		<WorkerOnBoarding majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyName="HRIS" schemeName="OnboardingTransactionID">ON-4399</DocumentID>
+			<AlternateDocumentID schemeAgencyName="ATS" schemeName="OnboardingTransactionID">b3923e66</AlternateDocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID schemeAgencyName="ATS" schemeName="Organization ID">46884910-c1ba-4a95-862d-ad6d925fcda4</OrganizationID>
+				<OrganizationName>ABC Company</OrganizationName>
+			</EmployerIdentifiers>
+			<OnBoardingPerson>
+				<PersonID schemeAgencyName="ATS" schemeName="ApplicantID">ebf81291-3dcc-4a66-8355-64881e1d7659</PersonID>
+			</OnBoardingPerson>
+			<OnBoardingEmployee>
+				<EmployeeID schemeAgencyName="HRIS" schemeName="EmployeeID">E121311</EmployeeID>
+			</OnBoardingEmployee>
+		</WorkerOnBoarding>
+	</DataArea>
+</AcknowledgeWorkerOnBoarding>
+<!--
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

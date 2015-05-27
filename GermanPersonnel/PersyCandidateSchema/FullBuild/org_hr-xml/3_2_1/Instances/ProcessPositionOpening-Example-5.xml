@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessPositionOpening 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessPositionOpening.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-15T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-234</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessPositionOpening/DataArea/PositionOpening</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<PositionOpening majorVersionID="1" minorVersionID="0">
+			<DocumentID>123456</DocumentID>
+			<AlternateDocumentID schemeAgencyID="ABC Company" validFrom="2009-11-10" validTo="2009-11-30" schemeID="PO">987653</AlternateDocumentID>
+			<PositionOpeningStatusCode validFrom="2009-11-10" validTo="2009-11-30">Active</PositionOpeningStatusCode>
+			<PostingRequester agencyRoleCode="Requester">
+				<PartyID>456789</PartyID>
+				<PartyName>Best Recruiting Agency</PartyName>
+				<Communication>
+					<ChannelCode>Telephone</ChannelCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>414</oa:AreaDialing>
+					<oa:DialNumber>961-5555</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<ChannelCode>Fax</ChannelCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>414</oa:AreaDialing>
+					<oa:DialNumber>962-5555</oa:DialNumber>
+				</Communication>
+				<PostingRequesterRoleCode>Recruiter</PostingRequesterRoleCode>
+			</PostingRequester>
+			<PostingRequester agencyRoleCode="Customer">
+				<PartyName>ABC Company</PartyName>
+				<PersonContact>
+					<PersonName>
+						<oa:GivenName>John</oa:GivenName>
+						<FamilyName>Smith</FamilyName>
+					</PersonName>
+					<RoleName>Hiring Manager</RoleName>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<oa:CountryDialing>1</oa:CountryDialing>
+						<oa:AreaDialing>414</oa:AreaDialing>
+						<oa:DialNumber>444-5555</oa:DialNumber>
+					</Communication>
+				</PersonContact>
+			</PostingRequester>
+			<PositionProfile>
+				<ID>GS-0001</ID>
+				<PostingInstruction>
+					<TemplateID>GS Professional US</TemplateID>
+					<BrandingID>GS Wordwide</BrandingID>
+					<PostingOptionCode>Social Media Placement</PostingOptionCode>
+					<PostingOptionCode>Auto-Renew Until Closed</PostingOptionCode>
+					<ApplicationMethod>
+						<Instructions>To be considered for this position, use the information below to submit your resume and salary requirements.</Instructions>
+						<PersonContact>
+							<PersonName>
+								<FormattedName>Jenny Recruiter</FormattedName>
+							</PersonName>
+							<RoleName>Professional and Technical Recruiter</RoleName>
+							<Communication>
+								<ChannelCode>Email</ChannelCode>
+								<UseCode>Business</UseCode>
+								<oa:URI>jrecruiter@somecompanydomain.com</oa:URI>
+								<oa:HTMLPreferredIndicator>false</oa:HTMLPreferredIndicator>
+							</Communication>
+						</PersonContact>
+						<Communication>
+							<ChannelCode>Web</ChannelCode>
+							<UseCode>Job Application</UseCode>
+							<oa:URI>http://www.somecompanydomain.com/apply.aspx?job=12345</oa:URI>
+						</Communication> 
+					</ApplicationMethod>
+				</PostingInstruction>
+				<PositionID>GS DBA1</PositionID>
+				<PositionTitle>Database Administrator</PositionTitle>
+				<PositionLocation>
+					<ReferenceLocation>
+						<oa:CityName>Baltimore</oa:CityName>
+						<oa:CountrySubDivisionCode listID="US States">MD</oa:CountrySubDivisionCode>
+					</ReferenceLocation>
+				</PositionLocation>
+				<PositionOpenQuantity>1</PositionOpenQuantity>
+				<PositionFormattedDescription>
+					<oa:Name>Primary Responsibilities:</oa:Name>
+					<Content><![CDATA[The Database Administrator provides administration and support of Oracle Databases in production, testing and development environments. Responsible for performing administrative functions affecting all system users. Performs system wide services such as backup and recovery, file and table space sizing, setting system parameters, monitoring system performance and proactive performance tuning.]]></Content>
+				</PositionFormattedDescription>
+				<SearchOptimization>
+					<MediaTarget>
+						<MediaTargetID schemeID="URL">http://www.craigslist.org/something</MediaTargetID>
+						<MediaTargetID schemeID="URL">http://www.delicious.com/something</MediaTargetID>
+						<MediaTargetID schemeID="URL">http://www.facebook.com/someapp/</MediaTargetID>
+						<MediaTargetID schemeID="URL">http://someothersocialmedia.com</MediaTargetID>
+					</MediaTarget>
+					<KeywordCode>ABC Company</KeywordCode>
+					<KeywordCode>DBA</KeywordCode>
+					<KeywordCode>Oracle</KeywordCode>
+				</SearchOptimization>
+				<ShiftDescription>Regular business hours. M-F, 9:00 to 5:00</ShiftDescription>
+				<OfferedRemunerationPackage>
+					<RemunerationBasisCode>Salaried</RemunerationBasisCode>
+					<RemunerationRange>
+						<RemunerationMinimumAmount currencyID="USD">55000.00</RemunerationMinimumAmount>
+						<RemunerationMaximumAmount currencyID="USD">75000.00</RemunerationMaximumAmount>
+						<RemunerationRateIntervalCode>Year</RemunerationRateIntervalCode>
+					</RemunerationRange>
+					<BenefitsSummary>
+						<InsuranceConsiderations>
+							<InsuranceProvidedIndicator>true</InsuranceProvidedIndicator>
+							<InsuranceTypeCode>Medical</InsuranceTypeCode>
+							<InsuranceTypeCode>Dental</InsuranceTypeCode>
+							<InsuranceTypeCode>Life</InsuranceTypeCode>
+						</InsuranceConsiderations>
+					</BenefitsSummary>
+					<oa:Description>Position offers health, dental, and life insurance benefits and generous vacation benefits.</oa:Description>
+				</OfferedRemunerationPackage>
+			</PositionProfile>
+		</PositionOpening>
+	</DataArea>
+</ProcessPositionOpening>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

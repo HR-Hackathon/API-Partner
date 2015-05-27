@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2010 rel. 2 (http://www.altova.com) by J.Postertz (GermanPersonnel e-Search GmbH) -->
+<!-- Copyright GermanPesonnel e-search GmbH http://www.germanpersonnel.de -->
+<xsd:schema xmlns:hrxml="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.germanpersonnel.de/persy/1" targetNamespace="http://www.germanpersonnel.de/persy/1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: PersyCadidate.xsd 
+       Status:  1.0 Release
+       Date this version: 2013-Mar-14 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.hr-xml.org/3" schemaLocation="FullBuild/org_hr-xml/Developer/Nouns/Candidate.xsd"/>
+	<xsd:element name="PreferredContact" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Bevorzugte Kontaktaufnahme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Confidential" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Vertauliche Kontaktaufnahme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="AccessibilityInfo" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Bemerkungen zur Kontaktaufnahme</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Children" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation>Anzahl der Kinder</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EmployerType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="Employee">
+					<xsd:annotation>
+						<xsd:documentation>Arbeitgeber</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Traineeship">
+					<xsd:annotation>
+						<xsd:documentation>Praktikas</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Volunteer">
+					<xsd:annotation>
+						<xsd:documentation>Außerberufliche Erfahrungen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="EducationType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="School">
+					<xsd:annotation>
+						<xsd:documentation>Allgemeine Schulen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="University">
+					<xsd:annotation>
+						<xsd:documentation>Hochschulen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="ProfessionalEducation">
+					<xsd:annotation>
+						<xsd:documentation>Berufsausbildung</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="FurtherEducation">
+					<xsd:annotation>
+						<xsd:documentation>Fort- und Weiterbildungen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ManagerialExperienceIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Führungserfahrungen sind vorhanden</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ProjectExperienceIndicator" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation>Projekterfahrungen sind vorhanden</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="EducationDescription" type="xsd:string">
+	    <xsd:annotation>
+			<xsd:documentation>Beschreibung der Ausbildung / Fortbildung.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="CarOwnershipIndicator" type="xsd:boolean">
+	    <xsd:annotation>
+	        <xsd:documentation>Eigener PKW vorhanden</xsd:documentation>
+	    </xsd:annotation>
+	</xsd:element>
+	<xsd:element name="PublicTransportDependencyIndicator" type="xsd:boolean">
+	    <xsd:annotation>
+	        <xsd:documentation>Eigener PKW vorhanden</xsd:documentation>
+	    </xsd:annotation>
+	</xsd:element>
+	<xsd:element name="DocumentType">
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="Certificate">
+					<xsd:annotation>
+						<xsd:documentation>Zeugnis</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="CurriculumVitae">
+					<xsd:annotation>
+						<xsd:documentation>Lebenslauf</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Photo">
+					<xsd:annotation>
+						<xsd:documentation>Bewerberfoto</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="ApplicationLetter">
+					<xsd:annotation>
+						<xsd:documentation>Bewerbungsschreiben</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Other">
+					<xsd:annotation>
+						<xsd:documentation>Sonstige Dokumente</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="CompetencyType">
+		<xsd:annotation>
+			<xsd:documentation>Kompetenzen und Fertigkeiten</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="language">
+					<xsd:annotation>
+						<xsd:documentation>Sprachen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="skill">
+					<xsd:annotation>
+						<xsd:documentation>Fachkenntnisse</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="EmploymentData">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Daten zur Arbeitslosigkeit</xsd:documentation>
+				</xsd:annotation>
+				<xsd:element name="EmploymentIndicator" type="xsd:boolean" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Kandidat befindet sich derzeit in einem Beschäftigungsverhältnis</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="ReportDate" type="xsd:date" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Arbeitslos gemeldet seit</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="AgencyCustomerNumber" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Arbeitslosen Kundennummer</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Agency" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Betreuende Arbeitsagentur</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="AgencyEmail" type="xsd:string" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>E-Mail des Betreuers</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="RecruitmentCertificate" type="xsd:boolean" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Vermittlungsgutschein vorhanden</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="WageRate" type="CurrencyType">
+		<xsd:annotation>
+			<xsd:documentation>Gewünschter Stundenlohn</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="JobTitle" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Stellenbezug</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ApplicationDate" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation>Bewerbungsdatum</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Correspondence" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Anschreiben des Bewerbers</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ProfileStatus">
+		<xsd:annotation>
+			<xsd:documentation>Status des Profiles zeigt ob es sich um einen Bewerber, geprüften Bewerber oder Mitarbeiter handelt</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="Staff">
+					<xsd:annotation>
+						<xsd:documentation>Mitarbeiter</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Applicant">
+					<xsd:annotation>
+						<xsd:documentation>Bewerber</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="ReviewedApplicant">
+					<xsd:annotation>
+						<xsd:documentation>Geprüfter Bewerber</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ProfileRating">
+		<xsd:annotation>
+			<xsd:documentation>Bewertung des Profiles</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="A"/>
+				<xsd:enumeration value="B"/>
+				<xsd:enumeration value="C"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="ProfileReference" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Vom Besitzer vergebene Reference</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="ProfileTransfer">
+		<xsd:annotation>
+			<xsd:documentation>Transferart</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="TempWorker">
+					<xsd:annotation>
+						<xsd:documentation>Arbeitnehmerüberlassung</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="TryAndHire">
+					<xsd:annotation>
+						<xsd:documentation>Arbeitnehmerüberlassung mit Übernahme</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Placement">
+					<xsd:annotation>
+						<xsd:documentation>Personalvermittlung</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="ServiceContract">
+					<xsd:annotation>
+						<xsd:documentation>Werkvertrag</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Freelancer">
+					<xsd:annotation>
+						<xsd:documentation>Freiberufler oder Freier Mitarbeiter</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+				<xsd:enumeration value="Interim">
+					<xsd:annotation>
+						<xsd:documentation>Interim Management</xsd:documentation>
+					</xsd:annotation>
+				</xsd:enumeration>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="Comment" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Bermerkungen zum Profil</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Conditions">
+		<xsd:annotation>
+			<xsd:documentation>Konditionen</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence maxOccurs="unbounded">
+				<xsd:element name="WagesPerHour" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="OvertimeHour" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn bei Überstunden</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="NightWork" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn bei Nachtarbeit</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Saturday" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn am Samstag</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Sunday" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn am Sonntag</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Holiday" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Stundenlohn an Feiertagen</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+				<xsd:element name="Provision" type="CurrencyType" minOccurs="0">
+					<xsd:annotation>
+						<xsd:documentation>Vermittlungsprovision</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="CurrencyType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:decimal">
+				<xsd:attribute name="currencyID" use="required">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="EUR"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:attribute>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

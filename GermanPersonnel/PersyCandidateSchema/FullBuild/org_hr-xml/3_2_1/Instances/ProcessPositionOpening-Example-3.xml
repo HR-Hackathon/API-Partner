@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Note this posting is designed to be parallel to ProcessStaffingOrder-Example-3.xml -->
+<ProcessPositionOpening 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessPositionOpening.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-16T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-898</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessPositionOpening/DataArea/PositionOpening</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<PositionOpening majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeID="PostingID" schemeAgencyID="JobBoardInc.com">88811199992</DocumentID>
+			<AlternateDocumentID validTo="2009-12-31" schemeID="RequsitionID" schemeAgencyID="StaffingCoInc">262130</AlternateDocumentID>
+			<PositionOpeningStatusCode>Active</PositionOpeningStatusCode>
+			<PostingRequester>
+				<PartyID schemeID="Client ID">1235123</PartyID>
+				<PartyName>ABC Inc., Corp. LTD</PartyName>
+				<PartyReportingIDs schemeAgencyID="StaffingCoInc">
+					<ID schemeID="DepartmentID">Finance 901</ID>
+					<ID schemeID="AccountID">1478111</ID>
+					<ID schemeID="ProjectID">Eng 2009-1401</ID>
+				</PartyReportingIDs>
+				<PersonContact contactTypeCode="Order Placed By">
+					<PersonName>
+						<FormattedName>Bob Smith</FormattedName>
+					</PersonName>
+					<RoleName>Posting Coordinator</RoleName>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<oa:AreaDialing>312</oa:AreaDialing>
+						<oa:DialNumber>-222-5555</oa:DialNumber>
+					</Communication>
+				</PersonContact>
+				<PostingRequesterRoleCode>Staffing Agency</PostingRequesterRoleCode>
+			</PostingRequester>
+			<PositionProfile>
+				<ID>265853</ID>
+				<PositionID>1</PositionID>
+				<PositionTitle>Oregon - Admin Asst</PositionTitle>
+				<PositionOpenQuantity>1</PositionOpenQuantity>
+				<JobCategoryCode>ETW/Administrative</JobCategoryCode>
+				<PositionOfferingTypeCode>Contract</PositionOfferingTypeCode>
+				<PositionFormattedDescription>
+					<Content><![CDATA[Prior experience supporting team and/or manager. Preparing correspondence and reports, screening telephone calls, scheduling meetings and conferences, plan and prepare travel arrangements, creating documents and spreadsheets, graphs, charts and presentations using outlook, word and powerpoint. Experience with voicemail, fax and maintaining detaled logs.May also be asked to track budgets, process expense reports, take meeting notes. Strong communications skills, ability to effectivly handle ambiguity, strong multi-tasking skills. Excellent attention to detail and follow through.]]></Content>
+				</PositionFormattedDescription>
+			</PositionProfile>
+		</PositionOpening>
+	</DataArea>
+</ProcessPositionOpening>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessSavingsPlanEnrollment systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessSavingsPlanEnrollment.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:ext="http://www.example.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-02-12T10:09:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessSavingsPlanEnrollment/DataArea/SavingsPlanEnrollment</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<SavingsPlanEnrollment majorVersionID="1" minorVersionID="0">
+			<DocumentID>1204-10048-001</DocumentID>
+			<SavingsPlanID>98986-02</SavingsPlanID>
+			<SavingsPlanSponsor>
+				<PartyName>Example Company Corp, Inc.</PartyName>
+			</SavingsPlanSponsor>
+			<AccountHolder>
+				<AccountHolderID schemeID="ABC Surrogate ID">144508-1885-111</AccountHolderID>
+				<AccountHolderPerson>
+					<PersonLegalID schemeID="SSN">111-22-0000</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>Jane</oa:GivenName>
+						<MiddleName>J</MiddleName>
+						<FamilyName>Jones</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address>
+							<oa:StreetName>123 This That Rd.</oa:StreetName>
+							<oa:CityName>Cincinnati</oa:CityName>
+							<oa:CountrySubDivisionCode>NY</oa:CountrySubDivisionCode>
+							<oa:PostalCode>90122</oa:PostalCode>
+						</Address>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:AreaDialing>919</oa:AreaDialing>
+						<oa:DialNumber>555 1212</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:AreaDialing>704</oa:AreaDialing>
+						<oa:DialNumber>555 1111</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:URI>jjones@egemployer.com</oa:URI>
+					</Communication>
+					<BirthDate>1975-05-14</BirthDate>
+					<GenderCode>Female</GenderCode>
+				</AccountHolderPerson>
+				<AccountHolderEmployment>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>2008-04-02</HireDate>
+						</Hire>
+					</EmploymentLifecycle>
+				</AccountHolderEmployment>
+				<PayCycleRemuneration>
+					<PayCycleIntervalCode>Two Weeks</PayCycleIntervalCode>
+				</PayCycleRemuneration>
+			</AccountHolder>
+			<SavingsPlanElections>
+				<PayrollDeferral>
+					<RegularDeferral>
+						<DeferralTypeCode>pre-tax</DeferralTypeCode>
+						<DeferralAmount currencyID="USD">150.00</DeferralAmount>
+						<PayrollEffectiveDate>2008-04-15</PayrollEffectiveDate>
+					</RegularDeferral>
+				</PayrollDeferral>
+				<InvestmentElections>
+					<ContributionSource>
+						<ID>1</ID>
+						<EarningsSourceCode>Salary</EarningsSourceCode>
+						<EarningsTypeCode>Deferred</EarningsTypeCode>
+					</ContributionSource>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>FD-RGV</InvestmentReferenceID>
+						<AllocationPercentage>20</AllocationPercentage>
+					</InvestmentAllocation>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>FD-MAG</InvestmentReferenceID>
+						<AllocationPercentage>40</AllocationPercentage>
+					</InvestmentAllocation>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>FIGRX</InvestmentReferenceID>
+						<AllocationPercentage>40</AllocationPercentage>
+					</InvestmentAllocation>
+				</InvestmentElections>
+			</SavingsPlanElections>
+			<Beneficiary>
+				<BeneficiaryTypeCode>primary</BeneficiaryTypeCode>
+				<BeneficiaryPerson>
+					<PersonName>
+						<oa:GivenName>Bob</oa:GivenName>
+						<FamilyName>Jones</FamilyName>
+					</PersonName>
+					<BirthDate>1976-04-01</BirthDate>
+					<DependentRelationshipCode>Spouse</DependentRelationshipCode>
+				</BeneficiaryPerson>
+			</Beneficiary>
+			<Beneficiary>
+				<BeneficiaryTypeCode>contingent</BeneficiaryTypeCode>
+				<BeneficiaryPerson>
+					<PersonName>
+						<oa:GivenName>Sara</oa:GivenName>
+						<FamilyName>Jones</FamilyName>
+					</PersonName>
+					<BirthDate>1995-01-03</BirthDate>
+					<DependentRelationshipCode>Spouse</DependentRelationshipCode>
+				</BeneficiaryPerson>
+			</Beneficiary>
+			<UserArea>
+				<ext:PayrollCenterCode>UT</ext:PayrollCenterCode>
+				<ext:AllotmentCampusCode>ACC</ext:AllotmentCampusCode>
+			</UserArea>
+		</SavingsPlanEnrollment>
+	</DataArea>
+</ProcessSavingsPlanEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

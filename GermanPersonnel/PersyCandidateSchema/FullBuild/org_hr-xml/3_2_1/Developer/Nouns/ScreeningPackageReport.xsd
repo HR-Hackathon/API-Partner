@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: ScreeningPackageReport.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="ScreeningPackageReport" type="ScreeningPackageReportType"/>
+	<xsd:complexType name="ScreeningPackageReportType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Screening Package Report. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>Contains a subset of the full ScreeningReport. It is intended to support a simple fulfillment scenario under which detailed, fielded results would not
+			be returned, just summary information or URL where are full report can be accessed. It is a fully-compatible subset.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="CustomerParty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SupplierParty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="RequesterParty" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PackageResult" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="PackageResult" type="PackageResultType"/>
+	<xsd:complexType name="PackageResultType">
+		<xsd:sequence>
+			<xsd:element ref="ScreeningID" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PackageID" minOccurs="0"/>
+			<xsd:element ref="OrderReceivedDate" minOccurs="0"/>
+			<xsd:element ref="StatusDateTime" minOccurs="0"/>
+			<xsd:element ref="OrderCompletedDate" minOccurs="0"/>
+			<xsd:element ref="PartyReportingIDs" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ScreeningUser" minOccurs="0"/>
+			<xsd:element ref="ScreeningSubjectCopyIndicator" minOccurs="0"/>
+			<xsd:element ref="ScreeningSubject" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="ScreeningResultTypeCode" minOccurs="0"/>
+			<xsd:element ref="ScreeningOrderStatusCode" minOccurs="0"/>
+			<xsd:element ref="ScreeningOrderInstructionCode" minOccurs="0"/>
+			<xsd:element ref="ScreeningResultCode" minOccurs="0"/>
+			<xsd:element ref="Score" minOccurs="0"/>
+			<xsd:element ref="oa:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="AccessPoint" minOccurs="0"/>
+			<xsd:element ref="PackageCost" minOccurs="0"/>
+			<xsd:element ref="OrderHistory" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="LegalNotice" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Attachment" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

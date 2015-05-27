@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessTimeCard 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2"  
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessTimeCard.xsd" 
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-05-17T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-016</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessTimeCard/DataArea/TimeCard</oa:ActionExpression>
+				<oa:ChangeStatus>
+					<oa:ReasonCode>New</oa:ReasonCode>
+				</oa:ChangeStatus>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<TimeCard majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyID="StaffingCoInc.com">99999111888</DocumentID>
+			<ReportedResource>
+				<SpecifiedPerson>
+					<PersonID schemeID="Associate ID">22-000145</PersonID>
+					<PersonName>
+						<oa:GivenName>Robert</oa:GivenName>
+						<FamilyName>Finch</FamilyName>
+					</PersonName>
+				</SpecifiedPerson>
+				<PartyReportingIDs>
+					<ID schemeID="Requestion ID">149581-82</ID>
+				</PartyReportingIDs>
+			</ReportedResource>
+			<TimeCardReportedItem>
+			<ID>1</ID>
+				<TimeReportedStatusCode>Approved</TimeReportedStatusCode>
+				<CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00055</AllocationID>
+						<AllocationPercentage>55</AllocationPercentage>
+					</CostAllocation>
+					<CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00032</AllocationID>
+						<AllocationPercentage>45</AllocationPercentage>
+					</CostAllocation>
+				<TimeInterval>
+				 <ID>Mon</ID>
+						<FreeFormEffectivePeriod>
+						<StartDate><FormattedDateTime>2009-05-04</FormattedDateTime></StartDate>
+						<oa:Duration>PT8H</oa:Duration>
+					</FreeFormEffectivePeriod>
+				</TimeInterval>
+			</TimeCardReportedItem>
+			<TimeCardReportedItem>
+			<ID>2</ID>
+				<TimeReportedStatusCode>Approved</TimeReportedStatusCode>
+	           <CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00055</AllocationID>
+						<AllocationPercentage>100</AllocationPercentage>
+					</CostAllocation>
+				<TimeInterval>
+				 <ID>Tue</ID>
+						<FreeFormEffectivePeriod>
+						<StartDate><FormattedDateTime>2009-05-05</FormattedDateTime></StartDate>
+						<oa:Duration>PT8H</oa:Duration>
+					</FreeFormEffectivePeriod>
+				</TimeInterval>
+			</TimeCardReportedItem>
+			<TimeCardReportedItem>
+			<ID>3</ID>
+				<TimeReportedStatusCode>Approved</TimeReportedStatusCode>
+ 	        <CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00055</AllocationID>
+						<AllocationPercentage>100</AllocationPercentage>
+					</CostAllocation>
+				<TimeInterval>
+				 <ID>Wed</ID>
+						<FreeFormEffectivePeriod>
+						<StartDate><FormattedDateTime>2009-05-06</FormattedDateTime></StartDate>
+						<oa:Duration>PT8H</oa:Duration>
+					</FreeFormEffectivePeriod>
+				</TimeInterval>
+			</TimeCardReportedItem>
+			<TimeCardReportedItem>
+			<ID>4</ID>
+				<TimeReportedStatusCode>Approved</TimeReportedStatusCode>
+			     <CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00055</AllocationID>
+						<AllocationPercentage>100</AllocationPercentage>
+					</CostAllocation>
+				<TimeInterval>
+				 <ID>Thurs</ID>
+						<FreeFormEffectivePeriod>
+						<StartDate><FormattedDateTime>2009-05-07</FormattedDateTime></StartDate>
+						<oa:Duration>PT8H</oa:Duration>
+					</FreeFormEffectivePeriod>
+				</TimeInterval>
+			</TimeCardReportedItem>
+			<TimeCardReportedItem>
+			<ID>5</ID>
+				<TimeReportedStatusCode>Approved</TimeReportedStatusCode>
+				<CostAllocation>
+						<AllocationID schemeID="GL Account No.">14-00055</AllocationID>
+						<AllocationPercentage>100</AllocationPercentage>
+					</CostAllocation>
+				<TimeInterval>
+				 <ID>Fri</ID>
+						<FreeFormEffectivePeriod>
+						<StartDate><FormattedDateTime>2009-05-08</FormattedDateTime></StartDate>
+						<oa:Duration>PT8H</oa:Duration>
+					</FreeFormEffectivePeriod>
+				</TimeInterval>
+			</TimeCardReportedItem>
+				<Approver>
+					<ApproverPerson>
+						<PersonID schemeID="Employee ID">22-000145</PersonID>
+						<PersonName>
+							<oa:GivenName>Sara</oa:GivenName>
+							<FamilyName>Dole</FamilyName>
+						</PersonName>
+						<RoleCode>Department Manager</RoleCode>
+					</ApproverPerson>
+					<ApprovedDateTime>2009-10-17T09:50:02.01Z</ApprovedDateTime>
+				</Approver>
+		</TimeCard>
+	</DataArea>
+</ProcessTimeCard>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

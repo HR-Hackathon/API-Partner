@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProcessWorkerOnBoarding releaseID="3.2" languageCode="en-US" 
+		systemEnvironmentCode="Production" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessWorkerOnBoarding.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>e99fnp2</oa:LogicalID>
+			<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2011-03-03T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID" schemeAgencyName="ATS">33d88-d9e3-304b-9d0a-490lx3d3g3xx</oa:BODID>
+	</oa:ApplicationArea>
+
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add" expressionLanguage="XPath">/ProcessWorkerOnBoarding/DataArea/WorkerOnBoarding</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+
+		<WorkerOnBoarding majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyName="FrontOffice" schemeName="OnboardingTransactionID">04ck09</DocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID schemeAgencyName="FrontOffice" schemeName="OrganizationID">446884910-c1ba-4a95-862d-ad6d925fcda4</OrganizationID>
+				<OrganizationName>ABC Company</OrganizationName>
+			</EmployerIdentifiers>
+			<OnBoardingPerson>
+				<PersonID schemeAgencyName="FrontOffice" schemeName="ApplicantID">ebf878610-3dcc-4a66-8355-64881e1d8940</PersonID>
+				<PersonLegalID schemeAgencyName="United States Social Security Administration" schemeName="Social Security Number">123-45-6789</PersonLegalID>
+				<PersonName>
+					<FormattedName>Sally Joan Underhill</FormattedName>
+					<oa:GivenName>Sally</oa:GivenName>
+					<MiddleName>Joan</MiddleName>
+					<FamilyName>Underhill</FamilyName>
+				</PersonName>
+				<Communication>
+					<UseCode>Mobile Phone</UseCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>215</oa:AreaDialing>
+					<oa:DialNumber>6321212</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<Address type="ResidenceAddress">
+						<oa:AddressLine>10055 Red Lion Rd. </oa:AddressLine>
+						<oa:CityName>Philadelphia</oa:CityName>
+						<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">PA</oa:CountrySubDivisionCode>
+						<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+						<oa:PostalCode>19114</oa:PostalCode>
+					</Address>
+				</Communication>
+				<CitizenshipCountryCode>US</CitizenshipCountryCode>
+				<ResidencyCountryCode>US</ResidencyCountryCode>
+				<EthnicityCode>Caucasian</EthnicityCode>
+				<NationalityCode>US</NationalityCode>
+				<BirthPlace>
+					<oa:CityName>Philadelphia</oa:CityName>
+				</BirthPlace>
+				<BirthDate>1975-04-02</BirthDate>
+				<GenderCode>Female</GenderCode>
+				<MaritalStatusCode>Married</MaritalStatusCode>
+				<PrimaryLanguageCode>en</PrimaryLanguageCode>
+			</OnBoardingPerson>
+			<OnBoardingWorkerProfile>
+				<EmploymentHistory>
+					<EmployerHistory>
+						<OrganizationName>XYZ Corporation</OrganizationName>
+						<InternetDomainName>www.xyzcorp.com</InternetDomainName>
+						<IndustryCode listName="IndustryName" listAgencyName="FrontOffice">Software</IndustryCode>
+						<EmploymentPeriod>
+							<StartDate>
+								<FormattedDateTime>2009-01-01</FormattedDateTime>
+							</StartDate>
+						</EmploymentPeriod>
+						<CurrentIndicator>true</CurrentIndicator>
+						<PositionHistory>
+							<PositionTitle>Software Architect</PositionTitle>
+							<PositionLocation>
+								<Address>
+									<oa:CityName>Philadelphia</oa:CityName>
+									<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">PA</oa:CountrySubDivisionCode>
+									<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+								</Address>
+							</PositionLocation>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>2009-01-01</FormattedDateTime>
+								</StartDate>
+							</EmploymentPeriod>
+							<CurrentIndicator>true</CurrentIndicator>
+							<oa:Description>
+Softwate Architect in working as a for all new generation product development in North America and Europe.			
+					</oa:Description>
+						</PositionHistory>
+					</EmployerHistory>
+					<EmployerHistory>
+						<OrganizationName>ACME Software INC.</OrganizationName>
+						<InternetDomainName>www.ACMESoftware.com</InternetDomainName>
+						<IndustryCode listName="IndustryName" listAgencyName="FrontOffice">Software</IndustryCode>
+						<EmploymentPeriod>
+							<StartDate>
+								<FormattedDateTime>2006-01-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2008-12-31</FormattedDateTime>
+							</EndDate>
+						</EmploymentPeriod>
+						<PositionHistory>
+							<PositionTitle>SQL Programmer</PositionTitle>
+							<PositionLocation>
+								<Address>
+									<oa:CityName>Philadelphia</oa:CityName>
+									<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">PA</oa:CountrySubDivisionCode>
+									<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+								</Address>
+							</PositionLocation>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>2006-01-01</FormattedDateTime>
+								</StartDate>
+								<EndDate>
+									<FormattedDateTime>2008-12-31</FormattedDateTime>
+								</EndDate>
+							</EmploymentPeriod>
+							<oa:Description>SQL Programmer and Database Administrator</oa:Description>
+						</PositionHistory>
+					</EmployerHistory>
+				</EmploymentHistory>
+				<EducationHistory>
+					<EducationOrganizationAttendance>
+						<OrganizationName>University of Maryland</OrganizationName>
+						<InternetDomainName>Maryland.edu</InternetDomainName>
+						<AttendancePeriod>
+							<StartDate>
+								<FormattedDateTime>1997-09-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2001-05-20</FormattedDateTime>
+							</EndDate>
+						</AttendancePeriod>
+						<EducationDegree>
+							<DegreeID schemeAgencyName="FrontOffice" schemeName="DegreeCodes">B.S.</DegreeID>
+							<DegreeName>Bachelor of Science</DegreeName>
+							<DegreeDate>
+								<FormattedDateTime>2001-05-20</FormattedDateTime>
+							</DegreeDate>
+							<DegreeMajor>
+								<ProgramID schemeAgencyName="FrontOffice" schemeName="MajorCodes">COMPUTER SCIENCE</ProgramID>
+								<ProgramName>Computer Science</ProgramName>
+							</DegreeMajor>
+							<ReferenceLocation>
+								<oa:CityName>College park</oa:CityName>
+								<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">IL</oa:CountrySubDivisionCode>
+								<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+							</ReferenceLocation>
+						</EducationDegree>
+					</EducationOrganizationAttendance>
+				</EducationHistory>
+				<PersonQualifications>
+					<QualificationsSummary/>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="FrontOffice" schemeName="SkillID">MS-SQL Programing</CompetencyID>
+						<CompetencyName>MS-SQL Programing</CompetencyName>
+						<TaxonomyID schemeAgencyName="FrontOffice" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">10</ExperienceMeasure>
+					</PersonCompetency>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="FrontOffice" schemeName="SkillID">C#</CompetencyID>
+						<CompetencyName>C#</CompetencyName>
+						<TaxonomyID schemeAgencyName="FrontOffice" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">7</ExperienceMeasure>
+					</PersonCompetency>
+				</PersonQualifications>
+			</OnBoardingWorkerProfile>
+			<OnBoardingEmployment>
+				<HireTypeCode listName="HireCode" listAgencyName="FrontOffice">Fulltime</HireTypeCode>
+				<HireDate>2011-03-01</HireDate>
+				<OfferAcceptedDate>2011-02-23</OfferAcceptedDate>
+			</OnBoardingEmployment>
+			<OnBoardingDeployment>
+				<DeploymentOrganization>
+					<OrganizationIdentifiers>
+						<OrganizationID schemeAgencyName="HRIS" schemeName="CompanyID">XYZ-345</OrganizationID>
+						<OrganizationName>HRIS</OrganizationName>
+					</OrganizationIdentifiers>
+				</DeploymentOrganization>
+				<WorkLocation>
+					<LocationID schemeAgencyName="HRIS" schemeName="OfficeLocationID">Office777</LocationID>
+					<LocationName>Philadelphia Office</LocationName>
+				</WorkLocation>
+				<Job>
+					<JobID schemeAgencyName="HRIS" schemeName="JobOpeningID">Job-7532</JobID>
+					<oa:JobTitle>Software Architect</oa:JobTitle>
+					<JobCategoryCode listName="JobCategory" listAgencyName="XYZCompany">Development Architect </JobCategoryCode>
+				</Job>
+				<PositionID schemeAgencyName="HRIS" schemeName="PositionID">Pos-23411</PositionID>
+				<PositionTitle>Lead Software Architect </PositionTitle>
+				<DutyEntryDate>2011-03-01</DutyEntryDate>
+				<WorkLevelCode>FullTime</WorkLevelCode>
+				<ContractAgreementTimePeriod>
+					<oa:Duration>P9M</oa:Duration>
+				</ContractAgreementTimePeriod>
+				<PositionOfferingTypeCode>Contract</PositionOfferingTypeCode>
+			</OnBoardingDeployment>
+			<Attachment>
+				<oa:EmbeddedData encodingCode="base64" filename="Sally Joan Underhill resume.docx" mimeCode="">Lk9Fb35T8uwQJ74=</oa:EmbeddedData>
+				<oa:Description>Resume</oa:Description>
+			</Attachment>
+			<Attachment>
+				<oa:EmbeddedData encodingCode="base64" filename="Sally Joan Underhill contract e-signed 2011-03-01.pdf" mimeCode="">
+Lk9Fb35T8uwQJ74=</oa:EmbeddedData>
+				<oa:Description>Contract signed</oa:Description>
+			</Attachment>
+		</WorkerOnBoarding>
+	</DataArea>
+</ProcessWorkerOnBoarding>
+<!--
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

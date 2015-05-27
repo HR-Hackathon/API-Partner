@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ShowWorkerOnBoarding languageCode="en-US" releaseID="3.2" 
+		systemEnvironmentCode="Production" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ShowWorkerOnBoarding.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID schemeName="Application Identifier" schemeAgencyName="ATS">HRIS816</oa:LogicalID>
+			<oa:ConfirmationCode>Never</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>1967-08-13</oa:CreationDateTime>
+		<oa:BODID schemeName="GUID" schemeAgencyName="ATS">ecd87e88-c34e-401b-9d0a-615ba5e0f6cc</oa:BODID>
+	</oa:ApplicationArea>
+
+	<DataArea>
+		<oa:Show recordSetCompleteIndicator="true" recordSetTotal="1" recordSetCount="1">
+			<oa:OriginalApplicationArea>
+				<oa:Sender>
+					<oa:LogicalID schemeName="Application Identifier" schemeAgencyName="ATS">e99fnp2</oa:LogicalID>
+					<oa:ConfirmationCode>OnError</oa:ConfirmationCode>
+				</oa:Sender>
+				<oa:CreationDateTime>2010-10-15</oa:CreationDateTime>
+				<oa:BODID schemeName="GUID" schemeAgencyName="ATS">ecd87e88-c34e-401b-9d0a-615ba5e0f6bb</oa:BODID>
+			</oa:OriginalApplicationArea>
+		</oa:Show>
+
+		<WorkerOnBoarding majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyName="Hiredesk" schemeName="OnboardingTransactionID">b3923e66-c34e-401b-9d0a-615ba5e0f6bb</DocumentID>
+			<EmployerIdentifiers>
+				<OrganizationID schemeAgencyName="ATS" schemeName="Organization ID">46884910-c1ba-4a95-862d-ad6d925fcda4</OrganizationID>
+				<OrganizationName>ABC Company</OrganizationName>
+			</EmployerIdentifiers>
+			<OnBoardingPerson>
+				<PersonID schemeAgencyName="ATS" schemeName="ApplicantID">ebf81291-3dcc-4a66-8355-64881e1d7659</PersonID>
+				<PersonLegalID schemeAgencyName="United States Social Security Administration" schemeName="Social Security Number">991681165</PersonLegalID>
+				<PersonName>
+					<FormattedName>John Allan Smith</FormattedName>
+					<oa:GivenName>John</oa:GivenName>
+					<MiddleName>Allen</MiddleName>
+					<FamilyName>Smith</FamilyName>
+				</PersonName>
+				<Communication>
+					<UseCode>Personal</UseCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>312</oa:AreaDialing>
+					<oa:DialNumber>5551212</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<UseCode>Personal</UseCode>
+					<Address type="ResidenceAddress">
+						<oa:AddressLine>44 12th St</oa:AddressLine>
+						<oa:CityName>Chicago</oa:CityName>
+						<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">IL</oa:CountrySubDivisionCode>
+						<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+						<oa:PostalCode>60601</oa:PostalCode>
+					</Address>
+				</Communication>
+				<Disability>
+					<DisabilityIndicator>true</DisabilityIndicator>
+					<DisabilitySummary>
+						<AccomodationTypeCode>Wheelchair</AccomodationTypeCode>
+					</DisabilitySummary>
+				</Disability>
+				<StudentIndicator>true</StudentIndicator>
+				<StudentTypeCode>Parttime</StudentTypeCode>
+			</OnBoardingPerson>
+			<OnBoardingWorkerProfile>
+				<ID schemeAgencyName="ATS" schemeName="Worker Profile Identifier">A321321</ID>
+				<ProfileName>Professional Profile</ProfileName>
+				<PersonQualifications>
+					<QualificationsSummary>Experienced Web Developer</QualificationsSummary>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="ATS" schemeName="SkillID">Ruby on Rails</CompetencyID>
+						<CompetencyName>Ruby on Rails</CompetencyName>
+						<TaxonomyID schemeAgencyName="ATS" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">5</ExperienceMeasure>
+					</PersonCompetency>
+					<PersonCompetency>
+						<CompetencyID schemeAgencyName="ATS" schemeName="SkillID">C SHARP</CompetencyID>
+						<CompetencyName>C SHARP</CompetencyName>
+						<TaxonomyID schemeAgencyName="ATS" schemeName="SkillID">IT-LANG</TaxonomyID>
+						<ExperienceMeasure unitCode="years">3</ExperienceMeasure>
+					</PersonCompetency>
+				</PersonQualifications>
+				<OrganizationAffiliations>
+					<OrganizationAffiliation validTo="2010-01-01" validFrom="2012-12-31">
+						<OrganizationName>TOGAF</OrganizationName>
+						<AffiliatedOrganizationTypeCode>Professional</AffiliatedOrganizationTypeCode>
+						<MemberID>T121434</MemberID>
+						<OrganizationAffiliationRole>
+							<RoleName>Certified Architect</RoleName>
+						</OrganizationAffiliationRole>
+						<oa:Description>The Open Group Architecture Framework</oa:Description>
+					</OrganizationAffiliation>
+				</OrganizationAffiliations>
+			</OnBoardingWorkerProfile>
+			<OnBoardingEmployee>
+				<EmployeeID schemeAgencyName="HRIS" schemeName="Employee Identifier">E121311</EmployeeID>
+				<RelocationIndicator>true</RelocationIndicator>
+			</OnBoardingEmployee>
+			<OnBoardingEmployment>
+				<HireTypeCode>Transfer</HireTypeCode>
+				<HireDate>2010-10-15</HireDate>
+				<OriginalHireDate>2008-02-25</OriginalHireDate>
+				<OfferDate>2010-09-27</OfferDate>
+				<OfferAcceptedDate>2010-10-02</OfferAcceptedDate>
+			</OnBoardingEmployment>
+			<OnBoardingDeployment validFrom="2010-10-01" validTo="1999-12-31" allocationPercentage="100">
+				<ResourceRelationshipCode>Employee</ResourceRelationshipCode>
+				<DeploymentOrganization>
+					<OrganizationalIdentifiers organizationalTypeCode="Department">
+						<OrganizationalName>R and D</OrganizationalName>
+					</OrganizationalIdentifiers>
+				</DeploymentOrganization>
+				<WorkLocation>
+					<LocationID schemeAgencyName="ATS" schemeName="Location Identifier">ABC001</LocationID>
+					<LocationName>Main Campus</LocationName>
+					<Address type="ResidenceAddress">
+						<oa:AddressLine>1 ABC Boulevard</oa:AddressLine>
+						<oa:CityName>Chicago</oa:CityName>
+						<oa:CountrySubDivisionCode listName="ISO-3166-2:US" listAgencyName="ISO">IL</oa:CountrySubDivisionCode>
+						<CountryCode listName="ISO-3166-1-alpha-2" listAgencyName="ISO">US</CountryCode>
+						<oa:PostalCode>60601</oa:PostalCode>
+					</Address>
+				</WorkLocation>
+				<Communication>
+					<UseCode>Business</UseCode>
+					<oa:CountryDialing>1</oa:CountryDialing>
+					<oa:AreaDialing>312</oa:AreaDialing>
+					<oa:DialNumber>6755000</oa:DialNumber>
+				</Communication>
+				<Job>
+					<JobID schemeAgencyName="HRIS" schemeName="Job Identitifer">JO-5543</JobID>
+					<oa:JobTitle>Web Developer</oa:JobTitle>
+					<JobCategoryCode listName="JobCategoryCodeContentType" listAgencyName="ATS">Software Programmer</JobCategoryCode>
+					<JobEvaluation validTo="2010-01-01" validFrom="2010-12-31" typeCode="Salary">
+						<JobPlanCode listName="JobPlanCodeContentType" listAgencyName="ATS">JP005</JobPlanCode>
+						<JobGradeCode listName="JobGradeCodeContentType" listAgencyName="ATS">HT10</JobGradeCode>
+						<JobStepCode listName="JobStepCodeContentType" listAgencyName="ATS">ST5</JobStepCode>
+					</JobEvaluation>
+					<JobDescription>The Web Application Developer will be responsible for supporting the existing infrastructure as well as develop new technologies.
+Essential Duties and Responsibilities: 
+include the following. Other duties may be assigned as required.
+Develop new Web applications as identified by supervisor and management through packaged and customized applications. 
+Create a company-wide Intranet, allowing data manipulation for each internal staff member. </JobDescription>
+				</Job>
+				<PositionID schemeAgencyName="HRIS" schemeName="Position Identifier">P123213</PositionID>
+				<PositionTitle>Web Developer Level 2</PositionTitle>
+				<ExpectedDutyEntryDate>2010-10-15</ExpectedDutyEntryDate>
+				<DutyEntryDate>2010-10-15</DutyEntryDate>
+				<WorkLevelCode>FullTime</WorkLevelCode>
+				<WageHourLawCoverageCode>Exempt</WageHourLawCoverageCode>
+				<EmploymentTermCode internshipIndicator="false" seasonalIndicator="false">Regular</EmploymentTermCode>
+				<NationalityContextCode>Domestic</NationalityContextCode>
+				<Remuneration validTo="2010-10-15" validFrom="1999-12-31">
+					<oa:Amount currencyID="USD">1000.00</oa:Amount>
+					<RemunerationRateIntervalCode>Week</RemunerationRateIntervalCode>
+					<RemunerationTypeCode>BasePay</RemunerationTypeCode>
+				</Remuneration>
+				<PositionOfferingTypeCode>DirectHire</PositionOfferingTypeCode>
+			</OnBoardingDeployment>
+		</WorkerOnBoarding>
+	</DataArea>
+</ShowWorkerOnBoarding>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

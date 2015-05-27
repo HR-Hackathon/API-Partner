@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: AcknowledgeObjectivesResult.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../Nouns/ObjectivesResult.xsd"/>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Meta.xsd"/>
+	<xsd:element name="AcknowledgeObjectivesResult" type="AcknowledgeObjectivesResultType"/>
+	<xsd:complexType name="AcknowledgeObjectivesResultType">
+		<xsd:annotation>
+			<xsd:documentation> 
+       AcknowledgeObjectivesResult conveys the result of a ProcessObjectivesResult request. 
+
+       ObjectivesResult  Contains information about results, against an objective plan (See ObjectivesPlan noun). Essentially, the same information can be communicated within EPMResult, which is a superset of information that can be reported within employee performance reports. ObjectivesResult is offered as a separate noun for integrations that may not involve the broad array of information available within EPMResult. 
+
+       Acknowledge is a "Response Verb". Response Expressions represent and communicate actions taken by the receiver. 
+       XPath is the default expression language. The actionCode attribute (Accepted, Modified, Rejected  
+       specifies the action taken by the receiver. ChangeStatus allows detailed change and state information to be returned.
+       </xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="oa:BusinessObjectDocumentType">
+				<xsd:sequence>
+					<xsd:element name="DataArea" type="AcknowledgeObjectivesResultDataAreaType">
+						<xsd:annotation>
+							<xsd:documentation>The DataArea is the part of the BOD that contains business information. This information consists of a verb and one or more noun instances. </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="AcknowledgeObjectivesResultDataAreaType">
+		<xsd:sequence>
+			<xsd:element ref="oa:Acknowledge"/>
+			<xsd:element ref="ObjectivesResult" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

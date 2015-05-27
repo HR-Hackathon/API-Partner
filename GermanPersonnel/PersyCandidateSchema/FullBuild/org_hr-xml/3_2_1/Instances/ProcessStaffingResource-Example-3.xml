@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessStaffingResource 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessStaffingResource.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-17T10:09:02.01Z</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-016</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessStaffingResource/DataArea/StaffingResource</oa:ActionExpression>
+				<oa:ChangeStatus>
+					<oa:Code>New</oa:Code>
+				</oa:ChangeStatus>			
+			</oa:ActionCriteria>
+		</oa:Process>		
+		<StaffingResource majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyID="StaffingCompany" schemeVersionID="1">7654323</DocumentID>              
+			<CustomerParty>
+				<PartyID schemeID="StaffingCustomerID" schemeAgencyID="StaffingCustomer">445123</PartyID>
+				<PartyID schemeID="StaffingCustomerOrgUnitId" schemeAgencyID="StaffingCustomer">12</PartyID>
+				<PersonContact contactTypeCode="Request Placed By">
+					<PersonName>
+						<LegalName>Jan Janssen</LegalName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Mobile Telephone</ChannelCode>
+						<oa:CountryDialing>0031</oa:CountryDialing>
+						<oa:AreaDialing>06</oa:AreaDialing>
+						<oa:DialNumber>12345678</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						 <oa:URI>jan.janssen@staffingcustomer.nl</oa:URI>
+					</Communication>
+					<Communication>
+						<ChannelCode>Web</ChannelCode>
+						 <oa:URI>http://www.staffingcustomer.nl</oa:URI>
+					</Communication>
+				</PersonContact>
+			</CustomerParty>		
+			<SupplierParty>
+				<PartyID schemeAgencyID="StaffingCompany">676773</PartyID>
+				<PersonContact>	
+					<PersonName>
+						<LegalName>Anna Fransen</LegalName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Mobile Telephone</ChannelCode>
+						<oa:CountryDialing>0031</oa:CountryDialing>
+						<oa:AreaDialing>06</oa:AreaDialing>
+						<oa:DialNumber>65824154</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						 <oa:URI>anna.fransen@staffingcompany.nl</oa:URI>
+					</Communication>
+					<Communication>
+						<ChannelCode>Web</ChannelCode>
+						 <oa:URI>http://www.staffingcompany.nl</oa:URI>
+					</Communication>
+				</PersonContact>
+			</SupplierParty>
+			<StaffingReferenceIDs>
+				<StaffingRFQID schemeAgencyID="StaffingCustomer">RFQ23489712</StaffingRFQID>
+				<StaffingQuoteID schemeAgencyID="StaffingCompany">Q747827</StaffingQuoteID>
+			</StaffingReferenceIDs>				
+			<StaffingRate validFrom="2008-03-01">
+					<OrderLineID>5</OrderLineID>
+					<ComponentRateIndicator>false</ComponentRateIndicator>
+					<RateTypeCode>bill</RateTypeCode>
+					<RateStatusCode>proposed</RateStatusCode>
+					<oa:Amount currencyID="EUR">15.00</oa:Amount>
+					<PayRateIntervalCode>Hour</PayRateIntervalCode>
+					<Multiplier>100</Multiplier>
+				</StaffingRate>
+			<ResourcePerson>
+				<PersonID>12345</PersonID>
+				<PersonName>
+					<FormattedName>Katrien de Vries</FormattedName>
+					<LegalName>ir. K.B. de Vries</LegalName>
+					<oa:GivenName>Katrien</oa:GivenName>
+					<oa:GivenName>Bernadette</oa:GivenName>
+					<PreferredName>Katrien</PreferredName>					
+					<FamilyName primaryIndicator="true" prefix="de">Vries</FamilyName>
+					<FormerFamilyName primaryIndicator="false">Janssen</FormerFamilyName>
+					<QualificationAffixCode>ir.</QualificationAffixCode>
+					<PersonNameInitials>K.B.</PersonNameInitials>
+				</PersonName>
+				<Communication>
+					<Address currentAddressIndicator="true">
+						<oa:BuildingNumber>27</oa:BuildingNumber>
+						<oa:StreetName>Colosseum</oa:StreetName>
+						<oa:CityName>Enschede</oa:CityName>
+						<CountryCode>NL</CountryCode>
+						<oa:PostalCode>7521 PV</oa:PostalCode>						
+					</Address>
+				</Communication>
+				<Communication>
+					<ChannelCode>Mobile Telephone</ChannelCode>
+					<oa:CountryDialing>0031</oa:CountryDialing>
+					<oa:AreaDialing>06</oa:AreaDialing>
+                    <oa:DialNumber>12345678</oa:DialNumber>
+				</Communication>
+				<Communication>
+					<ChannelCode>Email</ChannelCode>
+                     <oa:URI>katrien.de.vries@athome.nl</oa:URI>
+				</Communication>
+				<Communication>
+					<ChannelCode>Web</ChannelCode>
+                     <oa:URI>http://www.athome.nl</oa:URI>
+				</Communication>
+				<CitizenshipCountryCode>NL</CitizenshipCountryCode>
+				<BirthDate>1972-05-06</BirthDate>
+				<GenderCode>Female</GenderCode>
+				<PrimaryLanguageCode>nl</PrimaryLanguageCode>
+			</ResourcePerson>
+			<ResourceProfile>
+				<PersonAvailability>
+					<AvailabilityDates>
+						<StartDateTime>2008-03-01</StartDateTime>
+						<EndDateTime>2008-03-31</EndDateTime>
+					</AvailabilityDates>
+				</PersonAvailability>				
+				<EmploymentHistory>
+					<EmployerHistory>
+						<OrganizationName>Company X</OrganizationName>
+						<OrganizationContact>
+							<ContactName>Jan Pietersen</ContactName>
+						</OrganizationContact>
+						<PositionHistory> 
+							<PositionTitle>Engineer</PositionTitle>
+							<EmploymentPeriod>
+								<StartDate>
+									<FormattedDateTime>1997-01-01</FormattedDateTime>
+								</StartDate>
+								<EndDate>
+									<FormattedDateTime>2003-09-01</FormattedDateTime>
+								</EndDate>
+							</EmploymentPeriod>
+						</PositionHistory>
+					</EmployerHistory>
+				</EmploymentHistory>
+				<EducationHistory>
+					<EducationOrganizationAttendance>
+						<EducationOrganizationID>234</EducationOrganizationID>
+						<ProgramName>HEAO</ProgramName>
+						<AttendancePeriod>
+							<StartDate>
+								<FormattedDateTime>1990-09-01</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>1996-11-01</FormattedDateTime>
+							</EndDate>
+						</AttendancePeriod>
+						<EducationDegree>
+							<DegreeTypeCode>Bc.</DegreeTypeCode>
+							<DegreeMajor>
+								<ProgramName>Commercial economics</ProgramName>
+							</DegreeMajor>
+						</EducationDegree>
+					</EducationOrganizationAttendance>
+				</EducationHistory>
+				<Licenses>
+					<License>
+						<LicenseID>B1973662</LicenseID>
+						<LicenseName>Rijbewijs B</LicenseName>
+						<FirstIssuedDate>
+							<FormattedDateTime>1990-10-03</FormattedDateTime>
+						</FirstIssuedDate>
+						<FreeFormPeriod>
+							<StartDate>
+								<FormattedDateTime>2000-10-03</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+								<FormattedDateTime>2010-10-03</FormattedDateTime>
+							</EndDate>
+						</FreeFormPeriod>
+						<IssuingAuthority>
+							<oa:Name>CBR</oa:Name>
+						</IssuingAuthority>
+						<oa:Description>May only drive a car with an automatic gear</oa:Description>
+					</License>					
+				</Licenses>
+				<PersonQualifications>
+					<PersonCompetency>
+						<CompetencyName>WorkingAndThinkingLevel</CompetencyName>
+						<CompetencyEvidence>
+							<oa:Description>WO</oa:Description>
+						</CompetencyEvidence>
+					</PersonCompetency>
+					<PersonCompetency>
+						<CompetencyName>Project management</CompetencyName>
+						<CompetencyEvidence>
+							<oa:Description>Project management course</oa:Description>
+						</CompetencyEvidence>
+					</PersonCompetency>
+				</PersonQualifications>	
+			</ResourceProfile>			
+			<ResourceDeployment>
+				<Schedule>
+					<ScheduledHours scheduleBasis="Week">36</ScheduledHours>
+					<ScheduledDays scheduleBasis="Week">4</ScheduledDays>
+				</Schedule>
+			</ResourceDeployment>
+			<WorkEligibility>
+				<WorkEligibilityDocument>
+						<ID>NL72431234</ID>
+						<oa:Name>Paspoort</oa:Name>
+						<FreeFormPeriod>
+							<StartDate>
+								<FormattedDateTime>2005-06-07</FormattedDateTime>
+							</StartDate>
+							<EndDate>
+									<FormattedDateTime>2010-06-07</FormattedDateTime>
+							</EndDate>
+						</FreeFormPeriod>
+				</WorkEligibilityDocument>
+			</WorkEligibility>
+			<Comment>This is the place to put free text comments.</Comment>
+		</StaffingResource>
+	</DataArea>
+</ProcessStaffingResource>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

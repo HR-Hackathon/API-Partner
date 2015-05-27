@@ -1,0 +1,134 @@
+<ProcessSavingsPlanEnrollment 
+			systemEnvironmentCode="Production" 
+			releaseID="3.2" 
+			languageCode="en-US" 
+			xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessSavingsPlanEnrollment.xsd"
+			xmlns="http://www.hr-xml.org/3" 
+			xmlns:oa="http://www.openapplications.org/oagis/9" 
+			xmlns:ext="http://www.example.com" 
+			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-02-12T10:09:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessSavingsPlanEnrollment/DataArea/SavingsPlanEnrollment</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<SavingsPlanEnrollment majorVersionID="1" minorVersionID="0">
+			<DocumentID>7654-3210</DocumentID>
+			<SavingsPlanID>00657-0010</SavingsPlanID>
+			<SavingsPlanSponsor>
+				<PartyName>My Example Company Corp, Inc.</PartyName>
+			</SavingsPlanSponsor>
+			<AccountHolder>
+				<AccountHolderID schemeID="Internal ID">457000064</AccountHolderID>
+				<AccountHolderPerson>
+					<PersonLegalID schemeID="SSN">555-44-1111</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>John</oa:GivenName>
+						<MiddleName>K</MiddleName>
+						<FamilyName>Doe</FamilyName>
+					</PersonName>
+					<Communication>
+						<UseCode>Personal</UseCode>
+						<Address type="Home">
+							<oa:AddressLine sequence="1">123 Any Street Rd.</oa:AddressLine>
+							<oa:CityName>Durham</oa:CityName>
+							<oa:CountrySubDivisionCode>NC</oa:CountrySubDivisionCode>
+							<oa:PostalCode>27705</oa:PostalCode>
+						</Address>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:AreaDialing>404</oa:AreaDialing>
+						<oa:DialNumber>798 5672</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:AreaDialing>314</oa:AreaDialing>
+						<oa:DialNumber>555 1111</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:URI>457000064@HEWITT.COM</oa:URI>
+					</Communication>
+					<BirthDate>1947-10-14</BirthDate>
+					<GenderCode>Male</GenderCode>
+				</AccountHolderPerson>
+				<AccountHolderEmployment>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>2007-04-01</HireDate>
+						</Hire>
+					</EmploymentLifecycle>
+				</AccountHolderEmployment>
+				<PayCycleRemuneration>
+					<PayCycleIntervalCode>Week</PayCycleIntervalCode>
+				</PayCycleRemuneration>
+			</AccountHolder>
+			<SavingsPlanElections>
+				<ElectionDate>2008-01-01</ElectionDate>
+				<PayrollDeferral>
+					<RegularDeferral>
+						<DeferralTypeCode>pre-tax</DeferralTypeCode>
+						<DeferralPercentage>010.0000</DeferralPercentage>
+					</RegularDeferral>
+					<RegularDeferral>
+						<DeferralTypeCode>after-tax</DeferralTypeCode>
+						<DeferralPercentage>005.0000</DeferralPercentage>
+					</RegularDeferral>
+					<CatchupDeferral>
+						<DeferralTypeCode>pre-tax</DeferralTypeCode>
+						<DeferralPercentage>000.0000</DeferralPercentage>
+					</CatchupDeferral>
+				</PayrollDeferral>
+				<SourceGroup>
+					<ID>0010</ID>
+					<oa:Name>All Investment Elections</oa:Name>
+					<ContributionSource>
+						<ID>0210</ID>
+						<EarningsSourceCode listID="Employee Contributions">after-tax</EarningsSourceCode>
+					</ContributionSource>
+					<ContributionSource>
+						<ID>0220</ID>
+						<EarningsSourceCode listID="Employee Contributions">after-tax rollover</EarningsSourceCode>
+					</ContributionSource>
+				</SourceGroup>
+				<InvestmentElections>
+					<SourceGroupID>0010</SourceGroupID>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>HEWITT221821502374</InvestmentReferenceID>
+						<AllocationPercentage>040.0000</AllocationPercentage>
+					</InvestmentAllocation>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>HEWITT321821502374</InvestmentReferenceID>
+						<AllocationPercentage>050.0000</AllocationPercentage>
+					</InvestmentAllocation>
+					<InvestmentAllocation>
+						<InvestmentReferenceID>HEWITT421821502374</InvestmentReferenceID>
+						<AllocationPercentage>010.0000</AllocationPercentage>
+					</InvestmentAllocation>
+				</InvestmentElections>
+				<DistributionElections>
+					<SourceGroupID>0010</SourceGroupID>
+					<DistributionEventCode>Retirement</DistributionEventCode>
+					<DistributionMethod>
+						<InstallmentNumber unitCode="months">48</InstallmentNumber>
+						<DistributionYear>2010</DistributionYear>
+					</DistributionMethod>
+				</DistributionElections>
+			</SavingsPlanElections>
+		</SavingsPlanEnrollment>
+	</DataArea>
+</ProcessSavingsPlanEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

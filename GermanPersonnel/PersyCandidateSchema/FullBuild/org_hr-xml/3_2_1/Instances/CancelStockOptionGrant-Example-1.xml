@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The following is an example of how a previously issued StockOptionGrant 
+might be removed using the "Incremental Delete" data management approach. 
+A previous issued grant might be removed upon a business event such as the 
+employee's termination if the employee was not yet vested under such grant.
+
+The "Cancel" verb would be used when there was some business calculation 
+or interpretation necessary. For just a routine or simple delete with no business 
+calculation required by the trading partner (no response required), the Process 
+verb might be used.
+-->
+<CancelStockOptionGrant 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2"  
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/CancelStockOptionGrant.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-08-13</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Cancel>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Delete">CancelStockOptionGrant/DataArea/StockOptionGrant</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Cancel>
+		<StockOptionGrant majorVersionID="1" minorVersionID="0">
+			<DocumentID>9876-1234</DocumentID>
+		</StockOptionGrant>
+	</DataArea>
+</CancelStockOptionGrant>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

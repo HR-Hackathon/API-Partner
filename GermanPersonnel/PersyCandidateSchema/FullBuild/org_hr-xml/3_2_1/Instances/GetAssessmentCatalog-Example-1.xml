@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetAssessmentCatalog systemEnvironmentCode="Production" 
+		releaseID="3.2" 
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetAssessmentCatalog.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-01-11T12:10:10.10Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get uniqueIndicator="true" 
+				recordSetSaveIndicator="true" 
+				maxItems="2" 
+				recordSetStartNumber="2">
+			<oa:Expression>/GetAssessmentCatalog/AssessmentCatalog/AssessmentPackageDetails</oa:Expression>
+		</oa:Get>
+		<AssessmentCatalog majorVersionID="1" minorVersionID="0">
+			<AssessmentPackage>
+				<AssessmentApplicability>
+					<AssessedCompetency>
+						<CompetencyName>Verbal Comprehension</CompetencyName>
+					</AssessedCompetency>
+				</AssessmentApplicability>
+			</AssessmentPackage>
+		</AssessmentCatalog>
+	</DataArea>
+</GetAssessmentCatalog>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

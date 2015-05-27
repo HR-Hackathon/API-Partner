@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: PositionCompetencyModel.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:annotation>
+		<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+		Provisional Release
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="PositionCompetencyModel" type="PositionCompetencyModelType"/>
+	<xsd:complexType name="PositionCompetencyModelType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Position Competency Model. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>A collection of competency information associated with a position or job. A position competency model includes references to individual competencies and references to groups of competencies that are required or associated with a position or job. Within those groups and individual competency refernences is information about associated proficiency levels (require or desire proficiency), and weightings of the group or individual competencies among their sibilings.
+ </ccts:DefinitionText>
+				<ccts:UsageRule>A position competency model typically is used as a base-line model with which to provision other talent management systems. For example, a performance management system could use a competency model to structure the competencies rating section of a performance appraisals. The baseline for the competencies and associated proficiency levels against which an employee is rated might be sourced from the position competency model. In similar fashion, the position competency model might be used to provision other talent management system components with such base-line information about positon competency requirements.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="CustomerParty" minOccurs="0"/>
+			<xsd:element ref="RequesterParty" minOccurs="0"/>
+			<xsd:element ref="PositionTitle" minOccurs="0"/>
+			<xsd:element ref="JobID" minOccurs="0"/>
+			<xsd:element ref="BaseCompetencyModelID" minOccurs="0"/>
+			<xsd:element ref="oa:Description" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PositionCompetencyGroup" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="PositionCompetency" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: ScreeningCatalogReport.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="ScreeningCatalogReport" type="ScreeningCatalogReportType"/>
+	<xsd:complexType name="ScreeningCatalogReportType">
+		<xsd:annotation>
+			<xsd:documentation>Contains a set of information describing a screening provider's catalog of services. There a variety of use cases that might be served by the ScreeningCatalog. There may be the need to simply retrieve and display descriptive information about screenings or to check current availability or pricing. Retrieval of catalog information could also be a first step in the configuration of a recruiting system with the PackageIDs it needs to submit orders to the screening provider.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="SupplierParty" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="ScreeningCatalogCustomerScope" minOccurs="0"/>
+				<xsd:element ref="ScreeningCatalogJurisdictionalScope" minOccurs="0" maxOccurs="unbounded">
+					<xsd:annotation>
+						<xsd:documentation>Contains jurisdictional requirements associated with screenings.</xsd:documentation>
+					</xsd:annotation>
+				</xsd:element>
+			</xsd:choice>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Example of one possible way to get the status of a ScreeningPackage. 
+
+This BOD instance is intended to retrieve up to 3 instances of ScreeningPackageResult matching the following field selections:
+
+ScreeningPackageResult/ScreeningSubjectDetails/ID = "1234-560-0876"  (CandidateID) 
+-->
+<GetScreeningReport systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" 
+xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetScreeningReport.xsd" xmlns="http://www.hr-xml.org/3" 
+xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2008-04-01</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get uniqueIndicator="true" maxItems="3">
+			<oa:Expression expressionLanguage="XPath">/GetScreeningReport/DataArea/ScreeningReport/ScreeningPackageResult</oa:Expression>
+		</oa:Get>
+		<ScreeningReport majorVersionID="2" minorVersionID="1">
+			<ScreeningPackageResult>
+				<ScreeningSubject>
+					<ScreeningSubjectID schemeID="CandidateID" agencyRoleCode="Customer" schemeAgencyID="Acme Corp.">1234-560-0876</ScreeningSubjectID>
+				</ScreeningSubject>
+             </ScreeningPackageResult>
+		</ScreeningReport>
+	</DataArea>
+</GetScreeningReport>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

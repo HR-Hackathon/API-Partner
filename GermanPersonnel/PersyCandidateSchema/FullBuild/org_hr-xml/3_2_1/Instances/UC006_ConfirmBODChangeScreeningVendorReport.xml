@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This ConfirmBod will acknowledge receipt of the GetScreeningVendorReport-->
+<ConfirmBOD systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.openapplications.org/oagis/9 ..\..\..\org_openapplications_platform\1_2\BODs\ConfirmBOD.xsd" xmlns="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<ApplicationArea>
+		<Sender>
+			<LogicalID>123456</LogicalID>
+		</Sender>
+		<Receiver>
+			<LogicalID>CL6789</LogicalID>
+		</Receiver>
+		<CreationDateTime>2011-03-01T19:20:30.49</CreationDateTime>
+		<!-- BODID in the ApplicationArea will be unique for every BOD -->
+		<BODID>EA83659F-DEF2-456C-B9C0-9D33A2F7-06A02</BODID>
+	</ApplicationArea>
+	<DataArea>
+		<Confirm>
+			<OriginalApplicationArea>
+				<Sender>
+					<LogicalID>123456</LogicalID>
+					<TaskID>Reported</TaskID>
+					<ConfirmationCode>Always</ConfirmationCode>
+				</Sender>
+				<Receiver>
+					<LogicalID>CL6789</LogicalID>
+				</Receiver>
+				<CreationDateTime>2010-07-16T19:25:30.45-05:00</CreationDateTime>
+				<!-- BODID in the BODID from the original GetScreeningVendorReport -->
+				<BODID>EA83659F-DEF2-456C-B9C0-9D33A2F7-06A01</BODID>
+			</OriginalApplicationArea>
+			<ResponseCriteria>
+				<ResponseExpression actionCode="Accepted" expressionLanguage="XPATH">/ConfirmBOD/DataArea/BOD/BODSuccessMessage/NounSuccessMessage</ResponseExpression>
+			</ResponseCriteria>
+		</Confirm>
+		<BOD>
+			<BODSuccessMessage>
+				<NounSuccessMessage/>
+			</BODSuccessMessage>
+		</BOD>
+	</DataArea>
+</ConfirmBOD>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: USEnrollment.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="USEnrollment" type="USEnrollmentType"/>
+	<xsd:complexType name="USEnrollmentType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>US Enrollment. Details</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>A collection of information to execute subscriber enrollments and maintenance within tier coverages (health care) and spending account accounts within the U.S. market.</ccts:DefinitionText>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="CustomerParty" minOccurs="0"/>
+			<xsd:element ref="BenefitsAdministratorID" minOccurs="0"/>
+			<xsd:element ref="SubscriberDetails" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="SubscriberDetails" type="SubscriberDetailsType"/>
+	<xsd:complexType name="SubscriberDetailsType">
+		<xsd:annotation>
+			<xsd:documentation>The Subscriber element is a required element containing information about the individual with an ability to enroll in the benefits program(s) based on a relationship with the Organization sponsoring the benefit program(s).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ID" minOccurs="0"/>
+			<xsd:element ref="SubscriberPerson" minOccurs="0"/>
+			<xsd:element ref="SubscriberEmployee" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SubscriberEmployment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SubscriberDeployment" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="USHealthCoverage" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="USRateBasedCoverage" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SpendingAccountCoverage" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="HIPAA" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Medicare" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Medicaid" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="SubscriberDependent" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="HIPAA" type="HIPAAType">
+		<xsd:annotation>
+			<xsd:documentation>Contain information relevant to compliance under the U.S. Health Insurance Portability </xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="Medicaid" type="MedicaidType"/>
+	<xsd:element name="Medicare" type="MedicareType"/>
+	<xsd:complexType name="HIPAAType">
+		<xsd:annotation>
+			<xsd:documentation>Contains details relavent to compliance with provisions under the 
+			U.S. Health Insurance Portability and Accountability Act of 1996 (HIPAA). Reports the 
+			number of prior months during which the person had medical coverage.
+			
+HIPAA Title I limits restrictions that a group health plan can place on benefits for 
+preexisting conditions. Group health plans may refuse to provide benefits relating 
+to preexisting conditions for a period of 12 months after enrollment in the plan or 18 
+months in the case of late enrollment. However, individuals may reduce this exclusion 
+period if they had group health plan coverage or health insurance prior to enrolling in 
+the plan. Title I allows individuals to reduce the exclusion period by the amount of 
+time that they had "creditable coverage" prior to enrolling in the plan and after any 
+"significant breaks" in coverage.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="PriorCoverageMonths"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="MedicaidType">
+		<xsd:sequence>
+			<xsd:element ref="StartDate"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:complexType name="MedicareType">
+		<xsd:sequence>
+			<xsd:element ref="MedicareEntitlementDetails" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Contains U.S. Medicare information for a subcriber or dependent.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="HealthInsuranceClaimNumberID" minOccurs="0"/>
+			<xsd:element ref="MedicarePartA" minOccurs="0"/>
+			<xsd:element ref="MedicarePartB" minOccurs="0"/>
+			<xsd:element ref="MedicarePartD" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="MedicareEntitlementDetails" type="MedicareEntitlementDetailsType"/>
+	<xsd:complexType name="MedicareEntitlementDetailsType">
+		<xsd:annotation>
+			<xsd:documentation>Contains information indicating whether the individual is entitled to the U.S. Medicare program and relevant effective dating.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="MedicareEligibleCode" minOccurs="0"/>
+			<xsd:element ref="MedicareEntitlementReasonCode" minOccurs="0"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="MedicareEntitlementReasonCode" type="MedicareEntitlementReasonCodeType"/>
+	<xsd:complexType name="MedicareEntitlementReasonCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Codes classifying the reason for entitlement under the U.S. Medicare program.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="MedicareEntitlementReasonCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="DrugPlanCoverageCode" type="DrugPlanCoverageCodeType"/>
+	<xsd:complexType name="DrugPlanCoverageCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Codes classifying the type of drug plan coverage under U.S. Medicare Part D.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="DrugPlanCoverageCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="MedicareEligibleCode" type="MedicareEligibleCodeType"/>
+	<xsd:complexType name="MedicareEligibleCodeType">
+		<xsd:annotation>
+			<xsd:documentation>Codes classifying a person's eligibility under the U.S. Medicare program. Medicare eligibility is determined by whether an individual meets the legal requirements for Medicare coverage.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleContent>
+			<xsd:extension base="MedicareEligibleCodeContentType">
+				<xsd:attributeGroup ref="oa:CodeListAttributeGroup"/>
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+	<xsd:element name="MedicarePartA" type="MedicarePartAType"/>
+	<xsd:complexType name="MedicarePartAType">
+		<xsd:complexContent>
+			<xsd:extension base="MedicareEnrollmentBaseType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="MedicarePartB" type="MedicarePartBType"/>
+	<xsd:complexType name="MedicarePartBType">
+		<xsd:complexContent>
+			<xsd:extension base="MedicareEnrollmentBaseType"/>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="MedicarePartD" type="MedicarePartDType"/>
+	<xsd:complexType name="MedicarePartDType">
+		<xsd:annotation>
+			<xsd:documentation>Pertains to the U.S. Medicare project. Contains information about the individual's Medicare Part D program enrollment as well as details about the specific drug plan in which the individual is enrolled.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="EnrollmentIndicator"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="UniqueBenefitOptionID"/>
+			<xsd:element ref="DrugPlanCoverageCode" minOccurs="0"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="MedicareEnrollmentBaseType">
+		<xsd:sequence>
+			<xsd:element ref="EnrollmentIndicator"/>
+			<xsd:element ref="StartDate" minOccurs="0"/>
+			<xsd:element ref="EndDate" minOccurs="0"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="SubscriberDependent" type="SubscriberDependentType"/>
+	<xsd:complexType name="SubscriberDependentType">
+		<xsd:complexContent>
+			<xsd:extension base="DependentPersonDossierBaseType">
+				<xsd:sequence>
+					<xsd:element ref="CustodialParent" minOccurs="0"/>
+					<xsd:element ref="ResponsiblePerson" minOccurs="0"/>
+					<xsd:element ref="USHealthCoverage" minOccurs="0"/>
+					<xsd:element ref="SpendingAccountCoverage" minOccurs="0"/>
+					<xsd:element ref="HIPAA" minOccurs="0"/>
+					<xsd:element ref="Medicare" minOccurs="0"/>
+					<xsd:element ref="Medicaid" minOccurs="0"/>
+					<xsd:element ref="EducationOrganization" minOccurs="0"/>
+					<xsd:element ref="UserArea" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

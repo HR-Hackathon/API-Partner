@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org 
+Copyright (c) 1997-2010 Open Applications Group, Inc. All Rights Reserved 
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" xmlns:oa="http://www.openapplications.org/oagis/9" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: EmploymentEligibilityI-9.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:import namespace="http://www.openapplications.org/oagis/9" schemaLocation="../../../../org_openapplications_platform/1_2/Common/OAGi/Components/Components.xsd"/>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="EmploymentEligibilityI-9" type="EmploymentEligibilityI-9Type"/>
+	<xsd:complexType name="EmploymentEligibilityI-9Type">
+		<xsd:annotation>
+			<xsd:documentation>Contains a set of information to document that each new employee (both citizen and non-citizen) hired after November 6, 1986, is authorized to work in the United States. Note that this standard would be only used within the United States.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="SoftwareVersion" minOccurs="0"/>
+			<xsd:element ref="Status" minOccurs="0"/>
+			<xsd:element ref="OrganizationID" minOccurs="0"/>
+			<xsd:element ref="SupplierParty" minOccurs="0"/>
+			<xsd:element ref="I-9Form" minOccurs="0"/>
+			<xsd:element ref="AuditTrail" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="I-9Form" type="I-9FormType"/>
+	<xsd:complexType name="I-9FormType">
+		<xsd:annotation>
+			<xsd:documentation>Contains the information required on the US I-9 form.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Section1" minOccurs="0"/>
+			<xsd:element ref="Section2" minOccurs="0"/>
+			<xsd:element ref="Section3" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="revisionDate" type="oa:DateType"/>
+		<xsd:attribute name="expirationDate" type="oa:DateType"/>
+	</xsd:complexType>
+	<xsd:element name="Section1" type="Section1Type"/>
+	<xsd:complexType name="Section1Type">
+		<xsd:annotation>
+			<xsd:documentation>Contains the US I-9 Form Employee Information and Verification to be completed by the employee.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="FamilyName" minOccurs="0"/>
+			<xsd:element ref="oa:GivenName" minOccurs="0"/>
+			<xsd:element ref="MiddleName" minOccurs="0"/>
+			<xsd:element ref="FormerFamilyName" minOccurs="0"/>
+			<xsd:element ref="oa:AddressLine" minOccurs="0"/>
+			<xsd:element ref="oa:Unit" minOccurs="0"/>
+			<xsd:element ref="oa:CityName" minOccurs="0"/>
+			<xsd:element ref="oa:CountrySubDivisionCode" minOccurs="0"/>
+			<xsd:element ref="oa:PostalCode" minOccurs="0"/>
+			<xsd:element ref="BirthDate" minOccurs="0"/>
+			<xsd:element ref="PersonLegalID" minOccurs="0"/>
+			<xsd:element ref="WorkerEligibilityType" minOccurs="0"/>
+			<xsd:element ref="AlienID" minOccurs="0"/>
+			<xsd:element ref="AlienEligibility" minOccurs="0"/>
+			<xsd:element ref="ElectronicSignature" minOccurs="0"/>
+			<xsd:element ref="PreparerCertification" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="PreparerCertification" type="SignatureCertificationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains the preparer and/or translator information completed by a person other than the employee.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SignatureCertificationType">
+		<xsd:sequence>
+			<xsd:element ref="FormattedName" minOccurs="0"/>
+			<xsd:element ref="PositionTitle" minOccurs="0"/>
+			<xsd:element ref="OrganizationalName" minOccurs="0"/>
+			<xsd:element ref="SubmitterAddress" minOccurs="0"/>
+			<xsd:element ref="SubmitterPhoneNumber" minOccurs="0"/>
+			<xsd:element ref="ElectronicSignature" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Section2" type="Section2Type"/>
+	<xsd:complexType name="Section2Type">
+		<xsd:annotation>
+			<xsd:documentation>Contains the US I-9 Form Employer Review and Verification to be completed by the employer.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Section2Documentation" minOccurs="0" maxOccurs="2"/>
+			<xsd:element ref="EmployerCertification" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="Section2Documentation" type="Section2DocumentationType"/>
+	<xsd:complexType name="Section2DocumentationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains the US I-9 Form Employer Review and Verification to be completed by the employer.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:choice>
+				<xsd:element ref="DocumentTitleListA" minOccurs="0"/>
+				<xsd:element ref="DocumentTitleListB" minOccurs="0"/>
+				<xsd:element ref="DocumentTitleListC" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="IssuingAuthorityName" minOccurs="0"/>
+			<xsd:element ref="EligibilityDocumentID" minOccurs="0"/>
+			<xsd:element ref="ReplacementReceiptIndicator" minOccurs="0"/>
+			<xsd:element ref="ExpirationDate" minOccurs="0"/>
+			<xsd:element ref="Attachment" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:element name="EmployerCertification" type="EmployerCertificationType">
+		<xsd:annotation>
+			<xsd:documentation>Contains the employer information certifying that the documents appear to be genuine.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="EmployerCertificationType">
+		<xsd:complexContent>
+			<xsd:extension base="SignatureCertificationType">
+				<xsd:sequence>
+					<xsd:element ref="HireDate" minOccurs="0"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:element name="Section3" type="Section3Type"/>
+	<xsd:complexType name="Section3Type">
+		<xsd:annotation>
+			<xsd:documentation>Contains the US I-9 Form Information to update and reverify Eligibility to be completed by the employer. Note that DocumentTitleListB is deprecated since it is not used in section 3.  List B is used to validate the person's identity, not the eligibility to work. </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="NewPersonFormattedName" minOccurs="0"/>
+			<xsd:element ref="RehireDate" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:element ref="DocumentTitleListA" minOccurs="0"/>
+				<xsd:element ref="DocumentTitleListB" minOccurs="0"/>
+				<xsd:element ref="DocumentTitleListC" minOccurs="0"/>
+			</xsd:choice>
+			<xsd:element ref="EligibilityDocumentID" minOccurs="0"/>
+			<xsd:element ref="ExpirationDate" minOccurs="0"/>
+			<xsd:element ref="Attachment" minOccurs="0"/>
+			<xsd:element ref="ElectronicSignature" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+	</xsd:complexType>
+	<xsd:element name="AlienEligibility" type="AlienEligibilityType"/>
+	<xsd:complexType name="AlienEligibilityType">
+		<xsd:sequence>
+			<xsd:element ref="AlienID"/>
+			<xsd:element ref="ExpirationDate" minOccurs="0"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

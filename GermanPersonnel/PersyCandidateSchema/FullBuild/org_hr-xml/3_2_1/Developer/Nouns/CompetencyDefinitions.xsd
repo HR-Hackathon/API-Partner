@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+The notices below are provided with respect to licensed content incorporated herein:
+Copyright HR-XML Consortium. All Rights Reserved. http://www.hrxmlconsortium.org and http://www.hr-xml.org. Terms of license can be found in license.txt.
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved.  http://www.openapplications.org
+-->
+<xsd:schema xmlns="http://www.hr-xml.org/3" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:1.1" targetNamespace="http://www.hr-xml.org/3" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xsd:annotation>
+		<xsd:documentation> 
+       Name: CompetencyDefinitions.xsd 
+       Status:  3.2.1 Release
+       Date this version: 2013-Jan-28 
+       </xsd:documentation>
+	</xsd:annotation>
+	<xsd:include schemaLocation="../Common/Components.xsd"/>
+	<xsd:element name="CompetencyDefinitions" type="CompetencyDefinitionsType"/>
+	<xsd:complexType name="CompetencyDefinitionsType">
+		<xsd:annotation>
+			<xsd:documentation source="http://www.hr-xml.org" xml:lang="en">
+				<ccts:DictionaryEntryName>Competency Defintion. Detail</ccts:DictionaryEntryName>
+				<ccts:DefinitionText>A structured description of meaning(s) or semantics associated with a one or more competencies. A Reusable Competency Definition (RCD) is reusable in that it is without a specific context.  Hierarchical competency taxomomies or non-hierarchical "maps" may be composed at an atomistic level of references to many RCDs. An RCD might represent a node at any given level of such a
+				taxonomy. Thus, an RCD might be used for either course-grain competency "clusters" or fine-grain individual competencies.</ccts:DefinitionText>
+				<ccts:UsageRule>The RCD concept is important for 
+				simplifying HR transactions. The basic idea is that full definitional
+				content does not have to be communicated within each transaction. Instead
+				of passing the full content, identifiers are exchanged referencing definitions that are known
+				or discoverable by the trading partner.</ccts:UsageRule>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:group ref="DocumentIDGroup" minOccurs="0"/>
+			<xsd:element ref="DocumentSequence" minOccurs="0"/>
+			<xsd:element ref="CustomerParty" minOccurs="0"/>
+			<xsd:element ref="SupplierParty" minOccurs="0"/>
+			<xsd:element ref="ReusableCompetencyDefinition" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="UserArea" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="languageCode" type="LanguageCodeContentType" use="optional"/>
+		<xsd:attributeGroup ref="EffectiveDateAttributeGroup"/>
+		<xsd:attributeGroup ref="VersionIDAttributeGroup"/>
+	</xsd:complexType>
+</xsd:schema>

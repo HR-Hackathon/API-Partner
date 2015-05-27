@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GetScreeningReport 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2"  
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/GetScreeningReport.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:ReferenceID schemeID="ClientID">PeopleClick-01</oa:ReferenceID>
+		</oa:Sender>
+		<oa:CreationDateTime>2008-05-12</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Get uniqueIndicator="true">
+			<oa:Expression expressionLanguage="token">GetScreeningReport/DataArea/ScreeningReport/ScreeningPackage/ScreeningResult/ScreeningCost</oa:Expression>
+		</oa:Get>
+		<ScreeningReport majorVersionID="2" minorVersionID="1">
+			<ScreeningPackageResult>
+				<ScreeningResult>
+					<CriminalReport>
+						<SearchCriminalTypeCode>Statewide</SearchCriminalTypeCode>
+						<CriminalCase>
+							<oa:CountrySubDivisionCode>NC</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+						</CriminalCase>
+					</CriminalReport>
+				</ScreeningResult>
+			</ScreeningPackageResult>
+		</ScreeningReport>
+	</DataArea>
+</GetScreeningReport>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

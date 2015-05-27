@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessStaffingOrder 
+		systemEnvironmentCode="Production" 
+		releaseID="3.2"  
+		languageCode="en-US" 
+		xsi:schemaLocation="http://www.hr-xml.org/3  ../Developer/BODs/ProcessStaffingOrder.xsd" 
+		xmlns="http://www.hr-xml.org/3" 
+		xmlns:oa="http://www.openapplications.org/oagis/9" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-06-11T08:21:25-07:00</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process acknowledgeCode="Always">
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Add">/ProcessStaffingOrder/DataArea/StaffingOrder</oa:ActionExpression>
+				<oa:ChangeStatus>
+					<oa:Code>New Order</oa:Code>
+					<oa:Reason></oa:Reason>
+				</oa:ChangeStatus>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<StaffingOrder majorVersionID="1" minorVersionID="0">
+			<DocumentID schemeAgencyID="IQN" schemeID="OrderID">262130</DocumentID>
+			<StaffingOrderTypeCode>Order</StaffingOrderTypeCode>
+				<CustomerParty>
+				<PartyID schemeID="Customer ID" schemeAgencyID="IQN">20497</PartyID>
+				<PartyReportingIDs>
+					<ID schemeID="Customer Org Unit ID">Tier 1 WHQ/Sales/GBU</ID>
+					<ID schemeID="DepartmentCode">Jerry Rice - WHQ - Beaverton, OR</ID>
+					<ID schemeID="LocationCode">OR - Beaverton</ID>
+				</PartyReportingIDs>
+				<PersonContact>
+					<PersonName>
+						<FormattedName>>C, Sabra</FormattedName>
+						<oa:GivenName>Sabra</oa:GivenName>
+						<FamilyName>C</FamilyName>
+					</PersonName>
+					<RoleName>Order Contact</RoleName>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<oa:AreaDialing>800</oa:AreaDialing>
+						<oa:DialNumber>555-6453</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<oa:URI>Sabra.C@N.com</oa:URI>
+					</Communication>
+				</PersonContact>
+			</CustomerParty>
+			<SupplierParty>
+				<PartyID schemeAgencyID="IQN">22021</PartyID>
+			</SupplierParty>
+			<MultiVendorDistributionIndicator>false</MultiVendorDistributionIndicator>
+			<StaffingRequisition>
+				<PositionID>1</PositionID>
+				<PositionTitle>Oregon - Admin Asst</PositionTitle>
+				<PositionOpenQuantity>1</PositionOpenQuantity>
+				<JobCategoryCode>ETW/Administrative</JobCategoryCode>
+				<PositionOfferingTypeCode>Contract</PositionOfferingTypeCode>
+				<PositionFormattedDescription>
+					<Content><![CDATA[Prior experience supporting team and/or manager. Preparing correspondence and reports, screening telephone calls, scheduling meetings and conferences, plan and prepare travel arrangements, creating documents and spreadsheets, graphs, charts and presentations using outlook, word and powerpoint. Experience with voicemail, fax and maintaining detaled logs.May also be asked to track budgets, process expense reports, take meeting notes. Strong communications skills, ability to effectivly handle ambiguity, strong multi-tasking skills. Excellent attention to detail and follow through.]]></Content>
+				</PositionFormattedDescription>
+	           <Schedule>
+	           	<DaySchedule>
+					<DayCode>Monday Through Friday</DayCode>
+					<StartTime>09:00:00</StartTime>
+					<EndTime>05:00:00</EndTime>
+				</DaySchedule>
+               </Schedule>			
+               <ReportsToPerson>
+					<PersonName>
+						<FormattedName>A, Kris</FormattedName>
+						<oa:GivenName>Kris</oa:GivenName>
+						<FamilyName>A</FamilyName>
+					</PersonName>
+					<Communication>
+						<ChannelCode>Telephone</ChannelCode>
+						<oa:AreaDialing>800</oa:AreaDialing>
+						<oa:DialNumber>555-6453</oa:DialNumber>
+					</Communication>
+					<Communication>
+						<ChannelCode>Email</ChannelCode>
+						<oa:URI>Kris.A@n.com</oa:URI>
+					</Communication>
+				</ReportsToPerson>
+				<StaffingRate  validFrom="2007-06-04">
+					<RateTypeCode>Regular</RateTypeCode>
+					<RateStatusCode>Proposed</RateStatusCode>
+					<oa:Amount currencyID="USD">125.57</oa:Amount>
+					<PayRateIntervalCode>Hour</PayRateIntervalCode>
+				</StaffingRate>
+					<InterviewRequiredIndicator>false</InterviewRequiredIndicator>
+				<ResumeRequiredIndicator>false</ResumeRequiredIndicator>
+			</StaffingRequisition>
+		</StaffingOrder>
+	</DataArea>
+</ProcessStaffingOrder>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+

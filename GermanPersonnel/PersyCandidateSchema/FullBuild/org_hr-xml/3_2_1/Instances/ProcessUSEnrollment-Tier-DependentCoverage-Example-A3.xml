@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessUSEnrollment systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/ProcessUSEnrollment.xsd" xmlns="http://www.hr-xml.org/3" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:AuthorizationID>BenefitsAdministrator1</oa:AuthorizationID>
+		</oa:Sender>
+		<oa:CreationDateTime>2010-02-03T17:45:40-05:00</oa:CreationDateTime>
+		<oa:BODID>PC2009-11-17-016</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Process>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/ProcessUSEnrollment/DataArea/USEnrollment</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Process>
+		<USEnrollment majorVersionID="1" minorVersionID="0">
+			<DocumentID>PC2009-11-17-016</DocumentID>
+			<CustomerParty>
+				<PartyID>5977</PartyID>
+				<PartyName>Premier Company</PartyName>
+			</CustomerParty>
+			<BenefitsAdministratorID schemeID="Mutually Defined">382235791</BenefitsAdministratorID>
+			<SubscriberDetails validFrom="2010-02-03">
+				<SubscriberPerson>
+					<PersonLegalID schemeID="US SSN">111-22-3333</PersonLegalID>
+					<PersonName>
+						<oa:GivenName>JOE</oa:GivenName>
+						<FamilyName>THOMPSON</FamilyName>
+					</PersonName>
+					<Communication>
+						<Address type="Residence">
+							<oa:AddressLine sequence="1">143 MAIN ST</oa:AddressLine>
+							<oa:CityName>OAKWOOD</oa:CityName>
+							<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+							<oa:PostalCode>61043</oa:PostalCode>
+						</Address>
+					</Communication>
+					<BirthDate>1970-06-22</BirthDate>
+					<GenderCode>Male</GenderCode>
+				</SubscriberPerson>
+				<SubscriberEmployee>
+					<EmployeeID>428408</EmployeeID>
+				</SubscriberEmployee>
+				<SubscriberEmployment>
+					<EmployedIndicator validFrom="2009-01-01">true</EmployedIndicator>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>2009-01-01</HireDate>
+						</Hire>
+					</EmploymentLifecycle>
+				</SubscriberEmployment>
+				<USHealthCoverage>
+					<USHealthCoverageCode>Health</USHealthCoverageCode>
+					<ElectedPlanID>11</ElectedPlanID>
+					<GroupNumberID>022574900320032</GroupNumberID>
+					<ContractConfigurationID>TTXX</ContractConfigurationID>
+					<BenefitReportingIDs>
+						<ID schemeID="Reporting Field 1" validFrom="2009-01-01">0032</ID>
+						<ID schemeID="Reporting Field 2" validFrom="2009-01-01">001278</ID>
+						<ID schemeID="Reporting Field 3" validFrom="2009-01-01">TF1</ID>
+						<ID schemeID="Reporting Field 4" validFrom="2009-01-01">428408</ID>
+						<ID schemeID="Reporting Field 5" validFrom="2009-01-01">A4310</ID>
+						<ID schemeID="Reporting Field 6" validFrom="2009-01-01">TSOP042</ID>
+					</BenefitReportingIDs>
+					<COBRAStatusCode>NonCOBRA</COBRAStatusCode>
+					<CoverageLevel validFrom="2009-02-03">
+						<CoverageLevelCode>Family</CoverageLevelCode>
+					</CoverageLevel>
+					<EligibilityRegionCode listID="Postal Code">61043</EligibilityRegionCode>
+				</USHealthCoverage>
+				<SubscriberDependent>
+					<DependentRelationshipCode>Child</DependentRelationshipCode>
+					<DependentPerson>
+						<PersonLegalID schemeID="US SSN">518-595-9999</PersonLegalID>
+						<PersonName>
+							<oa:GivenName>SAHRIYA</oa:GivenName>
+							<MiddleName/>
+							<FamilyName>THOMPSON</FamilyName>
+						</PersonName>
+						<Communication>
+							<Address type="Residence">
+								<oa:LineOne>143 MAIN ST.</oa:LineOne>
+								<oa:CityName>OAKWOOD</oa:CityName>
+								<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+								<CountryCode>US</CountryCode>
+								<oa:PostalCode>61043</oa:PostalCode>
+							</Address>
+						</Communication>
+						<BirthDate>2007-05-04</BirthDate>
+						<GenderCode>Female</GenderCode>
+					</DependentPerson>
+					<USHealthCoverage>
+						<USHealthCoverageCode>Health</USHealthCoverageCode>
+						<ElectedPlanID>11</ElectedPlanID>
+						<GroupNumberID>022574900320032</GroupNumberID>
+						<ContractConfigurationID>TTXX</ContractConfigurationID>
+						<COBRAStatusCode>NonCOBRA</COBRAStatusCode>
+						<CoverageLevel validFrom="2009-02-03">
+							<CoverageLevelCode>Family</CoverageLevelCode>
+						</CoverageLevel>
+					</USHealthCoverage>
+				</SubscriberDependent>
+				<SubscriberDependent>
+					<DependentRelationshipCode>Spouse</DependentRelationshipCode>
+					<DependentPerson>
+						<PersonLegalID schemeID="US SSN">444-40-3123</PersonLegalID>
+						<PersonName>
+							<oa:GivenName>MARY</oa:GivenName>
+							<MiddleName/>
+							<FamilyName>THOMPSON</FamilyName>
+						</PersonName>
+						<Communication>
+							<Address type="Residence">
+								<oa:LineOne>143 MAIN ST.</oa:LineOne>
+								<oa:CityName>OAKWOOD</oa:CityName>
+								<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+								<CountryCode>US</CountryCode>
+								<oa:PostalCode>61043</oa:PostalCode>
+							</Address>
+						</Communication>
+						<BirthDate>1972-03-22</BirthDate>
+						<GenderCode>Female</GenderCode>
+					</DependentPerson>
+					<USHealthCoverage>
+						<USHealthCoverageCode>Health</USHealthCoverageCode>
+						<ElectedPlanID>11</ElectedPlanID>
+						<GroupNumberID>022574900320032</GroupNumberID>
+						<ContractConfigurationID>TTXX</ContractConfigurationID>
+						<COBRAStatusCode>NonCOBRA</COBRAStatusCode>
+						<CoverageLevel validFrom="2009-02-03">
+							<CoverageLevelCode>Family</CoverageLevelCode>
+						</CoverageLevel>
+					</USHealthCoverage>
+				</SubscriberDependent>
+				<SubscriberDependent>
+					<DependentRelationshipCode>Child</DependentRelationshipCode>
+					<DependentPerson>
+						<PersonLegalID schemeID="US SSN">999-99-5872</PersonLegalID>
+						<PersonName>
+							<oa:GivenName>DAVE</oa:GivenName>
+							<MiddleName/>
+							<FamilyName>THOMPSON</FamilyName>
+						</PersonName>
+						<Communication>
+							<Address type="Residence">
+								<oa:AddressLine sequence="1">143 MAIN ST.</oa:AddressLine>
+								<oa:CityName>OAKWOOD</oa:CityName>
+								<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+								<CountryCode>US</CountryCode>
+								<oa:PostalCode>61043</oa:PostalCode>
+							</Address>
+						</Communication>
+						<BirthDate>2010-02-01</BirthDate>
+						<GenderCode>Male</GenderCode>
+					</DependentPerson>
+				</SubscriberDependent>
+			</SubscriberDetails>
+		</USEnrollment>
+	</DataArea>
+</ProcessUSEnrollment>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

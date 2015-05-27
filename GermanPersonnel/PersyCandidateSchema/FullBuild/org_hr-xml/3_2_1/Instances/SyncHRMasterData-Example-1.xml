@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncHRMasterData xmlns="http://www.hr-xml.org/3" xmlns:anyco="http://www.AnyCo.com.com/oagis/9" xmlns:oa="http://www.openapplications.org/oagis/9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" systemEnvironmentCode="Production" releaseID="3.2" languageCode="en-US" xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncHRMasterData.xsd">
+	<oa:ApplicationArea>
+		<oa:Sender>
+			<oa:LogicalID>SAPHR</oa:LogicalID>
+			<oa:ComponentID>ECC</oa:ComponentID>
+			<oa:TaskID>Master</oa:TaskID>
+			<oa:ReferenceID>App-1234</oa:ReferenceID>
+			<oa:ConfirmationCode>Always</oa:ConfirmationCode>
+		</oa:Sender>
+		<oa:CreationDateTime>2008-09-03T11:58:19-04:00</oa:CreationDateTime>
+		<oa:BODID>GUID-123456789</oa:BODID>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/SyncHRMasterData/DataArea/HRMasterData</oa:ActionExpression>
+			</oa:ActionCriteria>
+		</oa:Sync>
+		<HRMasterData majorVersionID="1" minorVersionID="0">
+			<DocumentID>BusObj-1234</DocumentID>
+			<DocumentSequence>1234</DocumentSequence>
+			<EmployerIdentifiers>
+				<OrganizationID schemeID="SourceOrganization">???</OrganizationID>
+				<OrganizationName>AnyCo.com</OrganizationName>
+			</EmployerIdentifiers>
+			<MasterPersonDossier>
+				<MasterPerson>
+					<PersonID schemeID="Global">12345678</PersonID>
+					<PersonLegalID schemeID="IMSS">12345678</PersonLegalID>
+					<PersonName validFrom="2008-08-29" validTo="2009-01-01" nameTypeCode="Current Name">
+						<FormattedName>Yamada Taro</FormattedName>
+						<oa:GivenName>Yamada</oa:GivenName>
+						<PreferredName>Yam</PreferredName>
+						<MiddleName>Yu</MiddleName>
+						<FamilyName>Taro</FamilyName>
+						<PreferredSalutationCode>Ms.</PreferredSalutationCode>
+						<GenerationAffixCode>III</GenerationAffixCode>
+						<QualificationAffixCode>MD</QualificationAffixCode>
+						<AlternateScriptPersonName scriptCode="Katakana">
+							<oa:GivenName>タロウ</oa:GivenName>
+							<FamilyName>ヤマダ</FamilyName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Kanji">
+							<oa:GivenName>太郎</oa:GivenName>
+							<FamilyName>山田</FamilyName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Romaji">
+							<oa:GivenName>Yamanda</oa:GivenName>
+							<FamilyName>Yaro</FamilyName>
+						</AlternateScriptPersonName>
+					</PersonName>
+					<PersonName nameTypeCode="Birth Name">
+						<FamilyName>Smith</FamilyName>
+						<AlternateScriptPersonName scriptCode="Katakana">
+							<FamilyName>ヤマダ</FamilyName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Kanji">
+							<FamilyName>山田</FamilyName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Romaji">
+							<FamilyName>Smith</FamilyName>
+						</AlternateScriptPersonName>
+					</PersonName>
+					<PersonName nameTypeCode="Register Name">
+						<AlternateScriptPersonName scriptCode="Katakana">
+							<FormattedName>ヤマダ</FormattedName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Kanji">
+							<FormattedName>山田</FormattedName>
+						</AlternateScriptPersonName>
+						<AlternateScriptPersonName scriptCode="Romaji">
+							<FormattedName>Smith</FormattedName>
+						</AlternateScriptPersonName>
+					</PersonName>
+					<Communication sequence="1">
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<oa:DialNumber>908 555-1212</oa:DialNumber>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Address</ChannelCode>
+						<UseCode>Personal</UseCode>
+						<Address validFrom="2008-06-04" type="Permanent">
+							<oa:BuildingNumber>123</oa:BuildingNumber>
+							<oa:StreetName>Market Street</oa:StreetName>
+							<oa:Unit>Apt 2B</oa:Unit>
+							<oa:DeliveryPointCode>Second address line text</oa:DeliveryPointCode>
+							<oa:CityName>Huixquilucan</oa:CityName>
+							<oa:CountrySubDivisionCode listID="State">EMEX</oa:CountrySubDivisionCode>
+							<oa:CountrySubDivisionCode listID="County">Berks</oa:CountrySubDivisionCode>
+							<CountryCode>MX</CountryCode>
+							<oa:PostalCode>52763</oa:PostalCode>
+							<UserArea>
+								<!--
+								<anyco:AddressUserArea>
+									<anyco:AlternateScriptAddress scriptCode="Katakana">
+										<oa:AddressLine sequence="1">ヤマダ</oa:AddressLine>
+										<oa:AddressLine sequence="2">ヤマダ ヤマダ</oa:AddressLine>
+										<oa:AddressLine sequence="3">ヤマ</oa:AddressLine>
+									</anyco:AlternateScriptAddress>
+									<anyco:AlternateScriptAddress scriptCode="Kanji">
+										<oa:AddressLine sequence="1">山</oa:AddressLine>
+										<oa:AddressLine sequence="2">山田 山田山田 </oa:AddressLine>
+										<oa:AddressLine sequence="3">田</oa:AddressLine>
+									</anyco:AlternateScriptAddress>
+								</anyco:AddressUserArea>-->
+							</UserArea>
+						</Address>
+					</Communication>
+					<BirthDate>1958-11-14</BirthDate>
+					<BirthPlace>
+						<oa:CityName>Anytown</oa:CityName>
+						<oa:CountrySubDivisionCode listID="State">NJ</oa:CountrySubDivisionCode>
+						<CountryCode>US</CountryCode>
+					</BirthPlace>
+					<GenderCode>Female</GenderCode>
+					<CertifiedMaritalStatus>
+						<MaritalStatusCode validFrom="1984-06-16">Married</MaritalStatusCode>
+					</CertifiedMaritalStatus>
+					<CitizenshipCountryCode>US</CitizenshipCountryCode>
+					<Disability>
+						<DisabilityIndicator>false</DisabilityIndicator>
+					</Disability>
+				</MasterPerson>
+				<MasterEmployee>
+					<EmployeeID schemeID="Employee">12345678</EmployeeID>
+					<EmployeeID schemeID="User">yaroy</EmployeeID>
+					<EmploymentTermCode>Regular</EmploymentTermCode>
+					<LaborBargainingUnitMemberCode bargainingUnitID="UID - 303C">Member</LaborBargainingUnitMemberCode>
+					<ExecutiveIndicator>false</ExecutiveIndicator>
+					<OfficerIndicator>true</OfficerIndicator>
+					<EmployeeGroupCode listID="Group" name="Regular Full-Time">1</EmployeeGroupCode>
+					<EmployeeGroupCode listID="SubGroup" name="Salaried">1</EmployeeGroupCode>
+				</MasterEmployee>
+				<MasterEmployment>
+					<EmployedIndicator>true</EmployedIndicator>
+					<EmploymentLifecycle>
+						<Hire>
+							<HireDate>2007-12-17</HireDate>
+							<OriginalHireDate>2007-12-17</OriginalHireDate>
+							<AdjustedHireDate>2007-12-17</AdjustedHireDate>
+						</Hire>
+						<LeaveIndicator>false</LeaveIndicator>
+						<Leave>
+							<LeaveStatusCode>Active</LeaveStatusCode>
+							<LeaveRemunerationCode>Paid</LeaveRemunerationCode>
+							<LeaveReasonCode name="Medical">01</LeaveReasonCode>
+							<LeaveStartDate>2008-07-01</LeaveStartDate>
+							<LastWorkedDate>2008-06-30</LastWorkedDate>
+							<LastPaidDate>2008-06-06</LastPaidDate>
+							<ScheduledWorkReturnDate>2008-08-01</ScheduledWorkReturnDate>
+							<WorkReturnDate>2008-08-02</WorkReturnDate>
+						</Leave>
+						<TerminatedIndicator>false</TerminatedIndicator>
+						<Termination>
+							<VoluntaryTerminationIndicator>true</VoluntaryTerminationIndicator>
+							<TerminationReasonCode name="Relocation">02</TerminationReasonCode>
+							<TerminationDate>2008-06-06</TerminationDate>
+							<LastWorkedDate>2008-06-06</LastWorkedDate>
+							<LastPaidDate>2008-06-06</LastPaidDate>
+						</Termination>
+						<RetireeIndicator>false</RetireeIndicator>
+					</EmploymentLifecycle>
+				</MasterEmployment>
+				<MasterDeployment validFrom="2008-06-01" allocationPercentage="100">
+					<ResourceRelationshipCode>Employee</ResourceRelationshipCode>
+					<DeploymentOrganization>
+						<OrganizationIdentifiers>
+							<OrganizationID>9006</OrganizationID>
+							<OrganizationName>AnyCo.com</OrganizationName>
+						</OrganizationIdentifiers>
+						<OrganizationalIdentifiers organizationalTypeCode="oa:Unit" validFrom="2008-07-11">
+							<OrganizationalID>123456789</OrganizationalID>
+							<OrganizationalName>HTR Integration</OrganizationalName>
+						</OrganizationalIdentifiers>
+						<OrganizationalIdentifiers organizationalTypeCode="Division">
+							<OrganizationalID>005</OrganizationalID>
+							<OrganizationalName>MRL</OrganizationalName>
+						</OrganizationalIdentifiers>
+						<UserArea>
+							<anyco:DeploymentOrganizationDetailsUserArea>
+								<CostCenterID>1000118</CostCenterID>
+								<CostCenterName>Hire to Retire</CostCenterName>
+								<SupervisorDetails>
+									<SupervisorID schemeID="Employee">12345678</SupervisorID>
+									<RoleCode>M5</RoleCode>
+									<SupervisorName>Joe Manager</SupervisorName>
+								</SupervisorDetails>
+							</anyco:DeploymentOrganizationDetailsUserArea>
+						</UserArea>
+					</DeploymentOrganization>
+					<WorkLocation>
+						<LocationID>WSN</LocationID>
+						<LocationName>Whitehouse Station</LocationName>
+						<Address>
+							<CountryCode>US</CountryCode>
+						</Address>
+					</WorkLocation>
+					<Communication sequence="1">
+						<ChannelCode>Email</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:URI>johny-joe@any.com</oa:URI>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Telephone</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:DialNumber>908 555-1212</oa:DialNumber>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Mobile Telephone</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:DialNumber>908 555-1212</oa:DialNumber>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Fax</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:DialNumber>908 555-1212</oa:DialNumber>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Pager</ChannelCode>
+						<UseCode>Business</UseCode>
+						<oa:DialNumber>908 555-1212</oa:DialNumber>
+					</Communication>
+					<Communication sequence="1">
+						<ChannelCode>Address</ChannelCode>
+						<UseCode>Business</UseCode>
+						<Address type="Work">
+							<oa:StreetName>Summneytown Pike</oa:StreetName>
+							<oa:DeliveryPointCode>WP 37B-301</oa:DeliveryPointCode>
+							<oa:CityName>West Point</oa:CityName>
+							<oa:CountrySubDivisionCode listID="State">PA</oa:CountrySubDivisionCode>
+							<oa:CountrySubDivisionCode listID="County">Summney County</oa:CountrySubDivisionCode>
+							<CountryCode>USA</CountryCode>
+							<oa:PostalCode>12345</oa:PostalCode>
+						</Address>
+					</Communication>
+					<Job validFrom="2008-03-03">
+						<JobID>12345678</JobID>
+						<oa:JobTitle>Director of Integration</oa:JobTitle>
+						<JobEvaluation>
+							<JobGradeCode>01</JobGradeCode>
+						</JobEvaluation>
+					</Job>
+					<MasterPosition validFrom="2008-06-01">
+						<PositionID>12345678</PositionID>
+						<PositionTitle>Director of HTR Integration</PositionTitle>
+						<RemunerationBasisCode>Executive</RemunerationBasisCode>
+					</MasterPosition>
+					<Schedule>
+						<ScheduledHours scheduleBasis="Week">40</ScheduledHours>
+					</Schedule>
+					<AssignmentEntryReasonCode>Lateral</AssignmentEntryReasonCode>
+					<WorkLevelCode>FullTime</WorkLevelCode>
+					<FullTimeEquivalentRatio>100.00</FullTimeEquivalentRatio>
+					<WageHourLawCoverageCode typeCode="FLSA">Exempt</WageHourLawCoverageCode>
+				</MasterDeployment>
+				<PayCycleRemuneration>
+					<Remuneration validFrom="2008-07-15" validTo="2008-10-15">
+						<oa:Amount currencyID="USD">50000.04</oa:Amount>
+						<RemunerationRateIntervalCode>Year</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>Annual Salary</RemunerationTypeCode>
+					</Remuneration>
+					<Remuneration validFrom="2008-07-15" validTo="2008-10-15">
+						<oa:Amount currencyID="USD">4166.67</oa:Amount>
+						<RemunerationRateIntervalCode>Month</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>Base Pay</RemunerationTypeCode>
+					</Remuneration>
+					<Remuneration validFrom="2008-07-15" validTo="2008-10-15">
+						<oa:Amount currencyID="USD">50</oa:Amount>
+						<RemunerationRateIntervalCode>Month</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>Recurring Payment</RemunerationTypeCode>
+						<UserArea>
+							<anyco:RemunerationAmountDetailsUserArea>
+								<anyco:RemunerationDetailCode name="Car Allowance">M116</anyco:RemunerationDetailCode>
+							</anyco:RemunerationAmountDetailsUserArea>
+						</UserArea>
+					</Remuneration>
+					<Remuneration validFrom="2008-07-15">
+						<oa:Amount currencyID="USD">5000.00</oa:Amount>
+						<RemunerationRateIntervalCode>Once</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>One Time Payment</RemunerationTypeCode>
+					</Remuneration>
+					<Remuneration validFrom="2008-07-15" validTo="2008-10-15">
+						<oa:Amount currencyID="USD">75</oa:Amount>
+						<RemunerationRateIntervalCode>Month</RemunerationRateIntervalCode>
+						<RemunerationTypeCode>Maintenance</RemunerationTypeCode>
+					</Remuneration>
+					<PayCycleIntervalCode>Month Week 2</PayCycleIntervalCode>
+					<PayGroupCode>C3</PayGroupCode>
+				</PayCycleRemuneration>
+				<DirectDepositInstruction>
+					<Payment>
+						<ID>1</ID>
+						<PaymentPercentage>
+							<Percentage>100</Percentage>
+							<BasisCode>Net Pay</BasisCode>
+						</PaymentPercentage>
+					</Payment>
+					<DirectDepositAccount>
+						<AccountID>111-111-111</AccountID>
+						<BankRoutingID schemeID="SWIFT Code">BOFAUS3N</BankRoutingID>
+						<BankBranch>
+							<oa:Name>Bank of America</oa:Name>
+							<Communication>
+								<Address>
+									<oa:AddressLine sequence="1">100 33rd Street West</oa:AddressLine>
+									<oa:CityName>New York</oa:CityName>
+									<oa:CountrySubDivisionCode listID="US States">NY</oa:CountrySubDivisionCode>
+									<oa:PostalCode>10001</oa:PostalCode>
+								</Address>
+							</Communication>
+							<Communication>
+								<ChannelCode>Telephone</ChannelCode>
+								<oa:DialNumber>800-294-7999</oa:DialNumber>
+							</Communication>
+						</BankBranch>
+					</DirectDepositAccount>
+				</DirectDepositInstruction>
+				<DependentPersonDossier>
+					<DependentPerson>
+						<PersonID>01</PersonID>
+						<PersonLegalID schemeID="National">87654321</PersonLegalID>
+						<PersonName nameTypeCode="Current Name">
+							<FormattedName>Dr. John Doe</FormattedName>
+							<oa:GivenName>John</oa:GivenName>
+							<MiddleName>John</MiddleName>
+							<FamilyName>Doe</FamilyName>
+						</PersonName>
+						<PersonName nameTypeCode="Birth Name">
+							<FamilyName>Smith</FamilyName>
+						</PersonName>
+						<BirthDate>1958-11-21</BirthDate>
+						<BirthPlace>
+							<oa:CityName>Sometown</oa:CityName>
+							<oa:CountrySubDivisionCode listID="State">PA</oa:CountrySubDivisionCode>
+							<CountryCode>US</CountryCode>
+						</BirthPlace>
+					</DependentPerson>
+				</DependentPersonDossier>
+			</MasterPersonDossier>
+		</HRMasterData>
+	</DataArea>
+</SyncHRMasterData>
+<!--
+
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->

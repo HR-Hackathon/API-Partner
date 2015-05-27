@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SyncUSEnrollment 
+		 systemEnvironmentCode="Production" 
+		 releaseID="3.2" 
+		 languageCode="en-US" 
+		 xsi:schemaLocation="http://www.hr-xml.org/3 ../Developer/BODs/SyncUSEnrollment.xsd" 
+		 xmlns="http://www.hr-xml.org/3" 
+		 xmlns:oa="http://www.openapplications.org/oagis/9" 
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<oa:ApplicationArea>
+		<oa:CreationDateTime>2009-10-17T10:09:02.01Z</oa:CreationDateTime>
+	</oa:ApplicationArea>
+	<DataArea>
+		<oa:Sync>
+			<oa:ActionCriteria>
+				<oa:ActionExpression actionCode="Replace">/SyncUSEnrollment/DataArea/USEnrollment</oa:ActionExpression>
+				<!-- The presense of the Replace actionCode indicates that the 
+implementers are using a "full-file" or snapshot update methodology -->
+			</oa:ActionCriteria>
+		</oa:Sync>
+		<USEnrollment majorVersionID="1" minorVersionID="0">
+			<CustomerParty>
+				<PartyName>Premier Company</PartyName>
+			</CustomerParty>
+				<SubscriberDetails>
+					<SubscriberPerson>
+						<PersonID schemeID="SSN">111-22-3333</PersonID>
+						<PersonName>
+							<oa:GivenName>Janice</oa:GivenName>
+							<FamilyName>Haynes</FamilyName>
+						</PersonName><Communication>
+						<Address type="Residence">
+								<oa:AddressLine sequence="1">125 Lincoln Park West</oa:AddressLine>
+								<oa:CityName>Chicago</oa:CityName>
+								<oa:CountrySubDivisionCode>IL</oa:CountrySubDivisionCode>
+								<oa:PostalCode>60614</oa:PostalCode>
+							</Address></Communication>
+						<BirthDate>1941-06-15</BirthDate>
+						<GenderCode>Female</GenderCode>
+						<CertifiedMaritalStatus>
+                             <MaritalStatusCode>Married</MaritalStatusCode>						
+						</CertifiedMaritalStatus>
+					</SubscriberPerson>
+					<SubscriberEmployment>
+						<EmploymentLifecycle>
+							<Hire>
+								<HireDate>2002-01-01</HireDate>
+							</Hire>
+						</EmploymentLifecycle>
+					</SubscriberEmployment>
+				<SpendingAccountCoverage>
+					<SpendingAccountTypeCode>FSA Health Care</SpendingAccountTypeCode>
+					<GroupNumberID>AB0123</GroupNumberID>
+					<PlanYear>2010</PlanYear>
+					<SpendingAccountContribution>
+						<SpendingAccountContributorCode>Employee</SpendingAccountContributorCode>
+						<GoalAmount currencyID="USD">1200</GoalAmount>
+						<PerPayPeriodAmount currencyID="USD">50</PerPayPeriodAmount>
+					</SpendingAccountContribution>
+				</SpendingAccountCoverage>
+				</SubscriberDetails>
+		</USEnrollment>
+	</DataArea>
+</SyncUSEnrollment>
+<!--
+
+Copyright The HR-XML Consortium. All Rights Reserved. http://www.hr-xml.org 
+Copyright (c) 1997-2011 Open Applications Group, Inc. All Rights Reserved 
+-->
+
