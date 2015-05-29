@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Berlin HR Hackaton 2015 - Apply with widgets sample page</title>
+    <script type="text/javascript" src="https://home.textkernel.nl/match/js/tkwidget.js">
+        TK.CONFIG = {
+            "token": "3942ddcd-5707-4673-9486-0a88484956c6",
+            "hostname": "https://home.textkernel.nl/match",
+            "interfacelocale": "german",
+            "images": {
+                "linkedin": "https://home.textkernel.nl/match/styles/images/widget/grid/linkedin.png",
+                "xing": "https://home.textkernel.nl/match/styles/images/widget/grid/xing.png",
+                "facebook": "https://home.textkernel.nl/match/styles/images/widget/grid/facebook.png",
+                "viadeo": "https://home.textkernel.nl/match/styles/images/widget/grid/viadeo.png",
+                "googleplus": "https://home.textkernel.nl/match/styles/images/widget/grid/googleplus.png",
+                "doyoubuzz": "https://home.textkernel.nl/match/styles/images/widget/grid/doyoubuzz.png",
+                "dropbox": "https://home.textkernel.nl/match/styles/images/widget/grid/dropbox.png",
+                "googledrive": "https://home.textkernel.nl/match/styles/images/widget/grid/googledrive.png",
+                "cv": "https://home.textkernel.nl/match/styles/images/widget/hybrid/cv.png",
+                "form": "https://home.textkernel.nl/match/styles/images/widget/hybrid/form.png"
+            },
+            "openInPopup": {
+                "linkedin": true,
+                "xing": true,
+                "facebook": true,
+                "viadeo": true,
+                "googleplus": true,
+                "doyoubuzz": true
+            },
+            "shouldRender": function (){return true;},
+            "preRender": function (){},
+            "postRender": function (){},
+            "gapiClientId": "YOUR_GAPI_CLIENT_ID"
+        }
+    </script>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        #TK_WIDGET_CONTAINER {
+            background-color: #fff;
+            box-sizing: content-box;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 180px;
+            text-align: center;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 12px;
+        }
+        .TK_WIDGET {
+            display: inline-block;
+            padding: 5px;
+        }
+        .TK_WIDGET[rel=cv], .TK_WIDGET[rel=form] {
+            display: block;
+            text-align:left;
+        }
+        hr {
+            border: solid #ccc;
+            border-width: 1px 0 0 0;
+            margin: 5px 0;
+        }
+        .TK_WIDGET:hover {
+            background-color: #ddd;
+        }
+
+        #TK_WIDGET_INITIATOR {
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            width: 130px;
+            margin: 10px auto 0px auto;
+        }
+
+        #wrapper {
+            align-self: center;
+        }
+
+        #banner {
+            background: #0d1836 url('http://www.hrhackathon.net/images/banner-bg.jpg') left bottom no-repeat;
+            background-size: cover;
+            height: 600px;
+            width: 100%;
+        }
+
+        #bannertext {
+            height: 100px;
+            color: #3193cb;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            text-align: center;
+            font-family: 'Roboto', 'sans-serif', arial;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<div id="wrapper">
+    <div id="banner">
+        <div id="bannertext">Apply with widget at Berlin HR Hackaton 2015</div>
+    </div>
+    <button id="TK_WIDGET_INITIATOR">Apply now</button>
+    <div id="TK_WIDGET_CONTAINER" style="display:none">
+        Apply with<hr/>
+        <div class="TK_WIDGET" rel="linkedin"></div>
+        <div class="TK_WIDGET" rel="xing"></div>
+        <div class="TK_WIDGET" rel="facebook"></div>
+        <div class="TK_WIDGET" rel="viadeo"></div>
+        <div class="TK_WIDGET" rel="googleplus"></div>
+        <div class="TK_WIDGET" rel="doyoubuzz"></div>
+        <div class="TK_WIDGET" rel="dropbox"></div>
+        <div class="TK_WIDGET" rel="googledrive"></div>
+        <hr/>
+        <div class="TK_WIDGET" rel="cv"></div>
+        <div class="TK_WIDGET" rel="form"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js"
+        id="dropboxjs" data-app-key="YOUR_DROPBOX_APP_KEY"></script>
+<script type="text/javascript" src="https://apis.google.com/js/client.js?onload=onGapiLoad"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+    google.load('picker', '1');
+</script>
+
+</body>
+</html>
