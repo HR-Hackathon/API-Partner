@@ -1,7 +1,0 @@
-test9.germanpersonnel.de/account/user/login
-
-HRHackathon:HRHackathon123
-
-XML Authentication:
-
-<SharedSecret>VenuwKmy</SharedSecret>
